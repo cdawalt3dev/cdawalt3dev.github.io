@@ -1,0 +1,217 @@
+/*
+ Name: style.css
+ Purpose: Stores default CSS information
+ Author: Chris Dawalt
+ Created: 2018-1-9
+*/
+
+
+/* CSS: 
+    use ">" to link immediate children.
+    use " " to link all children (yes, that is a space).
+*/
+
+
+
+*{
+  font-size:1.0em;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+  
+  /*values are: content-box, border-box*/
+  box-sizing: border-box;
+  
+  background-repeat:no-repeat;  /*safe default.*/
+  
+  line-height:0;
+  padding:0;
+  margin:0;
+}
+
+
+body{
+  background-color: #b4d2b4;
+    
+}
+
+
+/*This lets the alternate text in case of a missing image appear normally if it breaks lines.*/
+img{
+  line-height: normal;
+  text-align:center;
+}
+
+p{
+  font-size:1.1em;
+}
+
+a, p{
+  line-height: normal;
+  display:inline-block;
+}
+
+a:link{
+  color:#007700;
+}
+a:visited{
+  color:#007700;
+}
+a:hover{
+  color:#007700;
+}
+a:active{
+  color:#009900;
+}
+
+.aBack{
+  font-size:16px;
+  display: inline-block;
+  margin:80px 30px 30px 30px;
+  padding:8px;
+}
+
+
+.scrollable{
+  overflow:auto;
+}
+
+
+
+
+p.pSubHeader{
+  font-family: Tahoma, Geneva, sans-serif;
+  display:block;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:6px;
+  margin-bottom:24px;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+header.headerPrimary{
+  background-color:#a4e3a4;
+  display:block;
+  font-size:30px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#004700;
+  text-align:center;
+  margin: 36px 0px 5px 0px;
+  padding:10px 0px 6px 0px;
+}
+
+header.headerPrimary p{
+  font-size:34px;
+  font-weight: bold;
+}
+
+
+
+
+img.imgPortfolio{
+  margin:1px;
+  max-width:64px;
+  max-height:64px;
+}
+
+
+/*yes, all tables by default are centered in wherever they are placed.*/
+table{
+  margin-left:auto;
+  margin-right:auto;
+  
+  /*
+  border-style:solid;
+  border-width:3px;
+  border-color:#1e631e;
+  */
+  border-collapse: collapse;
+}
+
+.tablePortfolio td, .tablePortfolio th{
+  height:70px;
+}
+.tablePortfolio tr{
+  height:70px;
+}
+
+/*Style for the link text inside the table. Take up the entire space.*/
+/*th p, th a, td p, td a*/
+.tablePortfolio tr td:first-child a{
+  height:64px;
+  font-size:1.7em;
+  /*width:100%;*/
+  /*padding:0px 30px 0px 30px;*/
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  /*height:64px;*/
+  padding-left:30px;
+  padding-right:30px;
+}
+
+table.tablePortfolio{
+  background-color:#c4e3c4;
+}
+
+.tablePortfolio th, .tablePortfolio td{
+  /*line-height:normal;*/
+  border-style:solid;
+  border-color:#1e631e;
+  border-width:4px;
+  /*border-width:3px 0px 0px 3px;*/
+}
+
+
+
+
+
+div{
+  display:block;
+}
+
+
+div.divWide{
+  float: none;
+  display:block;
+  text-align:center;
+}
+
+div.divContent{
+  text-align:left;
+  background-color:#addcad;
+  min-width:560px;
+  max-width:1000px;
+  width: 92%;
+  min-height:300px;
+  border-radius: 32px;
+  border:3px solid #005000;
+  padding:30px 0px 30px 0px;
+  overflow: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+div.divContentSlim{
+  display:inline-block;
+  width:auto;
+  text-align:left;
+  background-color:#addcad;
+  min-width:40px;
+  max-width:1000px;
+  min-height:40px;
+  border-radius: 32px;
+  border:3px solid #005000;
+  padding:30px 30px 30px 30px;
+  overflow: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
