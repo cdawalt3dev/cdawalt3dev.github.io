@@ -1,0 +1,229 @@
+/*
+ Name: style_narrow.css
+ Purpose: Stores CSS changes needed for mobile / longways screens
+ Author: Chris Dawalt
+ Created: 2018-1-25
+*/
+
+@media (max-width: 600px) {
+
+
+
+body{
+	
+}
+
+
+
+header.headerJQMobileSite{
+
+    /* top, right, bottom, left*/
+	margin: 14px 0px 5px 0px;
+
+	font-size:25px;
+	text-align:center;
+	font-family: Courier New;
+	font-weight: bold;
+}
+
+
+div.divTextArea{
+	padding:8px 10px 8px 10px;
+
+}
+	
+	
+nav{
+    display:inline-flex;
+	margin:1px 0px 14px 0px;
+	padding: 0px;
+}
+
+nav a{
+	background-color:#0a610a;
+    text-align:center;
+	text-decoration: none;
+	min-width:60px;
+    border-style: solid;
+    border-width: 3px 0px 3px 3px;
+	border-color: #002700;
+	margin:0px;
+	padding: 5px 5px 5px 5px;
+
+}
+
+/*For mobile devices, this becomes vertical.*/
+div.divFlexBoxContainerHorStackable{
+    
+	width:auto;
+    -moz-box-orient: vertical;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -o-box-orient: vertical;
+    display: -o-box;
+	
+	padding:4px 0px 4px 0px;
+
+}
+
+div.divFlexBoxContainerVer{
+	
+	border-width: 1px 1px 1px 1px;
+}
+
+
+
+div.divFlexBoxRow{
+	border-width: 2px 2px 0px 2px;
+    border-style: solid;
+	border-color: #005000;
+	
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+} 
+div.divFlexBoxRow:last-child{
+	border-width: 2px 2px 2px 2px;
+    border-style: solid;
+	border-color: #005000;
+} 
+
+
+
+/*Now centers items since it takes up a single "row" instead.*/
+div.divFlexBoxColLeft{
+    /*background-color:#ff0000;*/
+	border-width: 0px 0px 0px 0px;
+    border-style: solid;
+	border-color: #005000;
+	
+    width: auto;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+	
+    display:flex;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+	
+    padding:0px;
+    margin:0px;
+} 
+
+div.divFlexBoxColRight{
+    /*background-color:#ff00ff;*/
+    white-space: nowrap;
+    width: auto;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+	
+    text-align:center;
+    /*display:flex;*/
+    display:block;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding:0px;
+    margin:0px;
+} 
+
+
+
+
+button{
+    
+}
+
+
+strong, legend, input, a, p, label, .ui-input-text{
+    padding:0;
+    margin:0;
+    display:inline-block;
+    text-shadow:none;
+}
+
+button.buttonForm, button.ui-btn{
+    display:inline-block;
+    min-width:80px;
+    margin:2px 3px 2px 3px;
+    padding:6px 4px 6px 4px;
+    font-size:16px;
+    border-radius: 2px;
+}
+
+
+p.pSubHeader{
+    margin:0;
+    padding:3px 2px 5px 2px;
+    font-size:20px;
+}
+
+
+/* Buttons */
+.ui-btn-corner-all,
+.ui-btn.ui-corner-all,
+/* Slider track */
+.ui-slider-track.ui-corner-all,
+/* Flipswitch */
+.ui-flipswitch.ui-corner-all,
+/* Count bubble */
+.ui-li-count {
+	-webkit-border-radius: 12px /*{global-radii-buttons}*/;
+	border-radius: 12px /*{global-radii-buttons}*/;
+}
+/* Icon-only buttons */
+.ui-btn-icon-notext.ui-btn-corner-all,
+.ui-btn-icon-notext.ui-corner-all {
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+
+
+
+.ui-input-text input, input{
+    width:260px;
+    min-width:260px;
+}
+
+
+.ui-input-text{
+
+    border-radius: 12px;
+}
+
+
+div.divOutput{
+    border-width: 1px 1px 1px 1px;
+    padding:5px 6px 2px 6px;
+    min-width:240px;
+    min-height:1.9em;
+    border-style: solid;
+    border-color: #005000;
+    border-radius: 12px;
+    vertical-align:middle;
+    display:inline-block;
+}
+
+div.divError{
+    display:flex;
+    background-color:rgba(0, 0, 0, 0.0);
+    min-height:1.8em;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+p.pError{
+    color:#9f0000;
+    font-size:12px;
+    font-weight: bold;
+}
+
+
+
+
+}/*END OF screen width up to 780px.*/
+

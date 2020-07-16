@@ -1,0 +1,41 @@
+
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	min-width: 250px;
+}
+
+
+
+
+.aSample:link {
+    color: #009100;
+}
+.aSample:visited {
+    color: #009100;
+}
+.aSample:hover {
+    color: #00E000;
+}
+.aSample:active {
+    color: #007900;
+}
+
+
+
+

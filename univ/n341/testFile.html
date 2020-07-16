@@ -1,0 +1,52 @@
+<!doctype html>
+
+<!--
+ Filename: testFile.html
+ Written by: Chris Dawalt (CPD)
+ Purpose: Produce my first web page with JavaScript functionality (mainly to show this page can be linked to from another)
+ Date: 26 August 2016
+ Modification history:
+ 15 Jun 2015: Fix double-dash error in header block comment (LJC)
+ 04 Sep 2015: Correct an error in the jQuery library comment (LJC)
+ 07 Dec 2015: Use new css structure with nSeriesCommon/css files (LJC)
+ 18 Jan 2016: Change CSS info (LJC)
+ 26 Aug 2016: Updated CSS info, changed text (CPD)
+-->
+
+<html lang="en">
+<head>
+
+	
+	<meta charset="utf-8">
+	<!-- Begin every html page with everything up to this point (just use your own header block) -->
+	<!-- Also, feel free to remove all the instructional comments as you modify this file to make it yours. -->
+	
+	<!-- This <title> displays in the page tab -->
+	<title>testFile</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="img/ico_testFile.png" />
+    
+	<!-- This will link to your CSS stylesheet for formatting as soon as you create the file. The page will work without it, though. -->	
+    <link rel="stylesheet" href="css/myFancyStylesheet.css">
+
+
+	<!-- This links to the jQuery library so your js code will work 
+         Always include this *before* your own js code (extremely important) -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!-- This links to the js code specific for this page -->
+	<script src="externalAlert.js"></script>
+	
+
+</head>
+
+<body>
+	<!-- This is the text that displays on the page -->
+	<h1 id="h1Sample">Ambiguous Text</h1>
+
+	<!-- added back button. -->
+	<a id="aBack" href="index.html">Back</a>
+
+</body>
+
+</html>

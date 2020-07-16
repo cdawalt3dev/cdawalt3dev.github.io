@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Adventure Game</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../_global/img/img_icon_adventure_game.png" />
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="js/global.js"> </script>
+  <script src="js/state_goblin.js"> </script>
+</head>
+<body>
+  
+  <div id="divContent" class="JS_State_Goblin">
+    
+    <div class="divTitle">
+	  <p class="pTitle">Goblin</p>
+	</div>
+  
+    <div class="divScene">
+      
+    </div>
+	
+	<div class="divText">
+
+     <div id="divTitleSub">	
+	   <p id="pTitleSub" style="display:none;" > </p>
+	 </div>
+	  
+	  <p id="pCustomMessage">
+	    You encountered the goblin!
+	    <br/>
+		Pick an option or an inventory item.
+		
+	  </p>
+	  
+	</div>
+	
+	
+	
+	<div id="JS_StandardOptions" class="divChoiceGroupHorizontal">
+	  <a id="JS_choiceAskToLeave" class="aChoice aChoiceHorizontal" href="#">Ask politely to leave</a>
+	  <a id="JS_choiceFistFight" class="aChoice aChoiceHorizontal" href="#">Fist fight</a>
+	  <a class="aChoice aChoiceHorizontal" href="state_outside.html">Run Away</a>
+	</div>
+	
+	
+	<div id="JS_GameOverOptions" class="divChoiceGroupHorizontal" style="display:none;">
+	  <a class="aChoice aChoiceHorizontal" href="index.html">Start Over</a>
+	  <a class="aChoice aChoiceHorizontal" href="../index.html">Quit</a>
+	</div>
+	
+	
+	
+	
+	<div id="divInventory">
+	  <div class="divIntentoryLabel">
+	    <p class="pInventoryLabel">Inventory:</p>
+	  </div>
+	  <div id="JS_divInventorySlots" class="divInventorySlotGroup">
+	    <!--
+		To be filled with HTML elements of this form in Javascript at startup, where "X" is a number from 0 to Number of Slots:
+	    <a class="aClickable" href="#"><img id="imgInvSlotX" class="imgInventorySlot"></img></a>
+		-->
+	  </div>
+	  <div id="divGold">
+	    <div class="divGoldLabel">
+	      <p class="pGoldLabel">Gold:</p>
+		</div>
+		<div id="divGoldQuantity">
+		  <p id="pGoldQuantity"> ? </p>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	
+  
+  </div>
+  
+  
+  
+  <a class="aBack" href="../index.html">Quit</a>
+  
+</body>
+</html>

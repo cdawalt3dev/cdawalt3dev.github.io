@@ -1,0 +1,263 @@
+<!doctype html>
+
+<!--
+ Filename: buttons.html
+ Written by: Chris Dawalt
+ Creation Date: October 10, 2016.
+ Purpose: Change the function project's buttons to utilize action listeners as well as event handlers.
+ Modification History:
+ Original Build (functions project): 9 Sep 2016 (CPD)
+ 
+*NOTE: basic information cut, see functions project for more info.
+ 
+*To find the 3 action listers and 3 handlers, search for
+document.getElementById("btnFire").onclick = function(){
+ 
+*The "Clear" button demonstrates a multi-function event listener.
+ 
+*For more information on the changes, see the bottom section of this HTML file.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Buttons</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_buttons.png" />
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+
+
+
+<body >
+
+    <a id = "aTitle" class="aSample"> Pirate RPG </a>
+	
+    <div id="divCheatMode">
+	    <input id="chkCheatMode" type="checkbox" name="CheatMode" value="CheatModeValue"> <a id="aCheatMode" class="aSample">Cheat Mode</a>
+    </div>
+    
+    <div id="divAlertsEnabled">
+	    <input id="chkAlertsEnabled" type="checkbox" name="alertsEnabled" value="alertsEnabledValue" checked> <a id="aAlertsEnabled" class="aSample">Alerts Enabled</a>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div id="divLeft" class="divSample">
+    	<img id="imgPlayer1" alt="" class="imgPlayerImage" src="../../img/playerShip.png">
+    	<a id="aPlayer1health" class="aHealth"> # </a>
+    </div>
+    
+    <div id="divRight" class="divSample">
+    	<img id="imgPlayer2" alt="" class="imgPlayerImage" src="../../img/enemyShip.png">
+    	<a id="aPlayer2health" class="aHealth"> # </a>
+    </div>
+    
+    <div id="divAction" class="divSampleSmall">
+    
+    <div id="divActionLeft" class="divSampleSmallTest">
+        <button id="btnFire" type="button" class="btnSample">Fire</button>
+        <button id="btnPlunder" type="button" class="btnSample">Plunder</button>
+    	<button id="btnTaunt" type="button" class="btnSample">Taunt</button>
+    	
+    </div>
+   	
+    <div id="divActionRight" class="divSampleSmallTest">
+    
+    	<button id="btnRepair" type="button" class="btnSample">Repair</button>
+    	<button id="btnSwerve" type="button" class="btnSample">Swerve</button>
+   		<button id="btnRetreat" type="button" class="btnSample">Retreat</button>
+    	
+        
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    
+    <div id="divMessage" class="divSampleSmall">
+        <div id="divMessage2" >
+            <a id="aMessage" class="aSample">
+            	text
+            </a>
+            <br/>
+            
+            
+            <div class="divFillContainer">
+               
+                <div class="divRightMin">
+                <button id="btnToggleMessageLog" type="button" class="btnSampleBig2">See Msg Log</button>
+                </div>
+                
+                <div class="divLeftFill">
+                	<button id="btnProceed" type="button" class="btnSampleBig">Proceed</button>
+                    
+                    <button id="btnClear" type="button" class="btnSampleBig" hidden>Clear</button>
+                    <button id="btnSpam" type="button" class="btnSampleBig" hidden>Spam</button>
+                    
+                </div>
+                
+                
+                
+            </div>
+            
+    
+        </div>
+    </div>
+    
+    
+    
+    <div id="divMessageLog" class="divSample" hidden>
+    <a id="aMessageLog1" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog2" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog3" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog4" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog5" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog6" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog7" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog8" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog9" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog10" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog11" class="aSampleML"> </a>
+    <br/>
+    <a id="aMessageLog12" class="aSampleML"> </a>
+    <br/>
+    
+    </div>
+    
+    
+    
+    
+	<a id="aBackLink" class="aLink" href="../../index.html">Back</a>
+		
+    
+    
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+
+BUTTONS EXTRA INFO
+*This project assigns the 3 in-game action buttons their methods via non-jquery event handlers,
+ while the last 3 in-game action buttons receive their methods as non-jquery action listeners.
+ 
+*There is a "multi-function" event listener, modeled after the example given.  The "Clear" button's contents have been sent to their own method "clearScreen", and the Clear button's click method calls both "clearScreen" and "promptAboutClearingScreen".  The prompt only occurs if alerts are enabled (top-right checkbox).
+
+*The clear button is only available after clicking "See Msg Log"
+
+
+
+
+
+
+HELP (from Functions):
+Defeat the enemy by sinking their ship (make the health hit 0).  The ship on the left is yours.  If it sinks, you lose.
+ACTIONS:
+Fire - attempt to damage the enemy.  Has a chance of missing, especially against a swerving opponent.
+Plunder - chance to steal wood (health) or a cannon, increasing your damage dealt and decreasing theirs.
+Taunt - decrease enemy morale to give an extra chance to miss.  Only works up to so many times.
+Repair - recover health
+Swerve - higher chance of missing an enemy attack
+Retreat - give up
+
+Proceed - advance an event.  Required at the beginning.
+See Msg Log - look at past messages (only those involving quantity are recorded).
+
+In log-view mode:
+Clear - remove all recorded text.
+Spam - print out each of the text-concatenation printout methods as well as the alert beforehand.
+
+ *Also, check "Cheat mode", top-left, to make all enemy damage do 1 for an easy win.
+
+
+
+
+Reference:
+http://www.w3schools.com/cssref/pr_class_position.asp
+~place something at a hard position on screen.
+
+http://www.w3schools.com/TAGS/att_input_checked.asp
+~checkboxes.  Useful.
+
+http://stackoverflow.com/questions/3576605/prevent-linebreak-after-div
+~display:inline or float:left in CSS can stop some elements from auto line-breaking afterwards.
+
+http://api.jquery.com/prop/
+~get & set HTML element properties with JQuery    $("#ID").prop("name", somethingHereToSet);
+
+http://stackoverflow.com/questions/22456641/disable-non-clickable-an-html-button-in-javascript
+http://stackoverflow.com/questions/3789844/how-to-make-a-greyed-out-html-form
+~right direction.  But $("#ID").prop("disabled", true);    seems to work, actually.
+
+http://stackoverflow.com/questions/901712/how-to-check-if-a-checkbox-is-checked-in-jquery
+~can also be done in JQUery through $("#ID").prop("checked"), returns true or false.
+
+http://www.w3schools.com/js/js_switch.asp
+~looks straight from Java
+
+http://www.w3schools.com/jsref/jsref_random.asp
+~random.  Good to know.
+
+http://www.w3schools.com/js/js_loop_for.asp
+~for loops, useful.
+
+http://stackoverflow.com/questions/1260122/expand-a-div-to-take-the-remaining-width
+~probably been here before, good idea
+
+http://stackoverflow.com/questions/1065435/can-a-css-class-inherit-one-or-more-other-classes
+~hm, a preprocessor known as "LESS" is needed to support CSS class-inheritence.
+
+http://stackoverflow.com/questions/2939914/vertically-align-text-in-a-div
+~vertically center things in a Div.  Seems to work for non-text too.
+
+http://stackoverflow.com/questions/4394309/how-do-i-fit-an-image-img-inside-a-div-and-keep-the-aspect-ratio
+~good to keep on hand, not used here though.
+
+
+
+
+
+
+
+http://ic-fromwithin.blogspot.com/2015/08/aye-there-be-pirates-here.html
+~player ship image
+
+https://www.thinglink.com/scene/693150162087837696#
+~enemy ship image
+
+-->
+

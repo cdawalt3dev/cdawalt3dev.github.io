@@ -1,0 +1,173 @@
+/*
+ Name: style_narrow.css
+ Purpose: Stores CSS changes needed for mobile / longways screens
+ Author: Chris Dawalt
+ Created: 2018-1-9
+*/
+
+
+@media (max-width: 600px) {
+
+
+
+
+/*On mobile devices, links should be easier to click on.*/
+a{
+    padding:15px;
+}
+
+/*Style for the text inside the table.*/
+th p, th a, td p, td a{
+    margin:0px;
+    /*padding:9px 16px 9px 16px;*/
+    
+    display:flex;
+    
+    /*vertical*/
+    align-items: center;
+    -webkit-justify-content: center;
+    
+    /*horizontal*/
+    justify-content: flex-end;
+    
+    
+    height:50px;
+    
+
+    font-size:20px;
+    padding:0px 30px 0px 30px;
+}
+
+
+.aBack{
+    font-size:17px;
+    margin:15px 15px 5px 15px;
+    padding:10px 15px 15px 10px;
+}
+
+
+p.pSubHeader{
+    
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:6px;
+    margin-bottom:16px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Also, designated links can look a little bigger too.*/
+a.aEasyLink{
+	font-size:20px;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+
+p.pShopItemHeader{
+    display:inline-block;
+    padding:2px 1px 6px 12px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+p.pNavTitle{
+	font-size: 17px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+header{
+    display:block;
+    font-size:30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    text-align:center;
+    margin: 0px 0px 32px 0px;
+}
+
+
+header.headerPrimary{
+
+    background-color:#a4e3a4;
+
+    /* top, right, bottom, left*/
+    margin: 36px 0px 5px 0px;
+    padding:7px 0px 3px 0px;
+
+    font-size:24px;
+    text-align:center;
+}
+
+
+
+
+img.imgPortfolio{
+
+    display:flex;
+    
+    margin:0px;
+    padding:0px;
+    
+    max-width:50px;
+    max-height:50px;
+
+}
+
+
+div.divContent{
+	text-align:left;
+    background-color:#addcad;
+	min-width:300px;
+	max-width:1000px;
+	width: 98%;
+	min-height:300px;
+	border-radius: 12px;
+	border:3px solid #005000;
+	padding:12px 0px 12px 0px;
+}
+
+
+div.divContentSlim{
+    display:inline-block;
+    width:auto;
+    text-align:left;
+    background-color:#addcad;
+    min-width:40px;
+    max-width:1000px;
+    min-height:40px;
+    border-radius: 12px;
+    border:3px solid #005000;
+    padding:5px 4px 5px 4px;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td{
+
+}
+
+
+
+
+body{
+		
+}
+
+
+header{
+    display:block;
+	font-size:21px;
+    font-family: Tahoma, Geneva, sans-serif;
+	color:#004700;
+	text-align:center;
+	margin: 0px 0px 6px 0px;
+}
+
+}/*END OF screen width up to 600px.*/
+

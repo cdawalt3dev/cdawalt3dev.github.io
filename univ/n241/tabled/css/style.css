@@ -1,0 +1,234 @@
+
+/*Reqruiement 8: CSS rules to give four background colors. Once per page row
+                 (group of category rows) */
+.tableIndexPage1{
+    background-color:#95d795;
+}
+.tableIndexPage2{
+    background-color:#77d977;
+}
+.tableIndexPage3{
+    background-color:#54c954;
+}
+.tableIndexPage4{
+    background-color:#47dc47;
+}
+
+/*Requirement 9. Border given to <table>, <th>, and <td>.*/
+table.tableIndex{
+    border-collapse: collapse;
+    border-style:solid;
+    border-width:6px;
+    border-color:#1e631e;
+}
+/*Border between the left-most Page column and the rest*/
+table.tableIndex>colgroup>col.colIndexPage{
+    border-style:solid;
+    border-color:#1e631e;
+    border-width: 5px;
+}
+/*  Applies to all members of a row that starts with a <th> page.*/
+/*  This bolds the line above a row's left-most <th> page to group items
+    together on the same page.*/
+table.tableIndex>tbody>tr>th, table.tableIndex>tbody>tr>th~td{
+    border-style:solid;
+    border-color:#1e631e;
+    border-top-width:5px;
+}
+
+
+table.tableIndex>thead>tr{
+    border-style:solid;
+    border-color:#1e631e;
+    border-width: 5px;
+    background-color:#98b398;
+}
+/*<thead>'s <th>s are column header cells (along the very top)*/
+table.tableIndex>thead>tr>th{
+    text-align:center;
+    border-style:solid;
+    border-width:2px;
+    border-color:#1e631e;
+    padding:5px 10px 5px 10px;
+}
+/*<tbody>'s <th>s are row header cells (along the very left)*/
+table.tableIndex>tbody>tr>th{
+    text-align:center;
+    /*top, right, bottom, left*/
+    padding:5px 10px 5px 10px;
+}
+
+table.tableIndex>tbody>tr>td{
+    border-style:solid;
+    border-color:#1e631e;
+    border-width:2px;
+    /*top, right, bottom, left*/
+    padding:5px 10px 5px 10px;
+}
+
+
+/******************************************************************/
+
+
+
+
+
+
+
+
+
+
+div.divTableIndexContainer{
+    padding:30px;
+}
+
+table.tableIndex{
+    
+    text-align:left;
+    caption-side: top;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table.tableIndex>caption{
+    font-size:1.1em;
+    margin-bottom:2px;
+}
+
+table.tableIndex>colgroup>col.colIndexCategory{
+}
+table.tableIndex>colgroup>col.colIndexCalculator{
+}
+
+
+
+
+body{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+body{
+    background-color:#bfe5bf;
+}
+body{
+    color:#004700;
+}
+body{
+    font-size: 20px;
+}
+p.pCaption{
+    color:#555555;
+    font-size:18px;
+    display:block;
+}
+h2, h3{
+    margin-top:0px;
+    margin-bottom:10px;
+    font-size:32px;
+    text-decoration: underline;
+}
+h2{
+    margin-top:36px;
+    font-size:40px;
+}
+h1{
+    border-bottom: 1px #000000 solid;
+}
+p.pCaption{
+    text-decoration: overline;
+}
+@font-face{
+    font-family: NeatlyPrinted;
+    src: url("../fonts/KGNeatlyPrinted.ttf");
+}
+p.pContent{
+    font-family: NeatlyPrinted;
+    font-size:28px;
+    font-weight:bold;
+}
+
+
+body{
+    text-align:center;
+}
+
+a, p, div{
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+    font-size:1.08em;
+}
+a{
+    display: inline;
+}
+
+p.pContent{
+    margin-bottom:6px;
+}
+
+
+a.aBackLink{
+    display:inline;
+    float:left;
+    font-size:1.24em;
+    margin:8px;
+    padding:16px;
+    margin-top:60px;
+    margin-bottom:100px;
+}
+
+
+div.divTextGroup{
+    margin:0px;
+    padding:2px;
+    padding-bottom:4px;
+    text-align:left;
+    max-width:800px;
+}
+
+div.divGroup{
+    background-color:#b2ecb2;
+    display:inline-block;
+    min-height:200px;
+    border:4px solid #005000;
+    padding:12px 16px 30px 16px;
+    margin-top:8px;
+    margin-bottom:8px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    text-align:center;
+}
+div.divGroupMaxWidth{
+    background-color:#b2ecb2;
+    display:inline-block;
+    min-height:200px;
+    border:4px solid #005000;
+    padding:12px 16px 30px 16px;
+    margin-top:8px;
+    margin-bottom:8px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    min-width:600px;
+    max-width:1200px;
+    text-align:center;
+}
+
+ul, ol{
+    margin:0px;
+}
+
+a:link, a:visited{
+    color:#127c12;
+}
+a:hover, a:focus{
+    color:#209820;
+}
+a:active{
+    color:#4eae4e;
+}
+
+
+
+
+

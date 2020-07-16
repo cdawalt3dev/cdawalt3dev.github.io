@@ -1,0 +1,206 @@
+<!doctype html>
+
+<!--
+ Filename: looping.html
+ Written by: Chris Dawalt
+ Creation Date: 21 September 2016
+ Purpose: Demonstrate the use of loops to print out a single character in 8-digit binary form.
+ Modification History:
+ Original Build.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Looping Through Arrays</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/ico_looping.png" />
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+
+
+
+	<a id="aTitle" class="aSample"> Looping through Arrays </a>
+    
+    <br/>
+
+    <div class="divWideRow">
+    	
+        <div class="divSample">
+        	<a class="aSample">Enter a single character: &nbsp;</a>
+        
+			<input id="txtCharBox" class="txtSample" type="text" name="CharBox" value="">
+
+			<br/>
+    		<button id="btnSubmit" type="button" class="btnSample">Submit</button>
+    		<button id="btnClear" type="button" class="btnSample">Clear</button>
+        
+        </div>
+    </div>
+    
+    
+    
+    <div class="divWideRow">
+    	
+        <div class="divSample">
+        
+        
+        	<div class="divOutter">
+                <a class="aSampleBorder"> ASCII value: &nbsp; </a>       
+                <a id="aASCIIResult" class="aSampleBorder"> &nbsp; </a> 
+            </div>
+            
+            <br/>
+            <br/>
+        
+            <div class="divOutter">
+            
+                <table>
+                    <tr>
+                    	<!-- These inherit from TH's CSS, making it slightly smaller (fits more text in the same space)-->
+                        <th> Index </th>
+                        <th> Binary Digit </th>
+                        <th> Interpretation </th>
+                
+                
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 0: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit0" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation0" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 1: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit1" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation1" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 2: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit2" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation2" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 3: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit3" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation3" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 4: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit4" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation4" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 5: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit5" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation5" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 6: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit6" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation6" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="aSampleTextMod" > 7: &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aBinaryDigit7" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        <td>
+                            <a id="aInterpretation7" class="aSampleTextMod" > &nbsp; </a>
+                        </td>
+                        
+                    </tr>
+                    
+                    
+                    
+                </table>
+            
+            </div>
+    	</div>
+    </div>
+    
+    
+    <div id="divEnterByPrompt">
+    	<button id="btnEnterByPrompt" type="button" class="btnSample">Enter By Prompt</button>
+    </div>
+    
+    
+	<a class="aLink" href="../../index.html">Back</a>
+	
+    
+</body>
+
+
+</html>
+
+<!--
+Reference:
+http://www.w3schools.com/html/html_tables.asp
+~Tables & easy CSS edits to them.  Quite helpful.
+
+-->

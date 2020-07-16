@@ -1,0 +1,400 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: September 19 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+}
+
+
+
+
+
+.aSample{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aSampleRight{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+	float:right;
+}
+
+
+
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+#aBackLink{
+	/*
+	position: absolute;
+    left: 10px;
+    bottom: 15px;
+	*/
+}
+
+#aTitle{
+	display: block;
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:34px;
+	left:0%;
+	width:100%;
+	
+	text-align: center;
+}
+
+.aSampleMiniTitle{
+	
+	display: block;
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	left:0%;
+	width:100%;
+	
+	text-align: center;
+}
+
+.aSampleBlock{
+	display: block;
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+	left:0%;
+	width:100%;
+	
+	text-align: center;	
+}
+
+
+
+.btnSample{
+	
+	float:none;
+	display:inline;
+	
+	color:#064100;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+
+
+
+
+
+.aTestText{
+	display:inline-flex;
+	
+}
+
+
+
+
+
+.divOutter{
+	
+	display:inline-flex; 
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.divInner{
+	display:inline-block; 
+}
+.divInnerRight{
+	text-align:right;
+	display:inline-block; 
+}
+
+
+
+
+
+
+	
+
+
+
+.divWideRow{
+	
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:100%;
+	
+}
+
+
+.divInvisible{
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	
+}
+
+
+.divSample{
+	margin: 15px 15px;
+	
+	padding: 15px;
+	
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+}
+.divOutput{
+	display:inline-block;
+	margin: 15px 15px;
+	
+	padding: 15px;
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+	
+	min-height:100px;
+	min-width:270px;
+}
+
+
+
+
+.divSampleSmall{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 1% 2%;
+	border-radius: 15px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+
+
+
+
+#divInput{
+	
+	display:inline-block;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	vertical-align: middle;
+	
+}
+
+
+
+
+#btnSubmit{
+	margin: 1% 4%;
+	width:20%;
+	
+}
+
+#btnClear{
+	margin: 1% 4%;
+	width:20%;
+}
+
+
+
+
+
+
+
+#divCoordsFrom{
+	
+	
+	padding: 6px 36px;
+	display:inline-block;
+	height:auto;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	
+}
+#divCoordsFromInner{
+	
+}
+
+
+#divCoordsTo{
+	padding: 6px 36px;
+	display:inline-block;
+	height:auto;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	
+}
+
+#divInputSpacer{
+	float:left;
+	width:20px;	
+	height:20px;
+	
+}
+
+#aCoordsFrom{
+	
+	
+}
+
+
+.aSampleTextMod{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+	display:block;
+}
+
+
+
+.divLabelCol{
+	
+	padding: 0px;
+	margin:0px 0px;
+	
+	display:inline-block;
+	text-align:right;
+	
+	
+}
+.divInputsCol{
+	
+}
+
+
+
+
+
+
+/*unused.*/
+.divAcross{
+	padding: 0px;
+	margin:0px 0px;
+	float:left;
+	width:100%;
+	height:24px;
+}
+
+
+.txtSample{
+	display:block;
+	color:#064100;
+	
+	
+	width:60px;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+}
+
+
+
+#divUseTrigonometry{
+	position:absolute;
+	left: 8%;
+	overflow:visible;
+	top: 2%;
+	right: 60%;
+	bottom:94%;
+	text-align: left;
+	
+}
+
+#divEnterByPrompt{
+	position:absolute;
+	left: 60%;
+	overflow:visible;
+	top: 2%;
+	right: 8%;
+	bottom:94%;
+	text-align: right;
+	
+}
+
+
+

@@ -1,0 +1,86 @@
+<!doctype html>
+
+<!--
+ Filename: conversions.html
+ Written by: Chris Dawalt
+ Creation Date: 7 September 2016
+ Purpose: Prompt for a name and number of doubloons.  Print back out the name and doubloon value in dollars (1 doubloon = $247).
+ Modification History:
+ Original Build.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Conversions</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_conversions.png" />
+    
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+
+    <a id = "aLineOut" class="aSample">   </a>
+	<br/><br/>
+    <a id = "aLineOut2" class="aSample">   </a>
+	
+    <br/><br/><br/>
+    <button id="btnRestart" type="button" class="btnSample" hidden>Restart</button>
+    <br/><br/>
+    
+    <!-- this element is hidden so that "Back" will not show up until the prompts are finished. -->
+	<a class="aLink" id="aBackLink" href="../../index.html" hidden>Back</a>
+    
+    
+    
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+Reference:
+http://www.w3schools.com/jsref/jsref_isnan.asp
+~check to see if "NaN" is returned from attempting to convert a string to an integer, indicating a bad value (non-numbers or bad minus / decimal placement).
+
+
+http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+http://stackoverflow.com/questions/3753483/javascript-thousand-separator-string-format
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+~comma delimit an integer with ".toLocaleString()".  A method of an integer type, oddly enough (at least coming from Java, this is odd)
+
+
+http://www.w3schools.com/tags/att_global_hidden.asp
+~"hidden" attribute in HTML.  Just include on its own to turn "on".
+
+http://www.w3schools.com/jsref/jsref_trim_string.asp
+~trim a string, removing white space (space beyond a string's furthest non-space chars).
+
+http://api.jquery.com/show/
+~show a hidden element with JQuery.
+
+http://stackoverflow.com/questions/6317892/suppress-expected-and-instead-saw-error-in-jslint
+http://stackoverflow.com/questions/3735939/jslint-expected-and-instead-saw
+~ === instead of ==.  Just good to be aware of (also, !== instead of !=).  Seems to have something to do with compatability between possibly different types (even if you know the types of two compared objects are the same, there is no way to enforce this to the interpreter).
+
+
+-->

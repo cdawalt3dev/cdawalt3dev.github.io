@@ -1,0 +1,184 @@
+
+
+*{
+  font-size:1.0em;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+  
+  /*values are: content-box, border-box*/
+  box-sizing: border-box;
+  
+  /*background-repeat:no-repeat;*/
+  /*...unfortunately this is not good for Micorosft Edge.
+    Buttons with a background-repeat of "no-repeat" will
+	not change in appearance when hovered over or pressed.
+	Some cosmic anomalies shall forever go unexplained.
+  */
+  
+  line-height:0;
+  padding:0;
+  margin:0;
+}
+
+/*Divs and images are ok.*/
+div, img{
+  background-repeat:no-repeat;
+}
+
+
+a:link{
+  color:#007700;
+}
+a:visited{
+  color:#007700;
+}
+a:hover{
+  color:#007700;
+}
+a:active{
+  color:#009900;
+}
+
+
+.aBack{
+
+	/*
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    font-size:1.4em;
+    display: inline-block;
+    margin:80px 30px 30px 30px;
+    padding:8px;
+	*/
+	
+	font-size:1.4em;
+	padding:8px;
+	display:inline-block;
+	margin-top:40px;
+	margin-bottom:30px;
+	margin-left:30px;
+	
+	
+	
+}
+
+
+
+body{
+  background-color:#aedca8;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+
+a{
+  line-height: normal;
+}
+
+p{
+  line-height: normal;
+  font-size:1.1em;
+  
+  margin-top:1px;
+  margin-bottom:1px;
+  
+  margin-left:6px;
+  margin-right:6px;
+  
+}
+
+
+.divTitle{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  min-height:40px;
+  text-align:left;
+  padding-left:20px;
+  padding-right:20px;
+  
+  
+}
+
+.pTitle{
+  font-size:2.0em;
+  margin-bottom:2px;
+}
+
+#divTitleSub{
+  /*background-color:#ff0000;*/
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height:50px;
+  text-align:center;
+  margin-top:5px;
+  margin-bottom:12px;
+}
+
+#pTitleSub{
+  font-size:1.8em;
+  
+}
+
+
+#divCanvas{
+  display:block;
+  
+  margin-left:auto;
+  margin-right:auto;
+
+  
+  margin-top:0px;
+  margin-bottom:0px;
+  
+  text-align:center;
+  
+  
+  
+  
+}
+
+
+#divContentContainer{
+  display:block;
+  text-align:center;
+}
+
+#divContent{
+  background-color:#cae7c6;
+  display:inline-block;
+  text-align:center;
+  
+  padding-top:4px;
+  padding-right:0px;
+  padding-left:0px;
+  padding-bottom:0px;
+  
+  
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  min-width:600px;
+  /*width:800px;*/
+  /*max-width:920px;*/
+  
+  border:4px;
+  
+  
+  border-style: solid;
+  border-width: 5px;
+  border-color:#338833;
+
+}
+
+
+
+
+
+
+
+

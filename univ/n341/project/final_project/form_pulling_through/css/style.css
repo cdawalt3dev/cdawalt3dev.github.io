@@ -1,0 +1,708 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: 22 November 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	min-width: 250px;
+}
+
+
+
+
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aSampleTitle{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:28px;
+}
+
+
+
+
+
+.divSample{
+	display:inline-block;
+	margin: 15px 15px;
+	
+	padding: 15px;
+	
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+}
+
+
+.divSampleWide{
+	display:inline-block;
+	margin: 24px 15px;
+	
+	padding: 12px;
+	
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+	
+	
+	/*
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	*/
+	
+	
+	margin-left:auto;
+	margin-right:auto;
+	/*text-align:center;*/
+	/*width:95%;*/
+	min-width:400px;
+	
+	
+}
+
+
+
+.divSampleSmall{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 8px;
+	border-radius: 24px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+
+
+
+.divOutter{
+	
+	display:inline-flex; 
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.divInner{
+	display:inline-block; 
+}
+
+
+.divWideRow{
+	
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:100%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+???
+.&gt{
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+}
+*/
+
+
+
+
+
+
+
+
+.txtTheme{
+	
+	/*these properties help the button to take inspiration from the theme in font size and font choice.*/
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	/* match buttons in height. */
+	height:30px;
+	
+	width:100%;
+  
+}
+.txtThemeSmaller{
+	
+	/*these properties help the button to take inspiration from the theme in font size and font choice.*/
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	/* match buttons in height. */
+	height:30px;
+	
+	width:300px;
+  
+}
+.txtThemeSmallest{
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	/* match buttons in height. */
+	height:30px;
+	
+	width:150px;
+  
+}
+
+
+
+
+
+
+
+
+#txtVerification{
+	
+	margin: 3px 3px 3px 3px;
+	/*these properties help the button to take inspiration from the theme in font size and font choice.*/
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	/* match buttons in height. */
+	height:30px;
+	
+	width:150px;
+	
+}
+
+#txtDateEstimate{
+	margin:3px 3px 3px 3px;
+	
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	/* match buttons in height. */
+	height:30px;
+	
+	width:150px;
+	
+	position: relative; z-index: 100000;
+	
+	
+}
+
+
+
+
+
+.aTheme{
+	font : inherit;
+	/*color : inherit;*/
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	
+	color:#064100;
+	/*font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-size:20px;
+}
+
+
+.aThemeSmall{
+	font : inherit;
+	/*color : inherit;*/
+	text-align : left;
+	outline : none;
+	cursor : text;
+	
+	
+	color:#064100;
+	/*font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-size:16px;
+}
+
+
+
+
+
+#btnReset{
+	margin:3px 20px 3px 20px;
+	height:40px;
+}
+#btnSubmit{
+	margin:3px 20px 3px 20px;
+	height:40px;
+}
+
+
+#divCostEstimate{
+	margin:15px 5px 0px 5px;
+	
+}
+
+
+
+
+
+
+#selCategory{
+	
+	margin:3px 3px 3px 3px;
+	
+	/*
+	font : inherit;
+	color : inherit;
+	*/
+	text-align : left;
+	outline : none;
+	/*cursor : text;*/
+	
+	/*
+	height:30px;
+	*/
+	
+	
+	/*position: relative;*/
+	z-index: 100000;
+	
+	
+	width:180px;
+	display:inline-block;
+	
+	
+	
+}
+
+#liCategory{
+	position: relative;
+	z-index: 100000;
+	
+}
+#ulCategory{
+	position: relative;
+	z-index: 100000;
+	
+}
+
+
+
+
+.imgSample{
+	margin: 5px 3px 5px 3px;
+	text-align:center;
+	vertical-align:central;
+}
+
+
+
+
+
+
+
+
+
+
+.tdNoBorder{
+	border:0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+
+.divBreaker{
+	display:none;	
+	
+}
+.tablePassive{
+	display:block; 	
+}
+
+
+	/*background-color: #FFFFFF;*/
+
+/*@media all and (max-width: 1000px) {*/
+
+
+/*screen width under 780 pixels.*/
+@media (min-width : 0px) and (max-width : 780px){
+	
+.tableSample{
+	
+	/*COLOR-CODED SIZE DEBUG*/
+	/*background-color: #FF00FF;*/
+	width:95%;	
+	
+}
+
+/*tables will now allow themselves to be centered.   the default "display:block" seen above outside of sizing will make a table feel compelled to lean left.*/
+.tablePassive{
+	display:inline-block;
+}
+
+.divBreaker{
+	display:block;	
+	
+}
+
+.divSample{
+	width:95%;
+	margin:0px;
+}
+	
+
+.td1stFloatRight{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+.td1stFloatLeft{
+	width:95%;	
+	text-align:left;
+	display:block;
+}
+.td1stFloatCenter{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+.td2ndFloatRight{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+.td2ndFloatLeft{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+.td2ndFloatCenter{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+.tdWide{
+	width:95%;	
+	text-align:center;
+	display:block;
+}
+
+
+.txtAreaTheme{
+	
+	height:300px;
+	width:92%;
+	display:block;
+	
+}
+
+.txtAreaThemeBig{
+	
+	height:400px;
+	width:92%;
+	display:block;
+	
+}
+.txtThemeSmaller{
+	height:30px;
+	width:180px;
+	
+	display:block;
+}
+
+
+#txtCategory{
+	
+	display:block;
+	align-self:center;
+	float:none;
+}
+
+
+/*prioritize this font adjustment over what JQueryUI suggests.*/
+.ui-checkboxradio-label{
+	font-size: 13px !important;
+}
+
+}
+
+/*screen width between 780 and 1000.*/
+@media (min-width : 780px) and (max-width : 1000px){
+	
+	
+	
+.tableSample{
+	
+	/*COLOR-CODED SIZE DEBUG*/
+	/*background-color: #FFFFFF;*/
+	
+	width:600px;	
+	
+}
+.td1stFloatRight{
+	width:150px;
+	text-align:right;
+}
+.td1stFloatLeft{
+	width:150px;
+	text-align:left;
+}
+.td1stFloatCenter{
+	width:150px;
+	text-align:center;
+}
+.td2ndFloatRight{
+	width:450px;
+	text-align:right;
+}
+.td2ndFloatLeft{
+	width:450px;
+	text-align:left;
+}
+.td2ndFloatCenter{
+	width:450px;
+	text-align:center;
+}
+.tdWide{
+	width:450px;
+	text-align:center;
+}
+
+
+.txtAreaTheme{
+	
+	height:300px;
+	width:480px;
+	
+}
+
+.txtAreaThemeBig{
+	
+	height:400px;
+	width:480px;
+	
+}
+
+	
+	
+	
+
+
+}
+/*screen width over 1000.*/
+@media (min-width : 1000px){
+
+.tableSample{
+	
+	/*COLOR-CODED SIZE DEBUG*/
+	/*background-color: #FF0000;*/
+	width:800px;	
+	
+}
+.td1stFloatRight{
+	width:200px;
+	text-align:right;
+}
+.td1stFloatLeft{
+	width:200px;
+	text-align:left;
+}
+.td1stFloatCenter{
+	width:200px;
+	text-align:center;
+}
+.td2ndFloatRight{
+	width:600px;
+	text-align:right;
+}
+.td2ndFloatLeft{
+	width:600px;
+	text-align:left;
+}
+.td2ndFloatCenter{
+	width:600px;
+	text-align:center;
+}
+.tdWide{
+	width:800px;
+	text-align:center;
+}
+
+
+.txtAreaTheme{
+	
+	height:300px;
+	width:650px;
+	
+}
+
+.txtAreaThemeBig{
+	
+	height:400px;
+	width:650px;
+	
+}
+
+
+}
+/* END OF SIZE ADJUSTMENTS */
+
+
+
+
+
+
+
+
+
+
+
+/*more properties indifferent to size.*/
+
+td{
+	border:3px solid #005000;
+	padding: 5px 12px 5px 12px;
+}
+
+
+.txtAreaTheme{
+	
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	/*
+	height:200px;
+	width:650px;
+	*/
+}
+
+.txtAreaThemeBig{
+	
+	font : inherit;
+	color : inherit;
+	text-align : left;
+	outline : none;
+	cursor : text;
+	/*
+	height:400px;
+	width:650px;
+	*/
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

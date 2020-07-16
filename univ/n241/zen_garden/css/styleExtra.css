@@ -1,0 +1,268 @@
+/*
+Author: Chris Dawalt
+Date Created: 2018-3-2
+*/
+
+
+*{
+    /*values are: content-box, border-box*/
+    box-sizing: border-box;
+}
+
+p{
+    text-align:left;
+    padding:6px;
+    background-color:#fff494;
+}
+
+body{
+    text-align:center;
+}
+
+
+/*Requirement 1. 5 CSS rules for classes.*/
+.pGoatSub{
+    color:#6a9b0c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.6em;
+}
+.pDescription{
+    color:#ff4490;
+    font-size:1.4em;
+}
+.generalList{
+    color:#a970b1;
+    font-size:1.45em;
+    font-style:italic;
+    display:inline-block;
+    text-align:left;
+    background-color:#fbed78;
+    margin:5px;
+}
+.pNote{
+    color:#00b4d5;
+    font-size:1.42em;
+}
+.pEndNote{
+    color:#dc0000;
+    font-size:1.4em;
+}
+
+/*Requirement 2. 5 CSS rules for ID's.*/
+#h2Goat{
+    background-color:#acffa3;
+    color:#8bb387;
+    padding:8px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:3.2em;
+    margin-bottom:0;
+    
+}
+#h2Microsoft{
+    background-color:#a3d7ff;
+    color:#0078d7;
+    padding:8px;
+    font-size:3.0em;
+    margin-bottom:0;
+    
+}
+#h2Octopus{
+    background-color:#ffdba3;
+    color:#f99200;
+    padding:8px;
+    font-size:3.5em;
+    margin-bottom:0;
+}
+
+/*Requirement 3. CSS rules for h1, h2, h3, h4, h5, and h6 elements.*/
+h1, h2, h3{
+    background-color:#e8e7a1;
+    color:#837500;
+    padding:8px;
+}
+h4, h5, h6{
+    background-color:#e0e0e0;
+    color:#808080;
+    padding:4px;
+}
+h1{
+    font-size:4.3em;
+    font-weight:bold;
+    margin-top:24px;
+}
+h2{
+    font-size:3.8em;
+    margin-top:16px;
+
+}
+h3{
+    font-size:3.3em;
+    margin-top:13px;
+
+}
+h4{
+    font-size:2.7em;
+    margin-top:10px;
+
+}
+h5{
+    font-size:2.2em;
+    margin-top:7px;
+}
+h6{
+    font-size:1.7em;
+    margin-top:4px;
+
+}
+
+/*Requirement 4. CSS rules for a, a:hover, and a:visited*/
+a, a:link{    /*normal.*/
+    color:#00cb77;
+}
+a:hover{
+    background-color:#deffd5;
+    color:#27b700;
+}
+a:active{
+    background-color:#deffd5;
+    color:#27b700;
+}
+a:visited{
+    color:#008c52;
+}
+/*Requirement 5. CSS rule for the header element.*/
+header{
+    background-color:#f3e077;
+    border-bottom:5px solid #bfa200;
+    min-height:120px;
+    margin-bottom:14px;
+}
+/*Requirement 6. CSS rule for the footer element.*/
+footer{
+    background-color:#f3e077;
+    border-top:5px solid #bfa200;
+    min-height:80px;
+    margin-top:12px;
+}
+
+/*Requirement 7. CSS rule(s) for button element.*/
+button{
+    font-size:1.6em;   
+    background-color:#0000c3;
+    border-color:#a3a3ff;
+    border-width:4px;
+    color:#a3a3ff;
+    padding:10px;
+    margin:12px;
+    min-height:110px;
+    min-width:900px;
+}
+button:active{
+    background-color:#a3a3ff;
+    border-color:#0000c3;
+    border-width:4px;
+    color:#0000c3;
+    font-size:1.8em;
+    padding:5px;
+    min-height:110px;
+    min-width:900px;
+}
+/*Requirement 8. CSS Rule for the div element.*/
+div{
+    background-color:#fffcb7;
+    
+    border-width:30px;
+    border-style:solid;
+    border-color:#686400;
+}
+/*Requirement 9. CSS Rule for the ul element and li child elements.*/
+ul{
+    font-family: Tahoma, Geneva, sans-serif;
+    margin-left:40px;
+}
+ul li{
+    padding:3px;
+}
+ul li:before {
+    margin-right: 10px;
+    content: "*";
+    font-weight:bold;
+}
+
+.generalList a:link{    /*normal.*/
+    color:#b300cb;
+}
+.generalList a:hover{
+    background-color:#fad5ff;
+    color:#a200b7;
+}
+.generalList a:active{
+    background-color:#fad5ff;
+    color:#a200b7;
+}
+.generalList a:visited{
+    color:#7c008c;
+}
+
+
+
+
+
+ 
+ 
+/*Requirement 10. CSS Rule for the ol element and li child elements.*/
+ol{
+    font-family: Trebuchet, Arial, sans-serif;
+    margin-left:25px;
+}
+ol li{
+   counter-increment: item;
+   margin:3px;
+}
+ol li:before {
+   margin-right: 10px;
+   content: counter(item) ".";
+   font-weight:bold;
+}
+/*Requirement 11. CSS Rule for the table, td, and th elements*/
+table{
+    background-color:#f3ef8f;
+    /*top right bottom left*/
+    margin:24px 12px 24px 12px;
+}
+td, th{
+    border:5px solid #bfa200;
+    width:16%;
+}
+th{
+    color:#8f8a00;
+    background-color:#ece764;
+    padding:8px;
+    font-size:1.8em;
+    font-weight:bold;
+}
+td{
+    color:#7b7700;
+    padding:4px;
+    font-size:1.4em;
+}
+
+img{
+    border:4px solid #647fd9;
+    border-style:outset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

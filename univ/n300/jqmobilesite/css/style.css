@@ -1,0 +1,494 @@
+/*
+ Name: style.css
+ Purpose: Stores default CSS information
+ Author: Chris Dawalt
+ Created: 2018-1-25
+*/
+
+
+/* CSS: 
+    use ">" to link immediate children.
+    use " " to link all children (yes, that is a space).
+*/
+
+
+
+
+header.headerJQMobileSite{
+
+    /* top, right, bottom, left*/
+    margin: 64px 0px 5px 0px;
+
+    font-size:50px;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+/*a:link{
+}
+a:visited{
+}
+a:hover{
+}
+a:active{
+}
+*/
+
+
+
+div.divTextArea{
+    padding:20px 30px 20px 30px;
+
+}
+
+
+div.divSemiContent{
+    width:98%;
+
+}
+
+/*"divFlexBoxContainerHorStackable" is different on mobile devices.*/
+div.divFlexBoxContainerHor, div.divFlexBoxContainerHorStackable{
+    
+    width:100%;
+    -moz-box-orient: horizontal;
+    display: -moz-box;
+    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    -o-box-orient: horizontal;
+    display: -o-box;
+    
+    
+    
+}
+
+
+
+
+div.divFlexBoxContainerVer{
+    
+    -moz-box-orient: vertical;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -o-box-orient: vertical;
+    display: -o-box;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+}
+
+
+div.divFlexBoxRow{
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    
+}
+div.divFlexBoxRow:last-child{
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+}
+
+
+div.divFlexBoxRowThin{
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+    
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    
+}
+div.divFlexBoxRowThin:last-child{
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+} 
+
+
+div.divFlexBoxColLeft{
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    width: 0px;
+    -moz-box-flex: 0.35;
+    -webkit-box-flex: 0.35;
+    -o-box-flex: 0.35;
+    
+    display:flex;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    
+    padding:4px 8px 4px 8px;
+    
+} 
+
+
+div.divFlexBoxColRight{
+    white-space: nowrap;
+    width: 0px;
+    -moz-box-flex: 0.65;
+    -webkit-box-flex: 0.65;
+    -o-box-flex: 0.65;
+    
+    
+    display:flex;
+    align-items: center;
+    
+    
+    padding:4px 8px 4px 8px;
+    
+} 
+
+
+
+
+
+
+div.divButtonGroup{
+    display:flex;
+    margin: 0px 4px 0px 4px;
+    padding:6px 0px 6px 0px;
+    min-height:2.2em;
+    text-align:center;
+    
+}
+
+.divFlexBoxCenter{
+    display:flex;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+input{
+    font-size:20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    min-width:0;
+    width:100%;
+    height:28px;
+}
+
+
+input.inputRange{
+    display:inline-block;
+    width:80%;
+    
+    height: 24px;
+    
+    /*transparent.*/
+    background: rgba(0, 0, 0, 0); 
+    
+    outline: none;
+    opacity: 1.0;
+    
+    float:left;
+    
+}
+
+p.pRangeValue{
+    float:right;
+}
+
+
+button{
+
+}
+button.buttonForm{
+    display:inline-block;
+    
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    
+    min-width:80px;
+    margin:4px;
+    padding:2px;
+    
+}
+.ui-btn {
+	font-size:16px;
+	/*margin:.5em 0;*/
+	/*padding:.7em 1em;*/
+	display:block;
+	position:relative;
+	text-align:center;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+    /*display:inline-block;*/
+}
+.ui-mobile label, .ui-controlgroup-label, .ui-controlgroup {
+
+	/*display:block;*/
+	margin:0 0 0 0;
+    /*padding:0 0 0 0;*/
+    
+    /*border-radius: 1px;*/
+    display:inline-block;
+    /*font-size:10px;*/
+}
+.ui-controlgroup,fieldset.ui-controlgroup {
+    margin: 0px;
+}
+
+
+
+
+input{
+    display:inline-block;
+}
+
+
+legend.legendPush{
+    padding:0 10px 0 0;
+
+}
+
+.ui-btn{
+    padding:4px 7px 4px 7px;
+}
+
+
+div.ui-checkbox{
+
+
+}
+
+.ui-checkbox-off, .ui-checkbox-on{
+    
+    min-height:2.1em;
+    padding:4px 7px 4px 32px;
+    font-size:17px;
+    display:inline-block;
+    
+    
+} /*.ui-mini , label.ui-btn, label.ui-checkbox-on, label.ui-checkbox-off*/
+label.ui-checkbox-on, label.ui-checkbox-off{ 
+     
+     /*width:300px;*/
+     padding:6px 16px 6px 32px;
+     display:inline-block;
+     
+     
+    font-size:18px;
+}
+
+.ui-mini{
+    margin:6px 6px 2px 6px;
+    font-size:17px;
+}
+
+
+
+
+.ui-input-text input,.ui-input-search input {
+	margin:0;
+	text-align:left;
+	border:0;
+	background:transparent none;
+	-webkit-appearance:none;
+	-webkit-border-radius:inherit;
+	border-radius:inherit;
+    
+    font-size:18px;
+    min-height:1.9em;
+    padding:0px 6px 0px 6px;
+    margin:0;
+    display:inline-block;
+    text-shadow:none;
+}
+
+strong, legend, input, a, p, label, pre, .ui-input-text{
+    padding:0;
+    margin:0;
+    display:inline-block;
+    text-shadow:none;
+    font-size:18px;
+}
+
+p.pBottomMargin{
+    margin-bottom:10px;
+}
+
+
+/*
+input.ui-slider-input {
+	display:block;
+	float:left;
+	font-size:14px;
+	font-weight:700;
+	margin:0;
+	padding:4px;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	border-width:1px;
+	border-style:solid;
+	outline:0;
+	text-align:center;
+	vertical-align:text-bottom;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box
+}
+*/
+
+input.ui-slider-input , .ui-body-a, .ui-slider-input{
+font-size:18px;
+}
+
+
+.ui-mobile label,
+div.ui-controlgroup-label {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+input.ui-slider-input{
+    min-width:60px;
+    padding:6px 8px 6px 8px;
+}
+
+.ui-slider-track {
+	position:relative;
+	overflow:visible;
+	border-width:1px;
+	border-style:solid;
+	height:20px;
+    
+	margin:0 15px 0 88px;
+    /*
+    display:inline-block;
+    min-width:300px;
+    */
+	/*top:6px*/
+}
+
+
+
+button.ui-btn{
+
+    display:inline-block;
+    width:auto;
+    min-width:80px;
+    padding:4px 7px 4px 7px;
+    
+    margin:2px 5px 2px 5px;
+}
+
+
+.ui-input-text input, input{
+    width:170px;
+    min-width:170px;
+}
+
+
+.ui-input-text{
+
+    border-radius: 12px;
+}
+
+
+div.divOutput{
+    border-width: 1px 1px 1px 1px;
+    padding:5px 6px 2px 6px;
+    min-width:240px;
+    min-height:1.9em;
+    border-style: solid;
+    border-color: #005000;
+    border-radius: 12px;
+    vertical-align:middle;
+    display:inline-block;
+}
+
+div.divBorder{
+
+
+    border-style: solid;
+    border-color: #005000;
+    border-radius: 12px;
+    border-width: 1px 1px 1px 1px;
+
+}
+
+
+.ui-radio>input{
+    display:none;
+}
+.ui-checkbox>input
+{
+    display:none;
+}
+
+p.pSubHeader{
+    margin:0;
+    padding:6px 2px 8px 2px;
+    font-size:24px;
+    font-weight: bold;
+}
+
+
+
+div.divHidden{
+    display:none !important;
+}
+
+
+div.divError{
+    display:flex;
+    background-color:rgba(0, 0, 0, 0.0);
+    min-height:1.7em;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+p.pError{
+    color:#9f0000;
+    font-size:16px;
+    font-weight: bold;
+}
+
+a.aBack.ui-link{
+    padding:9px 14px 9px 14px;
+    background-color:#006600;
+    color:#00AF00;
+}
+
+
+
+

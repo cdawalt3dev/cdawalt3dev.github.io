@@ -1,0 +1,112 @@
+<!doctype html>
+
+<!--
+ Filename: multiwrites_docwrite.html
+ Written by: Chris Dawalt (CPD)
+ Purpose: Write to the page using document.write(...)
+ Date: 4 September 2016
+ Modification history:
+ Original build.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <title>Multiwrites: write</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/ico_write.png" />
+
+	<link rel="stylesheet" href="css/style.css">
+    
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+    
+    <!--
+    NOTE: Javascript will be loaded by an inner HTML page , "multiwrites_docwrite_base.html" instead.  This way, none of the rest of this page is removed by calls to document.write.
+	<script src="js/javascript_docwrite.js"></script>
+	-->
+    
+</head>
+
+
+    
+    
+    
+<body>
+
+	<header>
+		<a id="aTitle">Multiwrites: document.write</a>
+        <br/><br/>
+        
+        <div id="divNavigation">
+        <a id="aNavigation" class="aSample">Navigation: &nbsp;</a>
+        </div>
+        
+        
+        
+        <img class="imgMultiHere" alt="document.write " src="../../img/ico_write_here.png" width="32" height="32">
+        
+        <a class="aLinkPlain" href="multiwrites_textcontents.html">
+        <img class="imgMulti" alt=".textContents " src="../../img/ico_text.png" width="32" height="32"></a>
+        
+        <a class="aLinkPlain" href="multiwrites_innerhtml.html">
+        <img class="imgMulti" alt=".innerHTML " src="../../img/ico_html.png" width="32" height="32"></a>
+        
+        
+        
+        
+        
+        
+        
+        <br/>
+		<a id="aBack" class="aLink" href="../../index.html">Back</a>
+        
+        
+    </header>
+
+
+        <br/>
+        <br/>
+        <br/>
+        
+        <!-- unique to this file.  Puts "multiwrites_dowrite_bare.html" into a window on this page.  When that page calls "document.write", it will not wipe this page of elements.
+		-->
+    <div> 
+        <object id="obj" type="text/html" data="multiwrites_docwrite_bare.html" width="400" height="200"  >
+        </object>
+     </div>
+
+
+
+
+    
+    
+
+</body>
+
+</html>
+    
+<!--
+Reference:
+
+http://stackoverflow.com/questions/8865458/how-to-vertically-center-text-with-css
+~center text vertically
+
+http://www.w3schools.com/css/css_link.asp
+~remove a link's effects, such as underline or color change.
+
+http://stackoverflow.com/questions/3576605/prevent-linebreak-after-div
+~stop linebreaks and force a div or image to stay left-wards
+
+http://stackoverflow.com/questions/21311299/nodevalue-vs-innerhtml-and-textcontent-how-to-choose
+https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+~key differences between innerHTML and textContents
+
+http://catcode.com/linkguide/clickimage.html
+~make images clickable (surround in a <a> tag, remove any space or line-break between the end of the image tag and the </a> to stop the small space between elements from counting as part of the link.
+
+http://stackoverflow.com/questions/18145273/how-to-load-an-external-webpage-into-a-div-of-a-html-page
+~load an external webpage into a portion of the current, denoted by an <object> tag.  Within a <div> tag works well.
+-->
+    

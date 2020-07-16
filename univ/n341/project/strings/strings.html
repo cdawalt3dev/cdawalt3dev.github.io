@@ -1,0 +1,235 @@
+<!doctype html>
+
+<!--
+ Filename: strings.html
+ Written by: Chris Dawalt
+ Creation Date: September 28 2016
+ Purpose: Demonstrate the use of several String utilities to modify a base string in 12 different ways.
+ Modification History:
+ Original Build.
+ 
+ ~See note below on where to find the seven String operations.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Strings</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_strings.png" />
+    
+    
+    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+	
+    <a id="aTitle" class="aSample"> Strings </a>
+    
+    <br/>
+	
+	
+    
+    <div class="divWideRow">
+        <div class="divSample">
+        
+        	<!-- Output is stored in this nested "Div".  Other divs are needed to center / decorate it properly.-->
+        	<div class="divOutter">
+                
+                <table>
+                	<tr>
+                    	<th>
+                        	Mod 
+                        </th>
+                        <th class="tableRowLonger">
+                        	<a > Result </a>
+                        </th>
+                    </tr>
+                    
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Original (trimmed) </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput0" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                	<tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> All Lowercase </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput1" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                	<tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> All Uppercase </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput2" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Alternating Letter Case </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput3" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Capitalize All Words </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput4" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> 1337 </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput5" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Scrambled Letters </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput6" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Scrambled Words </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput7" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Scrambled Both </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput8" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Shift ASCII values </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput9" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Remove Spaces </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput10" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Pirate Apostrophe </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput11" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    <tr >
+                    	<td >
+                        	<a class="aSampleTextMod"> Pirate Apostrophe + </a>
+                        </td>
+                        <td class="tableRowLonger">
+                        	<a id="aOutput12" class="aSampleTextMod" > </a>
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                    
+                	
+                </table>
+                
+        	</div>
+        </div>
+    </div>
+    
+    
+    
+	<div id="divEnterByPrompt">
+    	<button id="btnEnterByPrompt" type="button" class="btnSample">Enter Again</button>
+    </div>
+    
+    <br/>
+    <br/>
+    
+	<a class="aLink" href="../../index.html">Back</a>
+	
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+
+NOTE:
+~methods "replaceAllInStringPreserveCase", called from text mod method "pirateApostrophePlus", and "removeConsecutiveSpaces" demonstrate use of "indexOf", "charAt", and "substring".
+~method "getStringSafe" makes use of "trim" on the base string before deviations are made.  "removeConsecutiveSpaces" is also applied to the base string before deviations are made.
+~"toUpperCase" & "toLowerCase" are used in their aptly named deviations.
+~replaceAllInString (and ...IgnoreCase) use "replace" with a regex to apply to all occurences within a string instead of only the first.
+
+~Replacement is also done by building a new string the same size as a section to be edited, copying chars that do not change, changing those that do, and appending to the deviation's result in progress (replaceAllInStringPreserveCase).  Or, it may build the entire result string one character at a time (shiftASCII).  Either way, this is less expensive than appending each char to an eventually large string, since concatenation generates a modified copy of the entire string.
+~For consistency, all deviation methods accept two parameters, the base string and the base string split into an array of words (separated by spaces in the base), regardless of whether the array of words is needed.
+
+
+
+
+Reference:
+https://www.codecademy.com/en/forum_questions/5062e85ea7dffd000208cf85
+~good to confirm how "Math.random" works
+
+http://stackoverflow.com/questions/9334636/javascript-yes-no-alert
+~confirm(...) shows an "Okay" "Cancel" message.
+
+http://stackoverflow.com/questions/1144783/replacing-all-occurrences-of-a-string-in-javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+~example and explanation of RegExp for finding all occurrences of a string in another string.
+
+http://stackoverflow.com/questions/3145030/convert-integer-into-its-character-equivalent-in-javascript
+how to convert ASCII values to characters
+
+http://www.w3schools.com/jsref/jsref_indexof.asp
+~order of parameters (search text, index to start looking from)
+
+http://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript
+
+
+-->

@@ -1,0 +1,459 @@
+<!doctype html>
+
+<!--
+ Filename: form_prototype.html
+ Written by: Chris Dawalt
+ Creation Date: 22 November 2016
+ Purpose: 
+ Modification History:
+ Original Build.
+ 
+ NOTICE: slight issue with the JQuery UI "Le Frog" theme's checkbox.  It has been fixed across the files theme/jquery-us.css and theme/jquery-ui.js, search for "CPD FIX" (no quotes) to see the fix.
+ 
+ Also, the category row of the form doubles as having a "menu" JQuery UI item and a "autocomplete" JQuery UI item.  The menu is on the left, and the textbox nearby will try to suggest terms anywhere in the list related to what has been typed.
+ 
+  Has 3 different size modes:
+ *screen width under 780 pixels.
+ *screen width between 780 and 1000.
+ *screen width over 1000
+ 
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Pulling Through</title>
+	
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="theme/jquery-ui.css" rel="stylesheet">
+    <link href="css/form_prototype.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../img/ico_final_project_prototype_plus.png" />
+    
+    
+    <!-- This script can be included before the body without any side effects.  Custom page script, javscript.js, knows to execute after the page has loaded. -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    
+	<script type="text/javascript" src="js/javascript.js"> </script>
+    <!-- END OF PRE-SCRIPT -->
+    
+</head>
+
+<body >
+	
+    <div class="divWideRow">
+    	<a id = "aLine1" class="aSampleTitle"> Proposal Form </a>
+    </div>
+    
+    <br/><br/><br/>
+    
+    <div class="divWideRow">
+        <div class="divSample">
+        
+        	
+            <form id="frmProposal" method="post" enctype="text/plain">
+                
+                <table class="tableSample">
+                	<tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Login Credentials:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft" >
+                        	
+                            <table class="tablePassive" >
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtUsername"> Username: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                    <input name="Username" id="txtUsername" class="txtThemeSmaller" type="text" value="" autofocus required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtPassword"> Password: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                        <input name="Password" id="txtPassword" class="txtThemeSmaller" type="password" value="" required>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Project Title (optional):
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	<input name="Title" id="txtTitle" class="txtTheme" type="text" value="">
+							
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Contact email:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	<input name="ContactEmail" id="txtContactEmail" class="txtTheme" type="email" value="" placeholder="name@site.xxx"  >
+                			
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Telephone number:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	
+                        	<input name="TelephoneNumber" id="txtTelephoneNumber" class="txtTheme" type="tel" value="" placeholder="(###)###-####" >
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Type of project:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            
+                            <div id="divRadTypeOfProject">
+                                <input type="radio" id="radUti" class="radTypeOfProject" name="TypeOfProject" value="Utility" required><label for="radUti">Utility</label>
+                                <input type="radio" id="radInd" class="radTypeOfProject" name="TypeOfProject" value="Industrial" required><label for="radInd">Industrial</label>
+                                <input type="radio" id="radSol" class="radTypeOfProject" name="TypeOfProject" value="Solution" required><label for="radSol">Solution</label>
+                            </div>
+                            
+                            
+                        	
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Modes of sale:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            <div id="divSaleModes">
+                           		<input type="checkbox" name="SaleModes" id="chkInd" value="Individual"><label for="chkInd">Individual</label>
+                                <input type="checkbox" name="SaleModes" id="chkLis" value="Liscense"><label for="chkLis">Liscense</label>
+                                <input type="checkbox" name="SaleModes" id="chkTest" value="Mass"><label for="chkTest">Mass</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Category:
+                            </a>
+                            <br/>
+                        	<a class="aThemeSmall" >
+                            	(Type for autocomplete)
+                            </a>
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            <ul id="selCategory">
+                                <li class="liCategory"><div>Light</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>Word Processing</div></li>
+                                        <li class="liCategory"><div>Mobile Game</div></li>
+                                        <li class="liCategory"><div>Media Playback</div></li>
+                                        <li class="liCategory"><div>Web Plugin</div></li>
+                                        <li class="liCategory"><div>Client Data App</div></li>
+                                        <li class="liCategory"><div>GPS</div></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Moderate</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>3D Rendering</div></li>
+                                        <li class="liCategory"><div>Software Development Kit</div></li>
+                                        <li class="liCategory"><div>Desktop Game</div></li>
+                                        <li class="liCategory"><div>Console Game</div></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Specialized</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>Database Communication</div></li>
+                                        <li class="liCategory"><div>Debugging Apparatus</div></li>
+                                        <li class="liCategory"><div>Interactive Manufacturing</div></li>
+                                        <li class="liCategory"><div>Media Development</div></li>
+                                        <li class="liCategory"><div>Mass Data Mining</div></li>
+                                        <li class="liCategory"><div>Artificial Intelligence</div></li>
+                                   		
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Not Listed</div>
+                                   
+                                </li>
+                            </ul>
+                            
+                            
+                            <div class="divBreaker">
+                            	<br/>
+                            </div>
+                            
+                            
+ 							<input name="ProjectCategory" id="txtCategory" class="txtThemeSmaller" type="text" value="" required>
+                            
+                            
+                            
+                        </td>
+                    </tr>
+					<tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Cost Estimate:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+    						<div id="divCostEstimate"></div>
+                            
+                            <br/>
+                            
+                            
+                            
+                            
+                            
+                            
+                            <table class="tablePassive" >
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtEstimateLow"> Min: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                    	<input name="CostEstimateLow" id="txtEstimateLow" class="txtThemeSmallest" type="text" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtEstimateHigh"> Max: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                        <input name="CostEstimateHigh" id="txtEstimateHigh" class="txtThemeSmallest" type="text" value="" required>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                            
+                            
+                            
+                            
+                            
+                        	
+							
+                            
+                            
+                            
+                            
+                        </td>
+                    </tr>
+
+
+					<tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Date Estimate:
+                            </a>
+                        </td>
+                        <td class="td2ndFloatCenter">
+                            <input name="DateEstimate" id="txtDateEstimate" class="txtThemeSmallest" type="text" required>
+                        </td>
+                    </tr>
+                    
+                    <!--
+                    <tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Verification:
+                            </a>
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	<img class="imgSample" alt="please load images" src="../../../img/homemadecapcha.png">
+                            <input name="Verification" id="txtVerification" type="text" required>
+                        </td>
+                    </tr>
+                    -->
+                    
+      				<tr>
+                    	<td class="tdWide" colspan="2">
+                        <a class="aTheme">
+                        	You may describe your idea further in the alloted space.
+                        </a>
+                    	
+                        <textarea id="txtExtra" class="txtAreaTheme">
+           				</textarea>
+                        
+                    	</td>
+                    </tr>
+                    
+                	<tr>
+                    	<td class="tdWide" colspan="2">
+                        
+                        <!-- action="mailto:proposal@brownstonesoftware.com"-->
+                    	<button id="btnReset" class="btnTheme" type="reset">Reset </button>
+                    	<button id="btnSubmit" class="btnTheme" type="submit">Submit </button>
+                        
+                        
+                    	</td>
+                    </tr>
+                </table>
+            </form>
+            
+            <br/><br/><br/>
+    
+    		<a class="aTheme">
+            	Interpretation Debug:
+            </a>
+            <br/>
+            <textarea id="txtOutput" class="txtAreaThemeBig">
+            
+            </textarea>
+			
+        </div>
+    </div>
+    
+    
+    <br/><br/><br/>
+    
+    
+	<a class="aLink" href="../final_project.html">Back</a>
+	
+    
+    <!-- This script depends on the page having already loaded, and lacks protections against early loading.  Loading JQueryUI or dependents too early will cause DOM elements to be incomplete / missing, forcing JQueryUI & dependents to fail. -->
+    <script type="text/javascript" src="theme/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/form_prototype.js"></script>
+	<!--  END OF POST SCRIPT-->
+</body>
+
+
+
+
+</html>
+
+
+<!--
+Reference:
+
+http://stackoverflow.com/questions/6802085/jquery-ui-styled-text-input-box
+~A good way to help UI untouched by JQuery-UI (such as an ordinary "input" tag's textbox) take hints from the theme.
+
+http://stackoverflow.com/questions/17605976/how-to-make-one-td-span-both-columns-in-a-two-column-table
+~make a cell span multiple rows.
+
+http://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
+~ "[name='RADIOGROUP']" selector is helpful for covering all radio buttons in a group
+
+https://api.jqueryui.com/button/
+~the usual way to edit JQuery properties is something like
+ $( "SELECTOR" ).button( "option", "PROPERTY", VALUE );
+
+http://stackoverflow.com/questions/7389303/programatically-uncheck-jquery-ui-checkbox-button
+~call  $("SELECTOR").button( "refresh" )  to apply any changes to attributes outside of .button( "option", ...).
+ Such as, say  $("SELECTOR").prop("checked", true)  occurs.  Follow it up with  $("SELECTOR").button.("refresh")
+ to update the appearance.
+
+https://api.jquery.com/change/
+
+http://stackoverflow.com/questions/13766015/is-it-possible-to-configure-a-required-field-to-ignore-white-space
+http://www.w3schools.com/TAGs/att_input_type.asp
+~make a field show characters as asterisks (type="password")
+
+http://www.w3schools.com/html/html_form_input_types.asp
+http://www.w3schools.com/TAgs/att_textarea_readonly.asp
+http://www.w3schools.com/TAgs/att_input_required.asp
+http://stackoverflow.com/questions/8287779/html5-how-to-use-the-required-attribute-with-a-radio-input-field
+http://stackoverflow.com/questions/8222970/html-5-require-either-input-fields
+
+http://stackoverflow.com/questions/2689658/reset-particular-input-element-in-a-html-form
+http://stackoverflow.com/questions/12529827/reset-only-a-fieldset-within-a-form-and-keep-all-other-values
+~have more control over what a reset button does
+
+http://www.w3schools.com/cssref/pr_pos_z-index.asp
+http://stackoverflow.com/questions/8201855/cant-change-z-index-with-jquery
+http://stackoverflow.com/questions/22513291/jquery-datepicker-shows-up-behind-other-regular-page-elements
+http://stackoverflow.com/questions/7033420/jquery-date-picker-z-index-issue
+~the datepicker attached to text boxes should not show up behind other elements!
+
+
+http://www.w3schools.com/js/js_validation.asp
+http://www.girliemac.com/blog/2012/11/21/html5-form-validation/
+http://stackoverflow.com/questions/5272433/html5-form-required-attribute-set-custom-validation-message
+http://stackoverflow.com/questions/21589445/jquery-on-vs-bind-for-invalid-event-type
+http://stackoverflow.com/questions/7872047/how-to-set-a-default-text-if-a-input-text-is-empty
+http://stackoverflow.com/questions/10361460/how-can-i-change-or-remove-html5-form-validation-default-error-messages
+
+http://www.htmlgoodies.com/html5/tutorials/whats-new-in-html5-forms-email-url-and-telephone-input-types.html#fbid=SZgqGoNssjs
+http://stackoverflow.com/questions/4057702/jquery-select-the-element-that-called-the-function
+
+
+http://api.jqueryui.com/datepicker/
+http://stackoverflow.com/questions/14358021/jquery-ui-slider-detect-slider-handle-drag-drop-event
+
+https://api.jqueryui.com/slider/
+http://stackoverflow.com/questions/596467/how-do-i-convert-a-float-number-to-a-whole-number-in-javascript
+http://stackoverflow.com/questions/6655754/finding-the-number-of-digits-of-an-integer
+http://stackoverflow.com/questions/11832914/round-to-at-most-2-decimal-places-in-javascript
+
+https://api.jquery.com/focus/
+http://stackoverflow.com/questions/13937377/get-the-selected-item
+http://api.jqueryui.com/menu/
+
+https://forum.jquery.com/topic/floats-in-jquery-ui-sliders
+
+http://stackoverflow.com/questions/1134976/how-may-i-sort-a-list-alphabetically-using-jquery
+https://api.jquery.com/all-selector/
+
+http://stackoverflow.com/questions/1710838/jquery-select-all-elements-inside-particular-parent-elements
+https://api.jquery.com/children/
+http://stackoverflow.com/questions/9382028/get-the-current-jquery-selector-string
+http://stackoverflow.com/questions/6168926/jquery-validation-how-to-make-fields-red
+
+http://stackoverflow.com/questions/2457032/jquery-validation-change-default-error-message
+!
+
+
+http://stackoverflow.com/questions/8512111/jquery-is-it-possible-to-select-elements-with-only-one-class-from-among-element
+http://stackoverflow.com/questions/5796654/css-rule-to-apply-only-if-element-has-both-classes
+
+http://stackoverflow.com/questions/3380580/changing-jquery-ui-button-size
+~prioritize a CSS setting.
+
+http://stackoverflow.com/questions/16201948/how-to-exclude-particular-class-name-in-css-selector
+http://stackoverflow.com/questions/17638804/can-i-use-media-in-an-if-else-kind-of-way
+http://stackoverflow.com/questions/13637106/what-are-the-best-width-ranges-for-media-queries
+~good ranges for width.
+
+
+
+
+
+-->

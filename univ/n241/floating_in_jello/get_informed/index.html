@@ -1,0 +1,154 @@
+<!doctype html>
+
+<!-- see HTML comments below the <meta ... /> tag. -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  
+<!--
+
+-->
+  
+  <title>Get Informed</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+  
+  <h1>Get Informed</h1>
+  
+  <div class="divGroupMaxWidth divGroupMaxWidthForm">
+    <h3>Form</h3>
+      
+      <div class="divTextGroup">
+        
+        <p class="pMargin">Use the following form to ask questions or to make suggestions regarding the website.</p>
+      </div>
+      
+      <br/>
+      
+      
+      
+      <!--
+      <div class="formTable">
+        <div class="divInputRow">
+          <div class="labelSpaced">
+            AAAAA AAA
+          </div>
+          <div class="inputSpaced">
+            BBB
+          </div>
+        </div>
+        <div class="divInputRow">
+          <div class="labelSpaced">
+            CCC C
+          </div>
+          <div class="inputSpaced">
+            DDD
+          </div>
+        </div>
+      </div>
+      -->
+      <form action="mailto:inbox@calculators.com" method="post" enctype="text/plain">
+      
+        <div class="divTable">
+        
+          <fieldset>
+        
+        
+          <div class="divInputRow">
+            <div class="labelSpaced">
+              <label for="inputName">Name</label>
+            </div>
+            <div class="inputSpaced">
+              <input id="inputName" name="name" type="text" placeholder="(optional)" />
+            </div>
+          </div>
+          <div class="divInputRow">
+            <div class="labelSpaced">
+              <label for="inputEmail" >Email</label>
+            </div>
+            <div class="inputSpaced">
+              <input id="inputEmail" name="email" type="email" placeholder="(optional)" />
+            </div>
+          </div>
+          <div class="divInputRow">
+            <div class="labelSpaced">
+              <label for="inputSite">Age</label>
+            </div>
+            <div class="inputSpaced">
+              <input id="inputSite" name="age" type="text" placeholder="(optional)" />
+            </div>
+          </div>
+          
+          
+          <div class="divInputRow">
+            <div class="labelSpaced">
+              <label class="labelSmall" for="selectBestChoice">Which of the following best describes you? </label>
+            </div>
+            <div class="inputSpaced">
+              <select id="selectBestChoice" name="best_choice" >
+                <option value="nochoice" selected hidden>Choose (optional)</option>
+                <option value="primary" >In Middle School/High School</option>
+                <option value="college" >In College</option>
+                <option value="none" >None of the above</option>
+              </select>
+            </div>
+          </div>
+          
+          </fieldset>
+        </div> <!--END OF divTable-->
+      
+        <div class="divInputRowLeft">
+          <fieldset>
+            <legend>Intent of Message (optional)</legend>
+            <div class="divInputSemiRow">
+                <input id="radGrpMessageIntent_Question" type="radio" name="message_intent" value="question" /><label for="radGrpMessageIntent_Question">Question</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="radGrpMessageIntent_Suggestion" type="radio" name="message_intent" value="suggestion" /><label for="radGrpMessageIntent_Suggestion">Suggestion</label>
+            </div>
+          </fieldset>
+        </div>
+        
+        <div class="divInputRowLeft">
+          <fieldset>
+            <legend>Does your question/suggestion apply to any of the following page(s) (optional)?</legend>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Premechanical" type="checkbox" name="pages" value="question" /><label for="checkboxPage_Premechanical">Pre-Mechanical</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Mechanical" type="checkbox" name="pages" value="suggestion" /><label for="checkboxPage_Mechanical">Mechanical</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Electronic" type="checkbox" name="pages" value="other" /><label for="checkboxPage_Electronic">Electronic</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Modern" type="checkbox" name="pages" value="other" /><label for="checkboxPage_Modern">Modern</label>
+            </div>
+          </fieldset>
+        </div>
+        
+        
+        
+        <br/>
+        <div class="divInputRowLeft">
+          <p>Message:</p>
+          <br/>
+          <textarea class="textareaQuestion" placeholder="Begin typing here..." ></textarea>
+        </div>
+        <div class="divInputRowRight">
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    
+  </div>  <!--End of divGroupMaxWidth-->
+  
+    
+  <br/>
+  <a class="aBackLink" style="text-align:left;" href="../index.html"> Back</a>
+  
+</body>
+</html>

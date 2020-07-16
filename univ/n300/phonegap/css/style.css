@@ -1,0 +1,43 @@
+
+
+
+
+header.headerCustom{
+    /* top, right, bottom, left*/
+    margin: 64px 0px 5px 0px;
+
+    font-size:50px;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+a, p, label{
+    display: inline-block;
+    font-size: 22px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+   	padding:20px;
+}
+
+div.divTextArea{
+	text-align:center;
+}
+
+
+
+
+
+button.buttonDownload{
+    display:inline-block;
+    
+    font-size: 30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    
+    min-width:80px;
+    width:auto;
+    margin:4px;
+    padding: 12px 26px 12px 26px;
+    
+}

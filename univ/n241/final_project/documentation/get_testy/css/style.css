@@ -1,0 +1,474 @@
+
+
+
+
+h1, h2, h3, h4{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+body{
+    background-color:#bfe5bf;
+    color:#004700;
+    font-size: 1.0em;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+
+a:link, a:visited{
+    color:#127c12;
+}
+a:hover, a:focus{
+    color:#209820;
+}
+a:active{
+    color:#4eae4e;
+}
+
+
+
+
+
+header{
+    /*display:table;*/
+    display:block;
+    position:relative;
+    
+    height:200px;
+    min-width:600px;
+    width:1100px;
+    max-width:90%;
+    /*height:100%;*/
+    /*height:200px;*/
+    margin-top:32px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    
+    background-image:url("../img/headerimage.jpg");
+    background-repeat:no-repeat;
+    background-color:#6c964c;
+    
+    /*top-left, top-right, bottom-right, bottom-left */
+    border-radius: 0px 32px 32px 0px;
+    border:6px solid #005000;
+    
+    /*white-space:nowrap;*/
+    display:flex;
+    text-align:right;
+    vertical-align:middle;
+    align-items:center;
+    flex-direction: row-reverse;
+    
+}
+
+nav{
+    display:inline-flex;
+    position:absolute;
+    bottom:10px;
+    left:14px;
+    background-color:#224422;
+    padding:6px;
+}
+
+a.aButton{
+    font-size:1.9em;
+    padding:3px;
+    padding-left:6px;
+    padding-right:6px;
+    text-decoration:none;
+    border:3px solid #005000;
+}
+
+a.aButton:link, a.aButton:visited{
+    color:#89cf89;
+    background-color:#2c802c;
+}
+a.aButton:hover, a.aButton:focus{
+    color:#b1deb1;
+    background-color:#3f9b3f;
+}
+a.aButton:active{
+    color:#ffffff;
+    background-color:#7ac37a;
+}
+
+
+a.aButtonDisabled{
+    pointer-events: none;
+    cursor: default;
+}
+
+a.aButtonDisabled:link, a.aButtonDisabled:visited, a.aButtonDisabled:hover, a.aButtonDisabled:focus, a.aButtonDisabled:active{
+    color:#798877;
+    background-color:#004400;
+}
+
+
+
+
+
+
+a.aButtonNav{
+    padding:6px 12px 6px 12px;
+    border:0px;
+}
+a.aButtonNav:not(:first-child){
+    margin-left:6px;
+}
+div.divHeaderVerticalCenterOuter{
+    display:table-cell;
+    padding:0px;
+    margin:0px;
+    vertical-align:bottom;
+    background-color:#ff0000;
+}
+div.divHeaderVerticalCenterInner{
+}
+
+
+header h1{
+    display:inline-block;
+    /*position:absolute;*/
+    right:20px;
+    
+    /*display:table-cell;*/
+    font-size:2.2em;
+    
+    font-weight:bold;
+    margin:0px;
+    /*float:right;*/
+    /*line-height: 140px;*/
+    /*vertical-align:middle;*/
+    /*background-color:#00ff00;*/
+    
+    margin-right:60px;
+    margin-top:26px;
+    
+}
+
+h2, h3{
+    margin-top:24px;
+    margin-bottom:10px;
+    font-size:2.1em;
+}
+h2{
+    margin-top:36px;
+    font-size:2.6em;
+}
+section.sectionContent h2{
+    margin-top:-40px;
+    margin-bottom:-20px;
+    font-size:3.1em;
+}
+
+div{
+    font-size:1.0em;
+}
+p, a, div{
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+}
+p, a{
+    font-size:1.34em;
+}
+p a{
+    font-size:1.0em;
+}
+a{
+    display: inline;
+}
+
+td a, th a{
+    font-size:1.0em;
+}
+td, th{
+    font-size:1.1em;
+}
+
+
+td ul, td ol{
+    /*list-style-position: inside;*/
+    padding-left:26px;
+}
+td li{
+    font-size:0.93em;
+}
+
+th{
+    background-color:#a7c1a7;
+}
+td{
+    background-color:#9fdb9f;
+}
+
+
+
+p.pMargin{
+    margin:12px;
+}
+
+
+ul, ol{
+    margin:0px;
+    padding-left: 0;
+}
+
+li{
+    font-size:1.8em;
+}
+
+
+
+
+
+
+p.pCaption{
+    text-decoration: overline;
+    margin-bottom:14px;
+    font-size:0.98em;
+}
+p.pContent{
+    font-size: 2.02em;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+p.pCaption{
+    color:#555555;
+    font-size:1.8em;
+    display:block;
+}
+
+
+
+a.aBackLink{
+    display:inline;
+    float:left;
+    font-size:1.7em;
+    margin:8px;
+    padding:16px;
+    margin-top:60px;
+    margin-bottom:100px;
+}
+
+a.aLinkLarge{
+    font-size:2.6em;
+}
+
+
+div.divTextGroup{
+    margin:0px;
+    padding:2px;
+    padding-bottom:4px;
+    text-align:left;
+    max-width:800px;
+}
+div.divReferenceGroup{
+    margin:0px;
+    padding:2px;
+    text-align:left;
+}
+
+div.divTableFooter{
+    display:inline-block;
+    min-width:600px;
+    text-align:left;
+    
+}
+div.divTextGroupIntroduction{
+    display:table;
+    margin:0px;
+    padding:6px;
+    padding-bottom:8px;
+    text-align:left;
+    max-width:1000px;
+    overflow: auto;
+}
+div.divTextMainIntroduction{
+    display:table;
+    margin:0px;
+    padding:6px;
+    padding-bottom:8px;
+    text-align:left;
+    max-width:1200px;
+    overflow: auto;
+}
+
+
+.divGroup{
+    background-color:#b2ecb2;
+    display:table;
+    min-height:200px;
+    border:4px solid #005000;
+    padding:12px 16px 30px 16px;
+    margin-bottom:8px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    text-align:center;
+}
+.divGroup:not(:first-child){
+    margin-top:36px;
+}
+.divGroupMaxWidth{
+    background-color:#b2ecb2;
+    display:table;
+    /*min-height:200px;*/
+    border:4px solid #005000;
+    padding:26px 18px 32px 18px;
+    margin-top:36px;
+    margin-bottom:8px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    min-width:600px;
+    max-width:1200px;
+    text-align:center;
+    border-radius: 1.4em 1.4em 1.4em 1.4em;
+}
+
+.divGroupMaxWidthForm{
+    background-color:#b2ecb2;
+    display:table;
+    /*min-height:200px;*/
+    border:4px solid #005000;
+    padding:26px 18px 32px 18px;
+    margin-top:36px;
+    margin-bottom:8px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    min-width:1000px;
+    /*max-width:1200px;*/
+    text-align:center;
+    border-radius: 1.4em 1.4em 1.4em 1.4em;
+}
+
+
+.tableHeading{
+    margin-bottom:6px;
+}
+
+
+/*CSS rules to give four background colors. Once per page row.*/
+.tableIndexPage1{
+    background-color:#95d795;
+}
+.tableIndexPage2{
+    background-color:#77d977;
+}
+.tableIndexPage3{
+    background-color:#54c954;
+}
+.tableIndexPage4{
+    background-color:#47dc47;
+}
+
+
+
+
+
+textarea.textareaQuestion{
+    display: inline-block;
+    font-size: 0.9em;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    width:auto;
+    min-width:95%;
+    height:400px;
+    resize: none;
+}
+button{
+    margin:4px;
+    padding:5px;
+    font-size: 1.1em;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+
+div.divContentTopMarker{
+		display:block;
+  margin-top:58px;
+  position:relative;
+}
+
+div.divContentBottomMarker{
+		display:block;
+  position:relative;
+		margin-bottom:150px;
+}
+
+a.aButtonPreviousTop{
+    position: absolute;
+    bottom:3px;
+    left:40px;
+    min-width:90px;
+}
+a.aButtonNextTop{
+    position: absolute;
+    bottom:3px;
+    right:40px;
+    min-width:90px;
+}
+a.aButtonPreviousBottom{
+    position: absolute;
+    top:0px;
+    left:40px;
+    min-width:90px;
+}
+a.aButtonNextBottom{
+    position: absolute;
+    top:0px;
+    right:40px;
+    min-width:90px;
+}
+
+div.divIntroduction{
+    margin-bottom:60px;
+}
+
+section.sectionContent{
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#a6dca6;
+    border-radius: 1.4em 1.4em 1.4em 1.4em;
+    padding:60px 24px 60px 24px;
+    width:1600px;
+    max-width:100%;
+    
+}
+
+
+footer{
+    margin-top:40px;
+    height:200px;
+    background-color:#b9d7b9;
+}
+footer p{
+    display:block;
+    margin-bottom:20px;
+}
+div.divFooterInner{
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    min-width:700px;
+    text-align:left;
+    padding:30px 52px 30px 52px;
+}
+
+
+.referenceHeader{
+    font-size:1.94em;
+}
+
+
+
+
+
+

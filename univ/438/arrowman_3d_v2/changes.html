@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+	
+    <title>Arrowman 3D - HTML5 Changes</title>
+	
+    <link rel="shortcut icon" type="image/x-icon" href="../_global/img/img_icon_arrowman_3d_v2.png" />
+	
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  
+
+</head>
+
+<body>
+		
+	<div id="divContent">
+
+		<div class="divTitle">
+		  <p class="pTitle">Arrowman 3D - HTML5 Changes</p>
+		</div>
+
+		<div class="divScene">
+		  <p>The html5 folder contains the game built by Armory-integrated Blender.</p>
+		  <p>A few additions/removals were made to the game's HTML file (html5/index.html) and javascript file (html5/kha.js). Search for &quot;!!! MANUAL EDIT&quot; without quotes to see these places. Larger amounts of new Javascript stored to js/javascript.js. </p>
+		  <p>These changes were made to make fullscreen mode more direct.</p>
+		  <p>Lastly, a consistent change had to be made across the Haxe source script. In places that request a Canvas such as:</p>
+		  <p class="pScript">var canvasRef:CanvasScript = object.getTrait(CanvasScript);</p>
+		  <p>It is possible to return a non-null CanvasScript object that is not yet ready to be read for UI elements in HTML5 (never happens on Windows compiles).</p>
+		  <p>To fix this, try something like this after that line, at least before any text elements are retrieved:</p>
+		  <p class="pScript">if(!canvasRef.ready){</p>
+          <p class="pScript">&nbsp;&nbsp;&nbsp;&nbsp;if(iron.Scene.active.raw.name == "SceneNameExpected"){</p>
+		  <p class="pScript">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iron.system.Tween.timer(0.5, thisMethod);</p>
+		  <p class="pScript">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+		  <p class="pScript">&nbsp;&nbsp;&nbsp;&nbsp;return;</p>
+		  <p class="pScript">}</p>
+		  <p>This will stop the method at that point if the CanvasScript isn&#39;t ready. It will try again only if the user hasn'&#39;t changed the current scene.</p>
+		  
+		</div>
+
+	</div>
+	
+    <a id="aBackButton" class="aCustom" href="html5/index.html">Back</a>
+	
+	
+</body>
+</html>

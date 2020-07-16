@@ -1,0 +1,76 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: Day Month Year
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	min-width: 250px;
+}
+
+
+
+
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+

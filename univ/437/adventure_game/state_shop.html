@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Adventure Game</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../_global/img/img_icon_adventure_game.png" />
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="js/global.js"> </script>
+  <script src="js/state_shop.js"> </script>
+</head>
+<body>
+  
+  <div id="divContent" class="JS_State_Shop">
+    
+    <div class="divTitle">
+	  <p class="pTitle">Shop</p>
+	</div>
+	
+    <div class="divScene">
+      
+    </div>
+	
+	<div class="divText">
+	  <p id="pCustomMessage"> </p>
+	</div>
+	
+	
+	
+	
+	<div class="divChoiceGroupHorizontal">
+	  <a id="JS_ChoiceBuySword" class="aChoice aChoiceHorizontal" href="#" style="display:none;">Buy Sword</a>
+	  <a class="aChoice aChoiceHorizontal" href="state_outside.html">Leave</a>
+	</div>
+	
+	
+	<div id="divInventory">
+	  <div class="divIntentoryLabel">
+	    <p class="pInventoryLabel">Inventory:</p>
+	  </div>
+	  <div id="JS_divInventorySlots" class="divInventorySlotGroup">
+	    <!--
+		To be filled with HTML elements of this form in Javascript at startup, where "X" is a number from 0 to Number of Slots:
+	    <a class="aClickable" href="#"><img id="imgInvSlotX" class="imgInventorySlot"></img></a>
+		-->
+	  </div>
+	  <div id="divGold">
+	    <div class="divGoldLabel">
+	      <p class="pGoldLabel">Gold:</p>
+		</div>
+		<div id="divGoldQuantity">
+		  <p id="pGoldQuantity"> ? </p>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+  
+  </div>
+  
+  
+  
+  <a class="aBack" href="../index.html">Quit</a>
+  
+</body>
+</html>

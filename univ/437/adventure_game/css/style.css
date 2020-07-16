@@ -1,0 +1,481 @@
+
+
+*{
+  font-size:18px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-repeat:no-repeat;  /*safe default.*/
+  line-height: 0;
+}
+
+
+a:link{
+  color:#007700;
+}
+a:visited{
+  color:#007700;
+}
+a:hover{
+  color:#007700;
+}
+a:active{
+  color:#009900;
+}
+
+
+.aBack{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    font-size:1.4em;
+    display: inline-block;
+    margin:80px 30px 30px 30px;
+    padding:8px;
+}
+
+
+
+
+
+a.aChoice{
+    display:inline-block;
+    font-size:1.1em;
+    padding:3px;
+    padding-left:6px;
+    padding-right:6px;
+    text-decoration:none;
+    border:4px solid #005000;
+}
+
+a.aChoice, a.aChoice:link, a.aChoice:visited{
+    color:#89cf89;
+    background-color:#2c802c;
+}
+a.aChoice:hover{
+    color:#b1deb1;
+    background-color:#3f9b3f;
+}
+a.aChoice:focus{
+    
+}
+
+
+body{
+  background-color:#aedca8;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+
+a{
+  line-height: normal;
+}
+
+p{
+  font-size:1.1em;
+  padding:0;
+  margin:0;
+  
+  margin-top:1px;
+  margin-bottom:1px;
+  
+  margin-left:6px;
+  margin-right:6px;
+  line-height: normal;
+  
+  
+}
+
+
+
+.divTitle{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  min-height:40px;
+  text-align:left;
+  padding-left:20px;
+  padding-right:20px;
+  
+  
+}
+
+.pTitle{
+  font-size:1.6em;
+}
+
+#divTitleSub{
+  /*background-color:#ff0000;*/
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height:50px;
+  text-align:center;
+  margin-top:5px;
+  margin-bottom:12px;
+}
+
+#pTitleSub{
+  font-size:1.8em;
+  
+}
+
+.pWon{
+    color:#2ba879;
+    font-style:italic;
+}
+.pLost{
+    color:#a82b2b;
+    font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+.aClickable{
+  display:flex;
+}
+
+
+
+#divGold{
+  text-align:center;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+
+.divGoldLabel{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  height:80px;
+  width:80px;
+  text-align:right;
+  line-height: normal;
+  
+
+}
+.pGoldLabel{
+	
+  font-size:1.2em;
+  font-weight:bold;
+  color:#888811;
+	
+}
+
+
+
+#divGoldQuantity{
+  display:inline-flex;
+  color:#cccc11;
+  flex-direction: column;
+  justify-content: center;
+  
+  text-align:right;
+  width:80px;
+  height:80px;
+}
+
+
+#pGoldQuantity{
+	
+  font-size:1.2em;
+  font-style:normal;
+  color:#888811;
+}
+
+
+#divInventory{
+  text-align:center;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  margin-top:6px;
+  margin-bottom:6px;
+
+}
+
+.divIntentoryLabel{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:12px;
+  padding-right:12px;
+  height:80px;
+
+}
+
+
+
+
+.pInventoryLabel{
+  font-size:1.3em;
+  font-style:italic;
+}
+
+.divInventorySlotGroup{
+  display:flex;
+  border-color:#005500;
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom:5px;
+  min-height:85px;
+}
+.imgInventorySlot{
+  display:inline-block;
+  width:80px;
+  height:80px;
+  border-color:#005500;
+  border-style: solid;
+  border-width: 3px;
+  background-color:#66cc66;
+
+}
+
+
+
+
+
+
+.divChoiceGroupHorizontal{
+  margin-top:30px;
+  margin-bottom:20px;
+  margin-left:10px;
+  margin-right:10px;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  text-align:center;
+  
+}
+
+.divChoiceGroupHorizontalCondensed{
+  margin-top:5px;
+  margin-bottom:4px;
+  margin-left:10px;
+  margin-right:10px;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  text-align:center;
+  
+}
+
+
+.aChoiceHorizontal{
+  margin-left:40px;
+  margin-right:40px;
+}
+
+
+.divScene{
+  /*background-color:#ff0000;*/
+
+  display:block;
+  
+  padding:0;
+  margin:0;
+  
+  margin-left:auto;
+  margin-right:auto;
+
+  min-height:60px;
+  margin-top:10px;
+  margin-bottom:0px;
+  text-align:center;
+  
+  
+  
+}
+
+#divSceneHome{
+  display:inline-block;
+  position: relative;
+  text-align:left;
+  width:800px;
+  height:600px;
+  border-color:#001100;
+  border-style: solid;
+  border-width: 3px;
+  background-image: url("../img/home_room.png");
+  
+
+}
+
+
+
+/*
+.imgScene{
+  display:relative;
+  padding:0;
+  margin:0;
+  border-color:#001100;
+  border-style: solid;
+  border-width: 3px;
+}
+*/
+
+.divText{
+  /*background-color:#ff0000;*/
+  display:inline-block;
+  width:600px;
+  text-align:left;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:12px;
+  margin-bottom:6px;
+  
+  min-height:150px;
+  
+  
+  
+  
+  
+}
+
+.divTextCondensed{
+  display:inline-block;
+  min-width:600px;
+  max-width:800px;
+  text-align:left;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:4px;
+  margin-bottom:4px;
+  
+  min-height:70px;
+}
+.divTextCondensed p{
+  font-size:0.95em;
+  padding:0;
+  margin:0;
+}
+
+
+
+#divError{
+  display:block;
+  text-align:center;
+  padding:30px;
+  background-color:#cae7c6;
+  
+  border-style: solid;
+  border-width: 5px;
+  border-color:#338833;
+  
+  min-width:600px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+  
+
+}
+.pErrorTitle{
+  font-size:1.7em;
+  font-weight:bold;
+  color:#8f0000;
+}
+
+#pErrorMessage{
+  font-size:1em;
+  margin:10px;
+  margin-bottom:20px;
+}
+
+
+
+#divContent{
+  display:block;
+  text-align:center;
+  
+  padding-top:6px;
+  padding-right:5px;
+  padding-left:5px;
+  padding-bottom:6px;
+  
+  
+  margin-top:10px;
+  background-color:#cae7c6;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  min-width:600px;
+  /*width:800px;*/
+  max-width:900px;
+  
+  border:4px;
+  
+  
+  border-style: solid;
+  border-width: 5px;
+  border-color:#338833;
+
+}
+
+
+#imgHomeHoe{
+  display:none;
+  position:absolute;
+  left:569px;
+  top:215px;
+  /*background-image: url("../img/home_hoe.png");*/
+  width:178px;
+  height:351px;
+
+}
+
+#imgHomeSword{
+  display:none;
+  position:absolute;
+  left:302px;
+  top:351px;
+  /*background-image: url("../img/home_sword.png");*/
+  width:294px;
+  height:184px;
+
+}
+
+#imgHomeBook{
+  display:none;
+  position:absolute;
+  left:459px;
+  top:203px;
+  /*background-image: url("../img/home_book.png");*/
+  width:97px;
+  height:120px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,437 @@
+<!doctype html>
+
+<!--
+ Filename: pick_me_challenge.html
+ Written by: Chris Dawalt
+ Creation Date: 4 November 2016 (mod of pick_me)
+ Purpose: Demonstrate the use of JQuery selectors
+ Modification History:
+ Original Build (pick_me project: 30 October 2016)
+ 
+ *(see pick_me for information that applies here too)
+ *Check-mark ASCII characters changed to images via HTML edits to the display-label
+ locations of the table instead.  The first column containing those labels has been
+ sized (CSS class of tablerowSlim32) to fit them perfectly.  A value of "float:none"
+ seems to cause unwanted space to the right (solved by fitting), but is required for
+ centering.
+ *Also, the "imgStatus" class, used for filtering, has been removed by the "not"
+ method in JQuery on a selector for tag-selections (see   $("#btnSelectTag").click   ).
+
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Pick Me! (Challenge)</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_pick_me_challenge.png" />
+    
+    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+
+    <div class="divWideRow">
+	    <!--
+    	<a class="aSampleTitle"> Pick me! </a>
+        -->
+        <h1 class="aSampleTitle">Pick Me Challenge</h1>
+        
+	</div>
+    
+    
+    <div class="divWideRow">
+    	<div class="divSample">
+        	
+            <table id="WholeTable">
+                <tr>
+                    <th class="tablerowSlim32">
+                        Chk
+                    </th>
+                    <th class="tablerowSlim">
+                        Tag
+                    </th>
+                    <th>
+                        Class
+                    </th>
+                    <th>
+                        ID
+                    </th>
+                    <th class="tableRowLonger">
+                        <a > Content </a>
+                    </th>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> h2 </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Scrubber </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Larry </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <h2 id="Larry" class="Scrubber" > Hey, just me.</h2>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> p </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Scrubber </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Susan </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <p id="Susan" class="Scrubber" > You rang?</p>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> h3</a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Scrubber </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Tom </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <h3 id="Tom" class="Scrubber" > *YAWN*</h3>
+                    </td>
+                </tr>
+                
+                
+                
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> h2 </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Buccaneer </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Gerald </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <h2 id="Gerald" class="Buccaneer" > If the price is right, I'm there.</h2>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> p </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Buccaneer </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Harold </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <p id="Harold" class="Buccaneer" > Loyal to no end, cap'n!</p>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> h3</a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Buccaneer </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Lewis </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <h3 id="Lewis" class="Buccaneer" > When's the pillagin'?</h3>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> h2 </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Sabeteur </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Alex </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <h2 id="Alex" class="Sabeteur" > SShh, they might hear us.</h2>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> p </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Sabeteur </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Carol </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <p id="Carol" class="Sabeteur" > They have no idea.</p>
+                    </td>
+                </tr>
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> sup</a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Comedian </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Slacker </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <sup id="Slacker" class="Comedian" > How much does a pirate pay for corn?</sup>
+                    </td>
+                </tr>
+                
+                
+                <tr >
+                    <td class="tablerowSlim32">
+                        <a class="aSampleTextMod"> &nbsp; </a>
+                    </td>
+                    <td class="tablerowSlim">
+                        <a class="aSampleTextMod"> img</a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> Captain </a>
+                    </td>
+                    <td >
+                        <a class="aSampleTextMod"> RedBeard </a>
+                    </td>
+                    <td class="tableRowLonger">
+                        <img id="RedBeard" alt="captain img" class="Captain" src="../../img/redbeard.png" height="100">
+                    </td>
+                </tr>
+                
+            </table>
+            
+        
+        </div>
+    </div>
+    
+    
+    <div class="divWideRow">
+    	<div class="divSample">
+        	
+            <button id="btnClearSelection" type="button" class="btnSample">Clear Selection</button>
+            <button id="btnClearInputs" type="button" class="btnSample">Clear Inputs</button>
+            <button id="btnFillInputs" type="button" class="btnSample">Fill Inputs</button>
+                
+        
+            <br/>
+            <br/>
+            
+                
+            <div class="divWideRow">
+                    
+                
+                <br/>
+                 <a class="aSample"> NOTE:  Don't forget to try selections, such as &nbsp;&nbsp; h2:first &nbsp;&nbsp; in the input text fields. </a>
+                 <br/>
+                <br/>
+                 <a class="aSample"> ALSO:  Another unique way to chain a selection.  Try &nbsp;&nbsp;  h2:not(.Buccaneer) &nbsp;&nbsp; in the tag field.
+                 </a>
+                <br/>
+                <br/>
+                <br/>
+                
+                
+                <table class="tableSampleVert">
+                
+                
+                    <tr>
+                        <th class="tablerowSlim">
+                            Action
+                        </th>
+                        <th class="tablerowWide">
+                            Input
+                        </th>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectTag" type="button" class="btnSample">Select By Tag</button>
+                        </td>
+                        <td class="tablerowWide">
+                            <input type="text" id="txtSelectTag" class="txtSample">
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectClass" type="button" class="btnSample">Select By Class</button>
+                        </td>
+                        <td class="tablerowWide">
+                            <input type="text" id="txtSelectClass" class="txtSample">
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectID" type="button" class="btnSample">Select By ID</button>
+                        </td>
+                        <td class="tablerowWide">
+                            <input type="text" id="txtSelectID" class="txtSample">
+                        </td>
+                    </tr>
+                    
+                    
+                   
+                    
+                    
+                </table>
+                
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                
+                
+                <table>
+                	
+                    <tr>
+                        <th class="tablerowSlim">
+                            Action
+                        </th>
+                        <th class="tablerowWide">
+                            Instructions
+                        </th>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnApplyMulti" type="button" class="btnSampleSmall">Apply to last selection</button>
+                        </td>
+                        <td class="tablerowExtraWide">
+                            <input type="text" id="txtApplyMulti" class="txtSample" disabled>
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectTagFiltered" type="button" class="btnSampleSmall">Select By Tag (Filtered)</button>
+                        </td>
+                        <td class="tablerowExtraWide">
+                            <input type="text" id="txtSelectTagFiltered" class="txtSample" disabled>
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectClassFiltered" type="button" class="btnSampleSmall">Select By Class (Filtered)</button>
+                        </td>
+                        <td class="tablerowExtraWide">
+                            <input type="text" id="txtSelectClassFiltered" class="txtSample" disabled>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="tablerowSlim">
+                            <button id="btnSelectIDFiltered" type="button" class="btnSampleSmall">Select By ID (Filtered)</button>
+                        </td>
+                        <td class="tablerowExtraWide">
+                            <input type="text" id="txtSelectIDFiltered" class="txtSample" disabled>
+                        </td>
+                    </tr>
+                   
+                    
+                    
+                </table>
+                         
+                 
+            </div>
+        
+            <br/>
+                
+            
+        </div>
+    </div>
+    
+    
+    
+    	
+    <br/><br/><br/>
+	<a class="aLink" href="../../index.html">Back</a>
+	
+    
+
+</body>
+
+
+</html>
+
+
+
+<!--
+Reference:
+(also see pick_me.html)
+
+https://api.jquery.com/not-selector/
+http://api.jquery.com/not/
+http://stackoverflow.com/questions/3015103/jquery-exclude-elements-with-certain-class-in-selector
+~demonstrates the "not" selector.
+
+-->

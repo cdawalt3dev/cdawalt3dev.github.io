@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+Author: Chris Dawalt
+Date: 13 March 2018
+*Changes for Table Display Extra Credit:
+ID div#divColumnContent: display changed to table.
+Class section.sectionColumn: display changed to table-cell;
+-Columns are always the same height, even when expanded by content.
+
+*Tested in Microsoft Edge, Google Chrome, and FireFox at 100% zoom.
+ -Slightly more text line height in Chrome than in Edge or FireFox.
+ -Fonts slightly less thick in Firefox than in Chrome or Edge
+ -Slightly less margin and/or padding in Edge than in Chrome or Firefox.
+ -Link underline slightly thicker in Chrome than in Edge or Firefox.
+-->
+<!--Requirement 9. Page uses the following HTML5 elements:
+  *header
+  *footer
+  *nav
+  *section
+  *article
+  *figure
+  *mark
+  *time
+-->
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Floating In Jello</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+
+  <!--This is the header of the page. Has the title "About Me" and nav bar. -->
+  <header>
+    <h1>
+      About Me
+    </h1>
+    
+    <nav>
+      <ul>
+        <li><a href="dummy">Home (Dummy)</a></li>
+        <li class="liSelected"><a href="dummy">Hobbies</a></li>
+        <li><a href="dummy">Other Page (Dummy)</a></li>
+        <li><a href="dummy">Other Page (Dummy)</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  <section class="sectionContent">
+    <h2>Hobbies</h2>
+    
+    <!--div "divColumnContent" directly contains the two columns.
+        Each column is a section object with styling to occupy 48% of the container's width with a display of "inline-block". This allows each column to appear left and right of one another. Each column has its own header and contains article elements from top to bottom.-->
+    <div id="divColumnContent">
+      <section class="sectionColumn content">
+        <h3>Programming</h3>
+        <article>
+          <header>
+            <h4> GameMaker </h4>
+          </header>
+          <figure>
+            <img class="imgParagraphImage" src="img/gamemaker7_logo_small.png" alt="Gamemaker 7"/>
+          </figure>
+          <p class="pTextMargin">
+          I started programming when I was introduced to <mark>GameMaker 7</mark>, a 2-dimensional game design program with beginners in mind. It supported drag and drop commands to convey basic actions, such as moving an in-game object or waiting for an event. Most actions could also be represented in a simplified version of Java. I learned how to script by translating actions into script.
+          </p>
+        </article>
+        <article>
+          <header>
+            <h4> Visual Basic </h4>
+          </header>
+          <figure class="figureRowCenter">
+            <img class="" src="img/vb_logo_small.jpg" alt="Visual Basic"/>
+          </figure>
+          <p class="pTextMargin">
+          In my sophomore year in high school, I took a class in <mark>Visual Basic</mark>. The class used Visual Studio to drag and drop GUI elements to windows to create simple applications. The Visual Basic Language could make the application interactive, such as printing output to text fields or opening a new window.
+          </p>
+        </article>
+      </section>
+      <section class="sectionColumn content">
+        <h3>Gardening</h3>
+        <article>
+          <header>
+            <h4> Harvest </h4>
+          </header>
+          <div class="divImageGroup">
+              <figure class="figureInline">
+                <img class="" src="img/green_beans.jpg" alt="Green Beans" />
+              </figure>
+              <figure class="figureInline">
+                <img class="" src="img/peas.jpg" alt="Peas" />
+              </figure>
+          </div>
+          
+          <p class="pTextMargin">
+            Gardening is fun. For the last several years, I have been growing many different types of vegetables. Each year, my garden has gotten bigger. Last year, I grew green beans, peas, tomatoes, green peppers, and tomatoes.
+          </p>
+        </article>
+      </section>
+    </div>
+  </section>
+  
+  <!-- This is the footer of the page. Refers to a shaded area at the bottom containing contact info and "Page Last Updated" date.-->
+  <footer>
+    <p>Contact: <a href="mailto:cdawalt@umail.iu.edu">cdawalt@umail.iu.edu</a></p>
+    <p>Page Last Updated: <time datetime="2018-03-18 ">2018/03/18</time> </p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+
+<!--
+ Filename: ahoy_jquery_challenge.html
+ Written by: Chris Dawalt
+ Creation Date: 29 October 2016
+ Purpose: Challenge for the "Ahoy! JQuery" exercise.
+ Modification History:
+ Original Build.
+ 
+ Places 5 HTML images at the bottom of the screen and moves them over time with Javascript.  Images wrap-around, arriving from the right if they move far enough left to be obscured.  Also added a button to toggle text font (the "refresh" button will restore the original font regardless).
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+    <title>Ahoy JQuery!  (Challenge)</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_ahoy_jquery_challenge.png" />
+    
+   
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+
+    
+    
+    <div class="divWideRow">
+    	<!--
+        REPLACED WITH REQUESTED HEADER FOR THIS ASSIGNMENT BELOW
+        
+        <a class="aSampleTitle">
+            Ahoy JQuery!
+        </a>
+        -->
+        
+        <h1 class="aSampleTitle">Ahoy jQuery Challenge</h1>
+    
+	</div>            
+    
+    
+    <div class="divWideRow">
+    	<div class="divSampleWide">
+        	
+            <p id="aOutput1" class="aSample">
+        	empty default text
+            </p>
+            
+            
+            <button id="btnReset" type="button" class="btnSample">Reset</button>
+            <button id="btnAppend" type="button" class="btnSample">Append</button>
+            <button id="btnReplace" type="button" class="btnSample">Replace</button>
+            <button id="btnToggleFont" type="button" class="btnSample">Toggle Font</button>
+            
+            
+        </div>
+        
+    </div>
+    
+    
+    <img id="imgPirateShip0" alt="ship1" src="../../img/pirateshipsprite.png">
+    <img id="imgPirateShip1" alt="ship2" src="../../img/pirateshipsprite.png">
+    <img id="imgPirateShip2" alt="ship3" src="../../img/pirateshipsprite.png">
+    <img id="imgPirateShip3" alt="ship4" src="../../img/pirateshipsprite.png">
+    <img id="imgPirateShip4" alt="ship5" src="../../img/pirateshipsprite.png">
+    
+    
+        
+    <br/><br/><br/>
+	<a class="aLink" href="../../index.html">Back</a>
+		
+
+</body>
+
+
+
+</html>
+
+
+<!--
+Reference:
+http://stackoverflow.com/questions/7654708/jquery-changing-font-family-and-font-size
+~how to change font in JQuery:  $("some_selector").css("attribute", "value");
+
+http://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
+~get viewport size (the size of the web-page's space for displaying, as opposed to the size of the browser window or the size of the user's screen)
+
+http://stackoverflow.com/questions/12744928/in-jquery-how-can-i-set-top-left-properties-of-an-element-with-position-values
+~set the left & top CSS properties of elements to change their X and Y coords.  (try "position:absolute" first for best results)
+
+http://stackoverflow.com/questions/7646538/disable-vertical-scroll-bar-on-div-overflow-auto
+~disable scrollbars (the pirate ship graphics seem to want to make the window horizontally scrollable when they re-appear from the right, partially obscured by the screen)
+
+http://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery
+~run a method every so-many milliseconds.
+
+-->
+

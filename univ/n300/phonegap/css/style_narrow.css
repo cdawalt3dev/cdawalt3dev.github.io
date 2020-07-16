@@ -1,0 +1,57 @@
+/*
+ Name: style_narrow.css
+ Purpose: Stores CSS changes needed for mobile / longways screens
+ Author: Chris Dawalt
+ Created: 2018-1-25
+*/
+
+@media (max-width: 600px) {
+
+
+header.headerCustom{
+
+    /* top, right, bottom, left*/
+	margin: 14px 0px 5px 0px;
+
+	font-size:25px;
+	text-align:center;
+	font-family: Courier New;
+	font-weight: bold;
+}
+
+
+a, p, label{
+    display: inline-block;
+    font-size: 17px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+	padding:20px;
+}
+
+
+.aBackCustom{
+  padding:6px;
+  margin-left:0px;
+  margin-top:20px;
+ 
+}
+
+
+button.buttonDownload{
+    display:inline-block;
+    
+    font-size: 22px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    
+    min-width:80px;
+    width:auto;
+    margin:4px;
+    padding: 12px 26px 12px 26px;
+    
+}
+
+
+
+}/*END OF screen width up to 780px.*/
+

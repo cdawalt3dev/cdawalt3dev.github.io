@@ -1,0 +1,236 @@
+/*defaults.  The margin is overridden often.*/
+*{
+	margin:0 0 4px;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	
+	
+}
+
+/*NOTE: several entries edited to be more specific to individual elements, or broadened to include copies.*/
+
+header{
+	/*text-align:left;
+	color:white;
+	*/
+	background-color:#60CC60;
+	padding:28px 150px;
+	margin:0 0 14px;
+	
+}
+body {
+	background-color: #A0ffA0;
+}
+
+
+
+
+
+.divRow{
+	padding: 0px;
+	margin:0 0 0px;
+	width:396px;
+    height:34px;
+    /*border:1px solid;*/
+	
+}
+.divImage{
+	border:3px solid #005000; 
+	padding: 0px;
+	margin:0 0 0px;
+    width:32px;
+	height:32px;
+    float:left;
+}
+.divItem{
+	padding: 0px;
+	margin:0 0 0px;
+	width:auto;
+    height:32px;
+    overflow:hidden;
+	
+	line-height: 32px;
+	border:3px solid #005000; 
+}
+
+
+
+
+.aItemText{
+	padding: 0px;
+	
+	color: #32ff32;
+	font-size: 22px;
+	
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+  	
+}
+
+
+.aItemTextNoLink{
+	padding: 0px;
+	
+	color: #32ff32;
+	font-size: 22px;
+	
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+  	
+}
+
+
+.imgMulti{
+	float:left; 	
+	padding: 0px 4px;
+}
+
+.aItemTextRed{
+	padding: 0px;
+	color: #F42545;
+	font-size: 22px;
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+}
+
+/*appears to make no difference anymore.  Just for safety.*/
+.imgItemIcon{
+	padding: 0px;
+	margin:0 0 0px;
+}
+
+/*li, li a{*/						/* Define the formatting for the links to the labs */
+#ulOutterList{
+	padding: 0px;
+	list-style: none;
+	background-color: #006600;
+	text-align: center;
+	color: #32ff32;
+}
+
+.div{
+	padding: 0px;
+	margin: 0px;
+}
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+li{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	display:table-row;
+}
+
+
+
+
+
+
+/*centered now.*/
+#author{
+	color: #006800;
+	font-size: 24px;
+	text-align: center;
+	/*padding-left: 6em;*/
+	
+}
+/*is "title" a keyword or element already?*/
+#titleM{
+	font-size: 38px;
+	color: #006800;
+	text-align: center;
+}
+
+#coursework{
+	text-align: center;
+	font-size: 32px;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	color: #00FF00;
+}
+
+
+
+
+
+
+
+.aItemText:link {
+    color: #32dc32;
+}
+.aItemText:visited {
+    color: #32dc32;
+}
+.aItemText:hover {
+    color: #14ff14;
+}
+.aItemText:active {
+    color: #049204;
+}
+
+
+.aItemTextRed:link {
+    color: #DE2626;
+}
+.aItemTextRed:visited {
+    color: #DE2626;
+}
+.aItemTextRed:hover {
+    color: #FF0606;
+}
+.aItemTextRed:active {
+    color: #A00808;
+}
+
+
+
+
+.aLinkPlain:link {
+    text-decoration: none;
+}
+.aLinkPlain:visited {
+    text-decoration: none;
+}
+.aLinkPlain:hover {
+    text-decoration: none;
+}
+.aLinkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/*fixes a little overlap.*/
+#assignments ul {
+	float:left;
+	/*width: 396px;*/
+	padding-left:0px;
+}
+
+/*NOTE: increase "min-height" as more projects are added.
+Looks like a good formula is
+min-height = 104 + 38*rows
+*/
+#assignments{			/* Define the formatting for the <div id="asssignments"> box */
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 15px;
+	border-radius: 64px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+	width: 400px;
+	min-height: 884px;  /* 19 rows,  times 39 each instead*/    
+}
+
+
+
+
+

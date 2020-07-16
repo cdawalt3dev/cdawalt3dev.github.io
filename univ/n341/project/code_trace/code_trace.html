@@ -1,0 +1,203 @@
+<!doctype html>
+
+<!--
+TITLE: Code Trace
+AUTHORS: Seth Fuller/Joseph Wessel/Chris Dawalt
+ORIGINALLY CREATED ON: 11/14/2016
+LAST MODIFIED ON: 11/14/2016
+LAST MODIFIED BY: Seth Fuller/Joseph Wessel/Chris Dawalt
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Code Trace</title>
+  <link rel="stylesheet" href="code_trace.css">
+</head>
+
+<body>
+  <h1>Code Trace</h1><h3>Seth Fuller &amp; Joseph Wessel &amp; Chris Dawalt</h3>
+  <br>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>Line Number</th>
+        <th>Line of Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Print &quot;I LOVE COMPUTER SCIENCE LOTS&quot;</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>J = 4</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>D = 3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>While J &gt;= 3 and D &lt; 4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>For N = 1 to 3</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Print &quot; AND LOTS!&quot;</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Next N</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>J = J - 1</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>D = D + 1</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>End While</td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+<br>
+  <table>
+    <thead>
+      <tr>
+        <th>Line Number</th>
+        <th>Var J</th>
+        <th>Var D</th>
+        <th>Var N</th>
+        <th>System Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 (Step 1)</td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
+        <td>Prints &quot;I LOVE COMPUTER SCIENCE LOTS&quot;</td>
+      </tr>
+      <tr>
+        <td>2 (Step 2)</td>
+        <td>4</td>
+        <td>?</td>
+        <td>?</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>3 (Step 3)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>?</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>4 (Step 4)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>?</td>
+        <td>(J &gt;= 3) &amp; (D &lt; 4)<br>(4 &gt;= 3) &amp; (3 &lt; 4)?<br>(TRUE) and (TRUE)<br>TRUE<br>Go to line 5<br>instead of line 10</td>
+      </tr>
+      <tr>
+        <td>5 (Step 5)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>1</td>
+        <td>Set N=1<br>(N=3)?<br>FALSE<br>Go to line 6</td>
+      </tr>
+      <tr>
+        <td>6 (Step 6)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>1</td>
+        <td>Prints &quot; AND LOTS!&quot;</td>
+      </tr>
+      <tr>
+        <td>7 (Step 7)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>Increment N and go to line 5</td>
+      </tr>
+      <tr>
+        <td>5 (Step 8)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>(N=3)?<br>FALSE<br>Go to line 6</td>
+      </tr>
+      <tr>
+        <td>6 (Step 9)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>Prints &quot; AND LOTS!&quot;</td>
+      </tr>
+      <tr>
+        <td>7 (Step 10)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>Increment N and go to line 5 </td>
+      </tr>
+      <tr>
+        <td>5 (Step 11)</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>(N=3)?<br>TRUE<br>Go to line 8</td>
+      </tr>
+      <tr>
+        <td>8 (Step 12)</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>Decrements J</td>
+      </tr>
+      <tr>
+        <td>9 (Step 13)</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>Increments D</td>
+      </tr>
+      <tr>
+        <td>10 (Step 14)</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>End of while loop, return to loop start (Go to line 4)  </td>
+      </tr>
+      <tr>
+        <td>4 (Step 15)</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>(J &gt;= 3) &amp; (D &lt; 4)<br>(3 &gt;= 3) &amp; (4 &lt; 4)?<br>(TRUE) and (FALSE)<br>FALSE<br>Go one beyond line 10, 11 (end of loop +)<br>instead of line 5</td>
+      </tr>
+      <tr>
+        <td>11 (Step 16)</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>End of execution; finished.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</body>
+
+</html>

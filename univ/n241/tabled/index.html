@@ -1,0 +1,168 @@
+<!doctype html>
+
+<!-- see HTML comments below the <meta ... /> tag. -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  
+<!--
+NOTE: Instead of acting as a scheduling grid, this table will act as a quick
+      reference for jumping to other pages and categories on the final project
+      site. Each individual row represents one category and calculator list.
+      In the final site, the page and category columns will link to the 
+      corresponding pages and/or jump to the selected categories when clicked.
+This modifies requirements 1 through 3.
+Requirement 1: The first row has <th> elements to represent columns for a page,
+               a category, and calculators within that category.
+               The third <th> spans 3 columns, allowing for three calculators to 
+               belong to individual cells.
+Requirement 2: The first column lists the pages each category belongs to.
+Requirement 3: Each <td> represents a particular page, category, and calculator
+               per row.
+               
+Other requirements are satisfied.
+Requirement 4: Each page (first column) spans multiple rows since it is repeated 
+               for several consecutive categories.
+Requirement 5: Most categories only have one calculator (3rd <td>) which spans
+               the last three columns for calculators to act as one.
+Requirement 6: Caption included at the top of the table.
+Requirement 7: "css/style.css" is the external sheet.
+Requirement 10: For some categories with multiple calculators, the calculators
+                are stored in an <ol> list in one column instead of across three 
+                separate columns.
+-See css/style.css for CSS comments.
+               
+-->
+  
+  <title>This Topic Has Been Tabled</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+  
+  <h1>This Topic Has Been Tabled</h1>
+  
+  <div class="divGroupMaxWidth">
+  
+  
+    <div class="divTableIndexContainer">
+      <table class="tableIndex">
+        <caption>
+          Table of Pages, categories, and calculators.
+        </caption>
+        <colgroup>
+          <col class="colIndexPage" span="1" />
+          <col class="colIndexCategory" span="1" />
+          <col class="colIndexCalculator" span="3" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Category</th>
+            <th colspan="3" >Calculator(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tableIndexPage1">
+            <th rowspan="2">Pre-Mechanical</th>
+            <td>Addition, Subtraction</td>
+            <td colspan="3">Abacus</td>
+          </tr>
+          <tr class="tableIndexPage1">
+          
+            <td>Multiplication, Division</td>
+            <td colspan="3">Slide Rule</td>
+          </tr>
+          <tr class="tableIndexPage2">
+            <th rowspan="5">Mechanical</th>
+            <td>The First Calculator</td>
+            <td colspan="3">Calculating Clock</td>
+          </tr>
+          <tr class="tableIndexPage2">
+          
+            <td>The First Practical Calculator</td>
+            <td colspan="3">Pascaline</td>
+          </tr>
+          <tr class="tableIndexPage2">
+            
+            <td>All Four Operations</td>
+            <td colspan="3">Arithmometer</td>
+          </tr>
+          <tr class="tableIndexPage2">
+            
+            <td>Introducing Buttons</td>
+            <td colspan="3">Comptometer</td>
+          </tr>
+          <tr class="tableIndexPage2">
+            
+            <td>The Portable Mechanical Calculator</td>
+            <td colspan="3">Curta Calculator</td>
+          </tr>
+          <tr class="tableIndexPage3">
+            <th rowspan="3">Electronic</th>
+            <td>The Personal Solution</td>
+            <td colspan="3">ANITA</td>
+          </tr>
+          <tr class="tableIndexPage3">
+            
+            <td>Early Transistor-Based Calculators</td>
+            <td colspan="3">
+              <ol>
+                <li>Toscal BC-1411</li>
+                <li>Olivetti Programma 101</li>
+                <li>Friden EC-130</li>
+              </ol>
+            </td>
+          </tr>
+          <tr class="tableIndexPage3">
+            
+            <td>Square Root</td>
+            <td colspan="3">ELKA 22</td>
+          </tr>
+          <tr class="tableIndexPage4">
+            <th rowspan="4">Modern</th>
+            <td>Portable Calculators</td>
+            <td colspan="1">Cal Tech</td>
+            <td colspan="1">QT-B Micro Compet</td>
+            <td colspan="1">LE-120 "Handy"</td>
+          </tr>
+          <tr class="tableIndexPage4">
+            
+            <td>Scientific Calculators</td>
+            <td colspan="3">HP-35</td>
+          </tr>
+          <tr class="tableIndexPage4">
+            
+            <td>Affordable Calculators</td>
+            <td colspan="3">
+              <ol>
+                <li>Sinclair Cambridge</li>
+                <li>TI-2550</li>
+              </ol>
+            </td>
+          </tr>
+          <tr class="tableIndexPage4">
+            
+            <td>Efficiency</td>
+            <td colspan="3">
+              <ol>
+                <li>EL-805</li>
+                <li>Teal Photon</li>
+              </ol>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>  <!--End of divTableIndexContainer>-->
+    
+    
+  </div>  <!--End of divGroupMaxWidth-->
+  
+    
+  <br/>
+  <a class="aBackLink" style="text-align:left;" href="../index.html"> Back</a>
+  
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!doctype html>
+
+<!--
+ Filename: triggered.html
+ Written by: Chris Dawalt
+ Creation Date: 2 November 2016
+ Purpose: Set up some events and prove that they were called.
+ Modification History:
+ Original Build.
+ 
+ *Note that the unnecessary events (ready, keyup, click) are provided in addition to the following:
+ 	load
+	resize
+	keyPress
+	keyDown
+	mouseMoveRow;
+	mouseDownRow;
+	mouseUp
+    
+ *all events are registered for window, document, & "Test Element" (a box below the table on top).  Clicking / typing while the box's textArea is selected will trigger its mouse / key events accordingly.
+ *One-time-only startup events stay checked permanently.  Other events turn their table positions (rows are events, columns are what it occurred under) into check-marks immediately and quickly fade back into X's.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Triggered</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/ico_triggered.png" />
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+
+<body >
+
+
+	<div class="divWideRow">
+    	<a class="aSampleTitle"> Triggered </a>
+    </div>
+
+	<div class="divWideRow">
+		<div class="divSample">	
+    
+    		<table>
+            
+            	<tr>	
+                    <th class="tablerowSlim">
+                        Event
+                    </th>
+                    <th class="tablerowSlim">
+                        Window Register
+                    </th>
+                    <th class="tablerowSlim">
+                        Document Register
+                    </th>
+                    <th class="tablerowSlim">
+                        Test Element Register
+                    </th>
+            	</tr>    
+                
+                
+                
+                
+                <tr>
+                    <td >
+                    	
+                    	<a class="aSample">
+                        	Ready
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                    	
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowReady" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentReady" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementReady" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+            	</tr>
+                
+                
+                
+                
+                <tr>
+                    <td >
+                    	
+                    	<a class="aSample">
+                        	Load
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                    	
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowLoad" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentLoad" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementLoad" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+            	</tr>  
+                
+                
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Resize
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                    
+                    	<div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowResize" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentResize" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementResize" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            	
+                
+                
+                
+            	<tr>
+                    <td >
+                    	<a class="aSample">
+                        	Key Down
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowKeyDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentKeyDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                       <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementKeyDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Key Press
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowKeyPress" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentKeyPress" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementKeyPress" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            
+            	
+            	<tr>
+                    <td >
+                    	<a class="aSample">
+                        	Key Up
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowKeyUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentKeyUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                       <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementKeyUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Mouse Move
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowMouseMove" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentMouseMove" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementMouseMove" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Mouse Down
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowMouseDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentMouseDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementMouseDown" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Mouse Click
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowClick" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentClick" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementClick" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <td >
+                    	<a class="aSample">
+                        	Mouse Up
+                        </a>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblWindowMouseUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblDocumentMouseUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="tablerowWide">
+                        <div class="divHeightExpandOut">
+                            <img class="imgStatus" alt="" src="../../img/ico_officon.png" >
+                            <img class="imgStatus" alt="" src="../../img/ico_testFile.png" hidden>
+                            <div class="divHeightExpand">
+                                <a id="lblElementMouseUp" class="aSample">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+            
+            
+            </table>
+    
+    
+    
+    	</div>
+    </div>
+
+
+
+
+	<div class="divWideRow">
+    
+    <!--
+		<div class="divSample">	
+            
+            -->
+            
+            	
+                <br/>
+                <br/>
+                
+                <div id="divTest">
+                    <a class="aSample">
+                    	Example Element:
+                    </a>
+                    
+                    <br/>
+                    <br/>
+                    
+                    <textarea class="txtaSample">
+                    
+                    </textarea>
+                    
+                </div>
+                
+        <!--
+            
+   		</div>
+        -->
+        
+    </div>
+
+
+
+
+
+
+    <br/><br/><br/>
+	<a class="aLink" href="../../index.html">Back</a>
+		
+    
+    
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+Reference:
+http://stackoverflow.com/questions/1480133/how-can-i-get-an-objects-absolute-position-on-the-page-in-javascript
+~good reference for the "getAbsoluteCoords" method.
+
+http://stackoverflow.com/questions/3398882/jquery-fadein-not-working
+~easy mistake, good to know the element must be invisible before "fade-in" can work.
+
+http://stackoverflow.com/questions/3787502/how-to-get-border-width-in-jquery-javascript
+~Something that can offset the absolute-cord-method.  Best factor border-width in.
+
+http://stackoverflow.com/questions/4605907/restart-jquery-fadeout-while-its-fading-out
+~.stop(true, true).  Excellent advice for an instant reset of a fade effect.
+
+http://stackoverflow.com/questions/5235142/how-to-disable-resizable-property-of-textarea
+~text area doesn't need to be resized here.
+
+http://stackoverflow.com/questions/14651306/get-mouse-position-within-div
+~good to show.
+
+
+
+good info:
+http://stackoverflow.com/questions/14805225/whats-the-difference-between-mouseup-and-click-events
+http://stackoverflow.com/questions/4249648/jquery-get-mouse-position-within-an-element
+http://api.jquery.com/on/
+https://api.jquery.com/mouseup/
+http://stackoverflow.com/questions/4496910/onkeypress-event-not-working-in-firefox
+http://stackoverflow.com/questions/6869996/jquery-keypress-event-object-keycode-for-firefox-problem
+http://www.quirksmode.org/js/keys.html
+https://api.jquery.com/mousemove/#mousemove-eventData-handler
+http://stackoverflow.com/questions/15969327/extra-white-space-on-table-cells
+http://stackoverflow.com/questions/7330724/event-keycode-not-returning-correct-values-in-firefox
+https://api.jquery.com/resize/
+
+
+
+-->

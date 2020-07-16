@@ -1,0 +1,463 @@
+<!doctype html>
+
+<!--
+ Filename: movers_and_shakers_challenge.html
+ Written by: Chris Dawalt
+ Creation Date: 13 November 2016
+ Purpose: demonstrate the use of some JQuery effects.
+ Modification History:
+ Original Build.
+ 
+ See below for more information & a test-report.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Movers &amp; Shakers</title>
+    
+    
+    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_movers_and_shakers_challenge.png" />
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"> </script>
+    
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+<body >
+
+	<div class="divWideRow">
+		<!--<a class="aSampleTitle">Movers &amp; Shakers</a>-->
+        <h1 class="aSampleTitle">Movers &amp; Shakers Challenge</h1>
+    </div>
+    
+    
+
+	<div class="divWideRow">
+		<div class="divSample">	
+        	<table class="tableSample">
+            	<tr>
+                
+                    <th class="tablerowSlim">
+                        Category
+                    </th>
+                    <th class="tablerowCustomWide1Header">
+                        Test Element
+                    </th>
+                    <th class="tablerowSlim">
+                        Actions
+                    </th>
+                    <th class="tablerowSlim">
+                        Reset
+                    </th>
+                </tr>
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Show / Hide
+                        </a>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divVisibilityTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                        
+                        <fieldset class="fdsSample">
+                            <button id="btnHide" class="btnSample" type="button" > Hide </button><br/>
+                            <button id="btnShow" class="btnSample" type="button" > Show </button><br/>
+                            <button id="btnToggle" class="btnSample" type="button" > Toggle </button><br/>
+                        </fieldset>
+                            
+                            
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnVisibilityReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Fade in / out
+                        </a>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divFadeTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                            
+                            <fieldset class="fdsSample">
+                                <button id="btnFadeOut" class="btnSample" type="button" > Fade Out </button><br/>
+                                <button id="btnFadeIn" class="btnSample" type="button" > Fade In </button><br/>
+                                <button id="btnFadeToggle" class="btnSample" type="button" > Fade Toggle </button><br/>
+                                <label class="aSample">
+                                    <input id="chkGrowShrink" type="checkbox" name="chkGrowShrink" value="growShrink" checked>          
+                                    Grow / Shrink?
+                                </label >
+                                
+                            </fieldset>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnFadeReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Slide up / down
+                        </a>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divSlideTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                            
+                            <fieldset class="fdsSample">
+                                <button id="btnSlideUp" class="btnSample" type="button" > Slide Up </button><br/>
+                                <button id="btnSlideDown" class="btnSample" type="button" > Slide Down </button><br/>
+                                <button id="btnSlideToggle" class="btnSample" type="button" > Slide Toggle </button>
+                            </fieldset>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnSlideReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	All Visibility
+                        </a>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divAllVisibilityTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                            <fieldset class="fdsSample">
+                            	<button id="btnAllVisibility" class="btnSample" type="button" > Initiate </button><br/>
+                            </fieldset>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnAllVisibilityReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Movement
+                        </a>
+                        <br/>
+                        <a class="aSampleWithPadding">
+                        	(instant)
+                        </a>
+                            
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	
+                        
+                        <!--<div id="someDiv" class="divCustomFill1Tight">-->
+                        	<div id="divMovementTest"> </div>
+	                    <!--</div>-->
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                            
+                            <fieldset class="fdsSample">
+                                <button id="btnMovementLeft" class="btnSample" type="button" > Move To Left </button><br/>
+                                <button id="btnMovementRight" class="btnSample" type="button" > Move To Right </button><br/>
+                                <button id="btnMovementTop" class="btnSample" type="button" > Move To Top </button><br/>
+                                <button id="btnMovementBottom" class="btnSample" type="button" > Move To Bottom </button><br/>
+                                <label class="aSample">
+                                    <input id="chkAnimation" type="checkbox" name="chkAnimation" value="animation" checked>          
+                                    Animation?
+                                </label >
+                            
+                            </fieldset>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnMovementReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Glide
+                        </a>
+                        <br/>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divGlideTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                        
+                            <fieldset class="fdsSample">
+                                <button id="btnGlideTopLeft" class="btnSample" type="button" > Glide To Top-Left </button><br/>
+                                <button id="btnGlideTopRight" class="btnSample" type="button" > Glide To Top-Right </button><br/>
+                                <button id="btnGlideBottomLeft" class="btnSample" type="button" > Glide To Bottom-Left </button><br/>
+                                <button id="btnGlideBottomRight" class="btnSample" type="button" > Glide To Bottom-Right </button><br/>
+                             </fieldset>
+                             
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnGlideReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Nudge
+                        </a>
+                        <br/>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divNudgeTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                            
+                            <fieldset class="fdsSample">
+                                <button id="btnNudgeLeft" class="btnSample" type="button" > Nudge Left </button><br/>
+                                <button id="btnNudgeRight" class="btnSample" type="button" > Nudge Right </button><br/>
+                                <button id="btnNudgeUp" class="btnSample" type="button" > Nudge Up </button><br/>
+                                <button id="btnNudgeDown" class="btnSample" type="button" > Nudge Down </button><br/>
+                            </fieldset>
+                             
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnNudgeReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                	<td class="tablerowSlim">
+                    	<a class="aSampleWithPadding">
+                        	Easing
+                        </a>
+                        <br/>
+                    </td>
+                	<td class="tablerowCustomWide1">
+                    	<div class="divCustomFill1Tight">
+                        	<div id="divEasingTest"> </div>
+                        </div>
+                    </td>
+                    <td class="tablerowSlim">
+                    	<div class="divCustomFill1">
+                        	
+                            <fieldset class="fdsSample">
+                                <a class="aSampleSmall" > Note: ignores the easing <br/>mode below, always uses<br/> &quot;easeInOutBounce&quot;.</a><br/>
+                                <button id="btnEasing" class="btnSample" type="button" > Ease (Toggle) </button>
+                            </fieldset>
+                            
+                             
+                        </div>
+                    </td>
+                    <td class="tablerowSlim" >
+                        <div class="divCustomFill2">
+                    		<button id="btnEasingReset" class="btnSampleFill" type="button" > Reset </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    </div>
+    
+    
+    <br/><br/>
+    
+
+	<div class="divWideRow">
+		<div class="divSample">
+        	
+            <table >
+            	<tr >
+                	<td class="tdPadded">
+                    	<a class="aSample"> Length (milliseconds): </a>
+                        <br/>
+                    </td>
+                    <td class="tdPadded">
+                    	<input id="txtLength" class="txtSample" type="text">
+                    </td>
+                </tr>
+                <tr>
+                	<td class="tdPadded">
+                    	<a class="aSample"> Easing mode:</a>
+                	</td>    
+                	<td class="tdPadded">
+                    	<input id="txtEasing" class="txtSample" type="text"><br/>
+                    </td>
+                </tr>
+            
+            
+            </table>
+            <br/>
+            
+            <a class="aSampleSmall"> Note: try plugin modes such as &quot;easeInQuad&quot; or &quot;easeOutBounce&quot;, barring quotes.</a>    <br/>
+            
+            <button id="btnDefaultSettings" class="btnSample" type="button">
+            	Defaults
+            </button>
+            
+            <button id="btnResetAll" class="btnSample" type="button">
+            	Reset All
+            </button>
+            <br/>
+            
+            
+    	</div>
+    </div>
+    
+    
+    <!--
+    Radio button system replaced with a text box.  A plugin provides many new ease modes.
+    <label class="aSample">
+        <input type="radio" name="radgrpEasingMode" value="linear" id="radEasingModeLinear">
+        Linear
+    </label >
+    <label class="aSample">
+        <input type="radio" name="radgrpEasingMode" value="swing" id="radEasingModeSwing">
+        Swing
+    </label>
+    <br/>
+    -->
+    
+    
+    <br/><br/><br/>
+	<a class="aLink" href="../../index.html">Back</a>
+		
+    
+    
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+
+
+
+GENERAL
+*The Fade row includes a checkbox for allowing growing / shrinking of the test div's size during the fade, using multiple properties (parameters) of CSS at a time (width, height, "opacity" to mimick "fade").  Regardless, all animations send several arguments (besides CSS) in general.
+ 
+*The "AllVisibility" row demonstrates chaining JQuery animations.
+
+*For the Movement row, an element could not be moved to a position instantly with animation.  A nearby checkbox allows the test div to use animation to get to its destination (similar to "glide" below, but in one cardinal direction at a time).
+ 
+*See the two text boxes at the very bottom for customizing all the above animation easing methods (except that of the "easing" row), as well as all animation lengths (time, milliseconds).
+ 
+*See the bottom of this file for the browser-test report.
+ 
+
+
+
+
+
+
+
+
+
+TEST REPORT
+~Web page tested on recent versions of Firefox, Chrome, and Microsoft Edge (comparable to Internet Explorer)
+
+ Compared to the other Edge and Chrome, Firefox seems to slightly shrink the "Reset" buttons.
+ 
+ All browsers handle the default button colors / appearances on clicking differently, but do not alter the functionality.
+ 
+ Firefox may slightly enlarge the entire table (and its bounding div) compared to Edge and Chrome.
+ 
+ The entire table is slightly offset to the bottom-right in Edge compared to in Chrome and Firefox.
+ 
+ Firefox seems to give the groups of buttons a slight amonut of padding between each other.  Edge and Chrome either give none or less.
+ 
+ Edge appears to apply some sort of anti-aliasing to rendered text that Chrome and Firefox do not.
+ 
+ Edge makes button text appear slightly brighter than Chrome and Firefox do.
+ 
+ Edge does not apply the slight bolding to button text that other browsers do.
+ 
+ Text of class "aSampleSmall" seems to round up to being slightly larger in Edge than it is in Chrome and Firefox (could also be a side-effect of anti-aliasing)
+ 
+ Chrome makes underlines slightly more bold.
+ 
+ Chrome has slight overlap of the bottom two text fields.
+ 
+ Firefox has the smallest bottom-div width, followed by chrome and edge.
+
+ Firefox centers most elements with a slight left offset compared to the other browsers.
+ 
+ *For all 3 browsers, margins among each of the standard input elements seem to varry slightly.
+ 
+
+
+
+
+REFERENCE:
+~lookups of JQuery API
+~DreamWeaver's auto-complete feature
+
+http://gsgd.co.uk/sandbox/jquery/easing/
+~plugin for extra easing modes for animation.
+
+-->

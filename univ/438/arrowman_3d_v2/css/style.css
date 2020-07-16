@@ -1,0 +1,167 @@
+
+/*
+*{
+  font-size:18px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-repeat:no-repeat;
+  line-height: 0;
+}
+*/
+
+body{
+  background-color:#aedca8;
+}
+
+
+#divContent{
+  box-sizing: border-box;
+  display:block;
+  text-align:left;
+  
+  position:fixed;
+  top:20px;
+  left:50%;
+  margin-left:-450px;
+  
+  padding-top:6px;
+  padding-right:26px;
+  padding-left:26px;
+  padding-bottom:24px;
+  
+  margin-top:10px;
+  background-color:#cae7c6;
+  margin-right:auto;
+  margin-bottom:10px;
+  min-width:600px;
+  /*width:800px;*/
+  max-width:900px;
+  
+  border:4px;
+  
+  border-style: solid;
+  border-width: 5px;
+  border-color:#338833;
+
+}
+
+#divContent .divScene{
+  box-sizing: border-box;
+
+  display:block;
+  padding:0;
+  margin:0;
+  
+  margin-left:auto;
+  margin-right:auto;
+
+  min-height:60px;
+  margin-top:10px;
+  margin-bottom:0px;
+  text-align:center;
+}
+
+
+
+
+#divContent p{
+  box-sizing: border-box;
+	
+  font-size:1.23em;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-repeat:no-repeat;
+  line-height: 0;
+
+  text-align:left;
+  padding:0;
+  margin:0;
+  
+  margin-top:16px;
+  margin-bottom:16px;
+  
+  margin-left:6px;
+  margin-right:6px;
+  line-height: normal;
+  
+}
+
+#divContent .pScript{
+
+  margin-top:0px;
+  margin-bottom:0px;
+  font-family: "Lucida Console", Monaco, monospace;
+  padding-left:20px;
+}
+
+button.btnCustom{
+  box-sizing: border-box;
+  line-height: normal;
+  padding: 6px;
+  width:130px;
+  font-size:1.23em;
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+}
+
+
+.aCustom:link{
+  color:#007700;
+}
+.aCustom:visited{
+  color:#007700;
+}
+.aCustom:hover{
+  color:#007700;
+}
+.aCustom:active{
+  color:#009900;
+}
+
+.aCustom{
+  font-family: Tahoma, Geneva, sans-serif;
+  color:#003300;
+}
+#aBackButton{
+  font-size:1.6em;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  display: inline-block;
+  margin:80px 30px 30px 30px;
+  padding:8px;
+}
+
+
+#divContent .divTitle p{
+  box-sizing: border-box;
+  font-size:1.84em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  min-height:40px;
+  text-align:left;
+  padding-left:20px;
+  padding-right:20px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+

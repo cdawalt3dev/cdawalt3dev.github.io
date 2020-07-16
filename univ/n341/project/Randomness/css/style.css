@@ -1,0 +1,205 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: September 13 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+
+
+
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+#aTitle{
+	position:absolute;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:42px;
+	top:5%;
+	left:0%;
+	width:100%;
+	
+	text-align: center;
+}
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+#divMessageLog{
+	padding: 48px 24px;
+	margin: 48px 24px;
+	position:absolute;
+	left:8%;
+	top: 8%;
+	right:8%;
+	bottom:28%;
+	
+	
+}
+
+
+#divBottom{
+	
+	
+	border:3px solid #005000; 
+	
+    overflow:hidden;
+	display: table;
+   	table-layout: fixed;
+   
+	position:absolute;
+	
+	/*left & right are "0", as "display: table" seems to force this div to be centered, making "left" and "right" not behave as expected.  Changing width alone works.*/
+	left:0%;
+	right:0%;
+	top:70%;
+	bottom:4%;
+	width:78%;
+}
+
+
+
+.divSample{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 15px;
+	border-radius: 64px;
+	background-color: #54CA54;
+	border:3px solid #005000;  
+}
+.divSampleSmall{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 16px;
+	border-radius: 24px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+
+.aMessageLogText{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+#divBottomMessage{
+	min-height:32px;	
+}
+#aBottomMessage{
+	font-size:22px;
+}
+
+
+.btnSampleBig{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:26px;
+	width:100%;
+	
+}
+.btnSample{
+	color:#064100;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:24px;
+}
+
+#aBackLink{
+	
+	position: absolute;
+    left: 10px;
+    bottom: 15px;
+	
+}
+
+#txtGuess{
+	color:#064100;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	width:40px;
+	float:right;
+}
+
+#btnSubmitGuess{
+	
+	float:right;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

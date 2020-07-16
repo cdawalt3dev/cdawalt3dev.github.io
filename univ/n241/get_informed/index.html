@@ -1,0 +1,194 @@
+<!doctype html>
+
+<!-- see HTML comments below the <meta ... /> tag. -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+<!--
+This form will be used in the final project.
+Requirement 1: fieldset and legend used to group together the labels and input choices 
+               for check boxes and radio buttons.
+Requirement 2: text input fields for "name", "email", and "age".
+Requirement 3: radio button with two choices for the "message_intent" input.
+Requirement 4: select and option elements for the "best_choice" input.
+Requirement 5: checkboxes with four choices for the "pages[]" input.  
+Requirement 6: textarea for the "message" input.
+Requirement 7: form has a type="submit" button, using the <button> element.
+Requirement 8: each form field has a name attribute.
+Requirement 9: form has a type="reset" button, using the <button> element.
+Requirement 10: external stylesheet in css/style.css
+Requirement 11: see CSS stylesheet for comments on layout-related rules.
+-->
+  
+  <title>Get Informed</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+  
+  <h1>Get Informed</h1>
+  
+  <div class="divGroupMaxWidth divGroupMaxWidthForm" style="padding:20px 40px;" >
+    <h3>Form</h3>
+    
+    <div class="divTextGroup">
+      
+      <p >Use the following form to ask questions or to make suggestions regarding the website.</p>
+    </div>
+    
+    <br/>
+    
+    
+    <!-- Equal-width column demo:
+    <div class="formTable">
+      <div class="divInputRow">
+        <div class="labelSpaced">
+          This text is longer
+        </div>
+        <div class="inputSpaced">
+          blank
+        </div>
+      </div>
+      <div class="divInputRow">
+        <div class="labelSpaced">
+          shorter
+        </div>
+        <div class="inputSpaced">
+          blank
+        </div>
+      </div>
+    </div>
+    -->
+    
+    
+    <form action="mailto:messageform@calculators.com" method="post" enctype="text/plain">
+      
+      
+      <div class="divInputRowFormLeft">
+        <div class="divTable">
+          <!--Requirement 2: text inputs with labels.-->
+          <div class="divInputRowInner">
+            <div class="labelSpaced">
+              <label for="inputName">Name</label>
+            </div>
+            <div class="inputSpaced">
+              <!--1st text input.-->
+              <input id="inputName" name="name" type="text" placeholder="(optional)" />
+            </div>
+          </div>
+          <div class="divInputRowInner">
+            <div class="labelSpaced">
+              <!--2nd text input.-->
+              <label for="inputEmail" >Email</label>
+            </div>
+            <div class="inputSpaced">
+              <input id="inputEmail" name="email" type="email" placeholder="(optional)" />
+            </div>
+          </div>
+          <div class="divInputRowInner">
+            <div class="labelSpaced">
+              <!--3rd text input.-->
+              <label for="inputSite">Age</label>
+            </div>
+            <div class="inputSpaced">
+              <input id="inputSite" name="age" type="text" placeholder="(optional)" />
+            </div>
+          </div>
+          
+          
+          <div class="divInputRowInner">
+            <!--Requirement 4: select & options with a label.-->
+            <div class="labelSpaced" >
+              <label class="labelSmall" for="selectBestChoice">Which of the following best describes you? </label>
+            </div>
+            <div class="inputSpaced">
+              <!--select & options.-->
+              <select id="selectBestChoice" name="best_choice" >
+                <option value="nochoice" selected hidden>Choose (optional)</option>
+                <option value="primary" >In Middle School/High School</option>
+                <option value="college" >In College</option>
+                <option value="none" >None of the above</option>
+              </select>
+            </div>
+          </div>
+          
+        </div> <!--END OF divTable-->
+      </div><!--END OF this form row-->
+      
+      <!--Each row still maintains the two-column layout.-->
+      <div class="divInputRowFormLeft">
+        <!--Requirement 3: <input> radio buttons with labels.-->
+        <!--Requirement 1: 1st fieldset and legend to contain "message_intent" input.-->
+        <fieldset>
+          <legend>Intent of Message (optional)</legend>
+          
+          
+          <div class="labelSpaced" style="display:table-cell;">
+              
+          </div>
+          
+          <div class="inputSpaced">
+            <!--Radio buttons.-->
+            <div class="divInputSemiRow">
+                <input id="radGrpMessageIntent_Question" type="radio" name="message_intent" value="question" /><label for="radGrpMessageIntent_Question">Question</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="radGrpMessageIntent_Suggestion" type="radio" name="message_intent" value="suggestion" /><label for="radGrpMessageIntent_Suggestion">Suggestion</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+      <div class="divInputRowFormLeft">
+        <!--Requirement 5: <input> checkboxes with labels.-->
+        <!--Requirement 1: 2nd fieldset and legend to contain "pages[]" input.-->
+        <fieldset>
+          <legend>Page</legend>
+          
+          <div class="labelSpaced" style="text-align:left; vertical-align:top;" >
+              <p class="labelSmall2"> Does your question/suggestion apply to any of the following page(s) (optional)?</p>
+          </div>
+          
+          <div class="inputSpaced">
+            <!--Checkboxes.-->
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Premechanical" type="checkbox" name="pages[]" value="premechanical" /><label for="checkboxPage_Premechanical">Pre-Mechanical</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Mechanical" type="checkbox" name="pages[]" value="mechanical" /><label for="checkboxPage_Mechanical">Mechanical</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Electronic" type="checkbox" name="pages[]" value="electronic" /><label for="checkboxPage_Electronic">Electronic</label>
+            </div>
+            <div class="divInputSemiRow">
+                <input id="checkboxPage_Modern" type="checkbox" name="pages[]" value="modern" /><label for="checkboxPage_Modern">Modern</label>
+            </div>
+          </div>
+          
+        </fieldset>
+      </div>
+      
+      
+      
+      <br/>
+      <div class="divInputRowFormLeft">
+        <!--Requirement 6: textarea. Default text present.-->
+        <label for="textareaMessage">Message:</label>
+        <textarea id="textareaMessage" name="message" placeholder="Begin typing here..." >Begin typing here...</textarea>
+      </div>
+      <div class="divInputRowFormRight">
+        <!--Requirements 7 & 9: reset and submit buttons.-->
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  
+  </div>  <!--End of divGroupMaxWidth-->
+  
+    
+  <br/>
+  <a class="aBackLink" style="text-align:left;" href="../index.html"> Back</a>
+  
+</body>
+</html>

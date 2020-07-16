@@ -1,0 +1,203 @@
+<!doctype html>
+<!--
+ Name: index.html
+ Purpose: Simple web page
+ Author: Chris Dawalt
+ Created: 2018-1-25
+
+-->
+
+
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <script type="text/javascript">
+$( document ).ready(function() {
+  $.mobile.pushStateEnabled = false;
+});
+</script>
+  -->
+  
+  
+  <title>Interest Calculator</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../_global/img/img_icon_interestcalc.png" />
+  
+  
+  <!--
+  <meta name="viewport" content="width=device-width, user-scalable=false;"/> 
+  -->
+
+  <link rel="stylesheet" href="../_global/themes/jqm_dawalt/jqm_dawalt.min.css" />
+  <link rel="stylesheet" href="../_global/themes/jqm_dawalt/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_global/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../_global/css/style_narrow.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style_narrow.css"/>
+  
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+    
+        
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="js/javascript.js"> </script>
+  
+  
+  <!-- mobile-friendly settings -->
+  <link rel="apple-touch-icon" href="../_global/img/img_icon_interestcalc.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Interest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    
+</head>
+<body>
+
+  <div data-role="page" data-theme="a">
+  
+    <header class="headerJQMobileSite">
+      Interest Calculator
+    </header>
+    
+    <div class="divContent">
+  
+    <!--
+        <div data-role="header" data-position="inline">
+            <h1>Interest Calculator</h1>
+        </div>
+    -->
+      <div data-role="content" data-theme="a">
+        <div class="divTextArea">
+          <p class="pBottomMargin">Determine simple or compound interest using this calculator.</p>
+          <br/>
+          <p class="pBottomMargin">Get the <a href="../phonegap/index.html" data-ajax="false">app</a>.</p>
+          <br/>
+        </div>
+          
+        <form>
+          <div class="divFlexBoxContainerVer divBorder" >
+            <div class="divFlexBoxRowThin divFlexBoxFormConstraint divFlexBoxCenter">
+              <p class="pSubHeader"> INPUTS </p>
+            </div>
+            
+            
+            <div id="divInputError" class="divFlexBoxRowThin divFlexBoxFormConstraint divFlexBoxCenter divError">
+              <p id="pInputError" class="pError">  </p>
+            </div>
+            
+            <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+               <div class="divFlexBoxColLeft" >
+               
+                 <label  >Interest Type</label>
+               </div>
+               <div class="divFlexBoxColRight" >
+                 <fieldset id="radGrpInterestType" data-role="controlgroup"  data-type="horizontal" >
+                   <input id="radInterestType_Simple" type="radio" name="InterestType" value="Simple" checked="checked" />
+                   <label for="radInterestType_Simple">Simple</label>
+                 
+                   <input id="radInterestType_Compound" type="radio" name="InterestType" value="Compound" />
+                   <label for="radInterestType_Compound">Compound</label>
+                   
+                 </fieldset>
+               </div>
+            </div>
+            
+           
+            <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+              <div class="divFlexBoxColLeft" >
+                 <label for="inputPrincipal"> Principal ($) </label>
+              </div>
+              <div class="divFlexBoxColRight" >
+                <input id="inputPrincipal" name="Principal" type="text"/>
+              </div>
+            </div>
+           
+          
+            <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+              <div class="divFlexBoxColLeft" >
+                 <label for="inputInterest"> Interest Rate (Decimal) </label>
+              </div>
+              <div class="divFlexBoxColRight" >
+                <input id="inputInterest" name="Interest" type="text"/>
+              </div>
+            </div>
+             
+            <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+              <div class="divFlexBoxColLeft" >
+                <label for="inputTime"> Time (Years) </label>
+              </div>
+              <div class="divFlexBoxColRight" >
+                <input id="inputTime" name="Time" type="text"/>
+              </div>
+            </div>
+            
+            <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+              <div class="divFlexBoxColLeft divHidable" >
+                 <label for="inputCompoundPeriods"> Compound Periods (per year) </label>
+                 
+              </div>
+              <div class="divFlexBoxColRight divHidable" >
+                <input id="inputCompoundPeriods" name="compoundPeriods" type="text"/>
+                  <label for="chkContinuous">Continuous</label>
+                  <input name="Continuous" id="chkContinuous" data-mini="true" type="checkbox" checked="checked"/>
+                  
+              </div>
+            </div>
+          </div>
+             
+          <div class="divFlexBoxRowThin divFlexBoxFormConstraint divFlexBoxCenter">
+            <div class="divButtonGroup"  >
+              <button id="buttonCalculate" class="buttonForm" type="button"> Calculate </button>
+              <button id="buttonClearOutput" class="buttonForm" type="button"> Clear Output </button>
+              <button id="buttonClearAll" class="buttonForm" type="button"> Clear All </button>
+            </div>
+          </div>
+          
+        </form>
+           
+           
+        <!--  div class=" divSemiContent divFlexBoxContainerVer divBorder"  -->
+        <div class="divFlexBoxContainerVer divBorder">
+         
+          <div class="divFlexBoxRowThin divFlexBoxFormConstraint divFlexBoxCenter">
+            <p class="pSubHeader"> OUTPUTS </p>
+          </div>
+          
+
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColLeft" >
+              <label > Interest Amount ($) </label>
+            </div>
+            <div class="divFlexBoxColRight" >
+              <div class="divOutput">
+                <p id="aInterestTotal" > </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColLeft" >
+              <label > Total ($) </label>
+            </div>
+            <div class="divFlexBoxColRight" >
+              <div class="divOutput">
+                <p id="aTotalAmount" > </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+          
+      </div>
+    </div>
+    
+    
+    <a class="aBack" href="../index.html" data-ajax="false">Back</a>
+    
+  </div>
+    
+</body>
+</html>

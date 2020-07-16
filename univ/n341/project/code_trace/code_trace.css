@@ -1,0 +1,32 @@
+/*************************************************************************
+TITLE: code_trace.css
+AUTHOR: Seth Fuller (SMF)
+CREATE DATE: 14 Nov 2016
+PURPOSE: CSS styling file for the Code Trace assignment
+LAST MODIFIED ON: 14 Nov 2016
+LAST MODIFIED BY: Joe Wessel (JTW)
+MODIFICATION HISTORY:
+Original build
+*************************************************************************/
+h1 {
+  position: relative;
+  font-family: "Hobo Std";
+  font-size: 55px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

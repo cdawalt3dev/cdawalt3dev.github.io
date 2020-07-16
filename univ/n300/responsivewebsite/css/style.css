@@ -1,0 +1,424 @@
+/*
+ Name: style.css
+ Purpose: Stores default CSS information
+ Author: Chris Dawalt
+ Created: 2018-1-9
+*/
+
+
+/* CSS: 
+    use ">" to link immediate children.
+    use " " to link all children (yes, that is a space).
+*/
+
+
+
+
+header.headerResponsiveSite{
+
+    /* top, right, bottom, left*/
+    margin: 64px 0px 5px 0px;
+
+    font-size:54px;
+    text-align:center;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+a, p, label{
+    display: inline-block;
+    font-size: 18px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+}
+
+/*a:link{
+}
+a:visited{
+}
+a:hover{
+}
+a:active{
+}
+*/
+
+a.aEasyLink{
+    display:inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+p.pShopItemHeader{
+    display:inline-block;
+    padding:4px 2px 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align:middle;
+    text-align:center;
+}
+
+
+p.pNavTitle{
+    
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+div.divTextArea{
+    padding:20px 30px 20px 30px;
+
+}
+
+
+
+nav{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    display:inline-flex;
+    margin:1px 0px 36px 0px;
+    padding: 0px;
+    
+    
+    
+    
+}
+
+
+nav a{
+    background-color:#0a610a;
+    text-align:center;
+    text-decoration: none;
+    min-width:120px;
+    border-style: solid;
+    border-width: 3px 0px 3px 3px;
+    border-color: #002700;
+    margin:0px;
+    padding: 5px 5px 5px 5px;
+    float:none;
+}
+
+nav a:last-child{
+    border-width: 3px 3px 3px 3px;
+
+}
+
+nav a.aNavCurrent{
+    background-color:#375237;
+    pointer-events: none;
+    cursor: default;
+}
+nav a.aNavCurrent p{
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;
+    color:#728772;
+}
+
+nav p{
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;
+    color:#b2e8b2;
+}
+
+div.divSemiContent{
+    width:98%;
+
+}
+
+/*"divFlexBoxContainerHorStackable" is different on mobile devices.*/
+div.divFlexBoxContainerHor, div.divFlexBoxContainerHorStackable{
+    
+    width:100%;
+    -moz-box-orient: horizontal;
+    display: -moz-box;
+    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    -o-box-orient: horizontal;
+    display: -o-box;
+    
+    
+    
+}
+
+
+
+
+div.divFlexBoxContainerVer{
+    
+    -moz-box-orient: vertical;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -o-box-orient: vertical;
+    display: -o-box;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-width: 3px 3px 3px 3px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+}
+
+
+div.divFlexBoxRow{
+    border-width: 4px 4px 0px 4px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    
+} 
+div.divFlexBoxRow:last-child{
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: #005000;
+} 
+
+
+div.divFlexBoxRowThin{
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    border-color: #005000;
+    
+    
+    
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    
+} 
+div.divFlexBoxRowThin:last-child{
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #005000;
+} 
+
+
+
+div.divFlexBoxShopConstraint{
+    min-height:240px;
+}
+div.divFlexBoxFormConstraint{
+    min-height:40px;
+}
+
+div.divFlexBoxColA{
+    border-width: 0px 4px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    width: 0;
+    -moz-box-flex: 0.7;
+    -webkit-box-flex: 0.7;
+    -o-box-flex: 0.7;
+    
+} 
+
+div.divFlexBoxColB{
+
+    
+    white-space: nowrap;
+    width: 0;
+    -moz-box-flex: 0.3;
+    -webkit-box-flex: 0.3;
+    -o-box-flex: 0.3;
+    
+    
+    display: flex;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    
+    
+} 
+
+div.divFlexBoxColC{
+    border-width: 0px 2px 0px 0px;
+    border-style: solid;
+    border-color: #005000;
+    
+    width: 0px;
+    -moz-box-flex: 0.35;
+    -webkit-box-flex: 0.35;
+    -o-box-flex: 0.35;
+    
+    display:flex;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    
+} 
+
+div.divPadderLeft{
+    display:block;
+    margin: 0px 4px 0px 4px;
+    text-align:center;
+}
+
+div.divFlexBoxColD{
+    white-space: nowrap;
+    width: 0px;
+    -moz-box-flex: 0.65;
+    -webkit-box-flex: 0.65;
+    -o-box-flex: 0.65;
+    
+    display:flex;
+    align-items: center;
+} 
+
+
+
+div.divPadderRight{
+    width:100%;
+    display:block;
+    margin: 0px 4px 0px 4px;
+    padding: 6px 4px 6px 4px;
+}
+
+
+
+div.divButtonGroup{
+    display:flex;
+    margin: 0px 4px 0px 4px;
+    text-align:center;
+    
+}
+
+.divFlexBoxCenter{
+    display:flex;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+div.divImageCenterHelp{
+    max-height: inherit;
+    padding:0px;
+    margin:14px;
+}
+
+
+
+.imgCenter{
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+}
+
+
+img.imgShop{
+
+    max-height: 260px;
+    max-width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+/*A thumbnail of the software's logo near the title only shows up for mobile devices.*/
+img.imgShopMobile{
+    display:none;
+}
+
+
+div.divShopItemHeader{
+    display:inline-block;
+}
+
+
+
+
+
+input{
+    font-size:20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    min-width:0;
+    width:100%;
+    height:28px;
+}
+
+select{
+    font-size:20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    min-width:0;
+    width:100%;
+    height:28px;
+}
+
+input.inputRange{
+    display:inline-block;
+    width:80%;
+    
+    height: 24px;
+    
+    /*transparent.*/
+    background: rgba(0, 0, 0, 0); 
+    
+    outline: none;
+    opacity: 1.0;
+    
+    float:left;
+    
+}
+
+p.pRangeValue{
+    float:right;
+}
+
+textArea.textareaComment{
+    min-width:0px;
+    width:100%;
+    height:120px;
+    display: inline;
+    font-size: 18px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    
+
+}
+
+button{
+
+}
+button.buttonForm{
+    display:inline-block;
+    
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    
+    min-width:80px;
+    margin:4px;
+    padding:2px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

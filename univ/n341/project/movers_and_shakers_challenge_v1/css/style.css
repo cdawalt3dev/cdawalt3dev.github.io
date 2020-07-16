@@ -1,0 +1,556 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: 13 November 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+
+.aSampleSmall{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:15px;
+}
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aSampleTitle{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divSample{
+	display:inline-block;
+	margin: 15px 15px;
+	
+	padding: 15px;
+	
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+}
+
+
+.divSampleWide{
+	display:inline-block;
+	margin: 24px 15px;
+	
+	padding: 12px;
+	
+	
+	border-radius: 32px;
+	background-color: #207A20;
+	border:3px solid #005000;
+	
+	
+	/*
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	*/
+	
+	
+	margin-left:auto;
+	margin-right:auto;
+	/*text-align:center;*/
+	/*width:95%;*/
+	min-width:400px;
+	
+	
+}
+
+
+
+.divSampleSmall{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 8px;
+	border-radius: 24px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+
+
+
+.divOutter{
+	
+	display:inline-flex; 
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.divInner{
+	display:inline-block; 
+}
+
+
+.divWideRow{
+	
+	margin: 0 auto;
+	padding: 0px;
+	
+	display:inline-block;
+	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:100%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+table{
+	display:inline-block;
+	border:3px solid #005000;
+	
+}
+
+
+
+
+.tablerowSlimBiggerFont{
+	padding:0px 0px;
+	margin: 0px 0px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	min-width:64px;
+	border:3px solid #005000;
+}
+
+
+.tablerowSlim{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	
+	/* was 64... */
+	min-width:200px;
+	
+	
+	border:3px solid #005000;
+	
+	
+	/*vertical-align:central;*/
+	text-align:center;
+}
+
+.tablerowWide{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:236px;
+	vertical-align:text-bottom;
+	
+	
+	
+}
+
+
+
+.tablerowExtraWide{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:660px;
+	border:3px solid #005000;
+}
+
+
+
+.tableSample{
+	
+	/*oddly enough, this seems implied as well, probably from a parent element in this case.*/
+	border:3px solid #005000;
+	
+}
+
+th{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:128px;
+	border:3px solid #005000;
+	
+}
+td{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:128px;
+	border:3px solid #005000;
+	height:32px;
+	
+	text-align:left;
+}
+
+tr{
+	padding:1px;
+	border:3px solid #005000;
+	
+}
+.tableRowLonger{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:460px;
+	border:3px solid #005000;
+}
+
+
+
+
+.aSampleTextMod{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+	display:block;
+}
+
+
+
+
+
+#divVisibilityTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: rgba(15,231,148,1.00);
+	
+	border:5px solid rgba(30,158,120,1.00);
+}
+
+#divFadeTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+
+#divSlideTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+#divAllVisibilityTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+#divMovementTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+	
+}
+#divGlideTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+#divNudgeTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+#divEasingTest{
+	display:inline-block;
+	margin: 8px 8px;
+	padding: 0px;
+	width:50px;
+	height:50px;
+	border-radius: 8px;
+	background-color: #0FD794;
+	border:5px solid rgba(30,158,120,1.00);
+}
+
+
+
+
+.tablerowCustomWide1Header{
+	padding:1px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	min-width:200px;
+	vertical-align:text-bottom;
+	
+}
+
+
+.tablerowCustomWide1{
+	
+	/*vertical-align:central;*/
+	
+	align-items:center;
+	align-content:center;
+	align-self:center;
+	/*vertical-align:cent
+	vertical-align:text-bottom;ral;*/
+	text-align:center;
+	
+	/*
+	background-color:#11FFFF;
+	*/
+}
+
+
+.aSampleWithPadding{
+	padding:0px 10px;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+
+
+.btnSample{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	min-width: 220px;
+	min-height:24px;
+	display:inline-block;
+	
+	align-content:center;
+	align-self:center;
+	
+	
+}
+
+.txtSample{
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:22px;
+	/*min-width: 220px;*/
+	width: 220px;
+	min-height:24px;
+	display:inline-block;
+	
+	align-content:center;
+	align-self:center;
+	
+	
+}
+
+
+.btnSampleFill{
+	
+	/*padding: -24px;*/
+	/*margin:-24px;*/
+	
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:22px;
+	width:100%;
+
+	height:100%;
+	/*height:100px;*/
+	align-content:center;
+	align-self:center;
+	
+}
+
+.divCustomFill1{
+	
+	/*
+	width:200px;
+	height:200px;
+	margin:12px;
+	*/
+	
+	
+	
+	
+	align-items:center;
+	
+	/*display:table-cell;*/
+	
+	align-content:center;
+	/*vertical-align:central;*/
+	text-align:center;
+	
+	margin:12px;
+}
+
+
+.divCustomFill1Tight{
+	
+	margin:0px;
+	padding:0px;
+	
+	
+	align-items:center;
+	align-content:center;
+	align-self:center;
+	/*vertical-align:central;*/
+	text-align:center;
+	/*
+	background-color:#FFFFFF;
+	*/
+	
+	
+}
+
+
+
+.divCustomFill2{
+	width:200px;
+	height:200px;
+	margin:12px;
+	
+	/*vertical-align:central;*/
+	text-align:center;
+}
+
+
+.fdsSample{
+	
+	margin:0px;
+	padding:4px;
+	border:1px solid #005000;
+	
+	
+}
+
+.tdPadded{
+	padding:7px;	
+}
+
+
+

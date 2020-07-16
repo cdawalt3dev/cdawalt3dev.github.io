@@ -1,0 +1,99 @@
+<!doctype html>
+
+<!--
+ Filename: jsHelloWorld.html
+ Written by: Chris Dawalt
+ Purpose: Demonstrate use of javascript.
+ Date: 26 August 2016
+ Modification History:
+ 26 Aug 2016: created "joke" version.  Not assigned yet.
+ 31 Aug 2016: completed.
+
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Hello World</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_JSHelloWorld.png" />
+    
+    
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+
+<!-- onload="initialize()"    ...not used, jquery seems to just use a hard-reference I suppose.-->
+<body >
+
+    <a id = "aLine1" class="aSample"> Hello World </a>
+		
+	<br/><br/>
+		
+	<a id = "aLine2" class="aSample">  </a>
+	<br/>
+	<a id = "aLine3" class="aSample">  </a>
+	<br/>
+	<a id = "aLine4" class="aSample">  </a>
+	<br/><br/><br/>
+    
+    
+    
+    
+    <!-- onclick="alert('Hello world!')" -->
+	<button id="btnConstruction" type="button" class="btnSample">See Construction Version</button>
+    
+    <br/>
+    <button id="btnAlert" type="button" class="btnSample">Alert Version</button>
+    
+    
+    <br/><br/><br/>
+	<a class="aSample" href="../../index.html">Back</a>
+		
+    
+    
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+Reference:
+http://stackoverflow.com/questions/10693162/window-load-wrapper-for-jquery
+~creating a designated "load" method under jquery
+
+http://www.w3schools.com/js/js_strict.asp
+http://stackoverflow.com/questions/4462478/jslint-is-suddenly-reporting-use-the-function-form-of-use-strict
+~explanation of   'use strict';
+
+http://stackoverflow.com/questions/11238149/apply-jquery-function-in-click-event-of-link-button-in-code-behind
+~links a button's click event to a method with JQuery
+
+https://api.jquery.com/id-selector/
+~demonstrates selecting by class in JQuery
+
+http://api.jquery.com/text/
+~demonstrates changing the contents of an element called by ID with JQuery
+
+http://www.w3schools.com/css/css_link.asp
+~customize links for a tag type or of a class
+
+http://stackoverflow.com/questions/15367800/stray-end-tag-head
+~validation error diagnostic.  Most custom tags, such as "a" or "p", are not allowed to be defined in a "head" tag.
+
+-->

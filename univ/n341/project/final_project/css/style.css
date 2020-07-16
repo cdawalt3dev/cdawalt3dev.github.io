@@ -1,0 +1,278 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: 22 November 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+
+/*defaults.  The margin is overridden often.*/
+*{
+	margin: 0px 0px 0px 0px;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	
+	
+}
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	min-width: 250px;
+}
+
+
+
+
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divRow{
+	padding: 0px;
+	margin:0 0 0px;
+	width:396px;
+    height:34px;
+    /*border:1px solid;*/
+	
+}
+.divImage{
+	border:3px solid #005000; 
+	padding: 0px;
+	margin:0 0 0px;
+    width:32px;
+	height:32px;
+    float:left;
+}
+.divItem{
+	padding: 0px;
+	margin:0 0 0px;
+	width:auto;
+    height:32px;
+    overflow:hidden;
+	
+	line-height: 32px;
+	border:3px solid #005000; 
+}
+
+
+
+
+.aItemText{
+	padding: 0px;
+	
+	color: #32ff32;
+	font-size: 22px;
+	
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+  	
+}
+
+
+.aItemTextNoLink{
+	padding: 0px;
+	
+	color: #32ff32;
+	font-size: 22px;
+	
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+  	
+}
+
+
+.imgMulti{
+	float:left; 	
+	padding: 0px 4px;
+}
+
+.aItemTextRed{
+	padding: 0px;
+	color: #F42545;
+	font-size: 22px;
+	margin:0 0 0px;
+	padding-left: 8px;
+	float: left;
+}
+
+/*appears to make no difference anymore.  Just for safety.*/
+.imgItemIcon{
+	padding: 0px;
+	margin:0 0 0px;
+}
+
+/*li, li a{*/						/* Define the formatting for the links to the labs */
+#ulOutterList{
+	padding: 0px;
+	list-style:none;
+	background-color: #006600;
+	text-align: center;
+	color: #32ff32;
+}
+
+.div{
+	padding: 0px;
+	margin: 0px;
+}
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+li{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	display:table-row;
+}
+
+
+
+
+
+
+.aSampleTitle{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:28px;
+}
+
+
+#author{
+	color: #006800;
+	font-size: 24px;
+	text-align: center;
+	/*padding-left: 6em;*/
+	
+}
+/*is "title" a keyword or element already?*/
+#titleM{
+	font-size: 38px;
+	color: #006800;
+	text-align: center;
+}
+
+
+
+header{
+	/*text-align:left;
+	color:white;
+	*/
+	background-color:#60CC60;
+	padding:28px 150px;
+	margin:0 0 14px;
+	
+}
+body {
+	background-color: #A0ffA0;
+}
+
+
+
+
+
+
+
+/*fixes a little overlap.*/
+#assignments ul {
+	float:left;
+	/*width: 396px;*/
+	padding-left:0px;
+}
+
+/*NOTE: increase "min-height" as more projects are added.
+Looks like a good formula is
+min-height = 104 + 38*rows
+*/
+#assignments{			/* Define the formatting for the <div id="asssignments"> box */
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 15px;
+	border-radius: 64px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+	width: 400px;
+	min-height: 845px;  /* 19 rows,  times 39 each instead*/    
+}

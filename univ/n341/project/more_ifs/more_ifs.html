@@ -1,0 +1,164 @@
+<!doctype html>
+
+<!--
+ Filename: more_ifs.html
+ Written by: Chris Dawalt
+ Creation Date: September 19 2016
+ Purpose: Demonstrate the use of a chain of if-else statements and a switch statement separately to categorize ways of dealing with longitude and lattitude
+ Modification History:
+ Original Build.
+ 
+ ~Note that inputs can be intered by the top-right "Enter by Prompt" button too.  Outputs are along the bottom.
+ ~Use trig mode, top-left checkbox, lets the advice direction be determined by the range of degrees by the angle formed by the two lat / lon pairs.
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>More Ifs</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/ico_more_ifs.png" />
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/javascript.js"> </script>
+
+</head>
+
+
+<body >
+
+    <a id="aTitle" class="aSample"> More Ifs </a>
+    
+    
+    <div class="divWideRow">
+    <div id="divInput" class="divSampleSmall">
+    
+    	<div id="divCoordsFrom" class="divInvisible">
+        
+            <a id="aCoordsFrom" class="aSample"> Current Location </a>
+            <br/>
+        
+            <div class="divOutter">
+            
+                <div class="divInnerRight">
+                            <a id="aCoordsFromLat" class="aSampleTextMod" > Latitude: &nbsp; </a>
+                            <a id="aCoordsFromLon" class="aSampleTextMod" > Longitude: &nbsp; </a>
+                            
+                </div>
+                <div class="divInner">
+                
+                        <input id="txtCoordsFromLat" class="txtSample" type="text" name="CoordsFromLat" value="">
+                        <input id="txtCoordsFromLon" class="txtSample" type="text" name="CoordsFromLon" value="">  
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div id="divCoordsTo" class="divInvisible">
+        
+			<a id="aCoordsTo" class="aSample"> Destination Location </a>
+			<br/>
+            
+            <div class="divOutter">
+            
+                <div class="divInnerRight">
+                        <a id="aCoordsToLat" class="aSampleTextMod"> Latitude: &nbsp; </a>
+                        <a id="aCoordsToLon" class="aSampleTextMod"> Longitude: &nbsp; </a>
+                        
+                </div>
+                <div class="divInner">
+                
+                        <input id="txtCoordsToLat" class="txtSample" type="text" name="Guess" value="">
+                        <input id="txtCoordsToLon" class="txtSample" type="text" name="Guess" value="">
+                        
+                </div>
+            
+            </div>
+            
+        </div>
+        
+        <br/>
+    	
+    	<button id="btnSubmit" type="button" class="btnSample">Submit</button>
+        <button id="btnClear" type="button" class="btnSample">Clear</button>
+	      
+    </div>
+    </div>
+    <!-- end of divInput & divWidwRow, in that order. -->
+    
+    
+    
+    <div id="divUseTrigonometry">
+        <input id="chkUseTrigonometry" type="checkbox" name="UseTrigonometry" value="UseTrigonometryValue"> <a id="aUseTrigonometry" class="aSample">Use Trigonometry</a>
+    
+    </div>
+    
+    
+    <div id="divEnterByPrompt">
+        <button id="btnEnterByPrompt" type="button" class="btnSample">Enter By Prompt</button>
+    </div>
+        
+    
+    
+    
+    <div class="divWideRow">
+        <div class="divOutput">
+            <div class="divOutter">
+                <div class="divInner">
+                        <a id="aIfResultsTitle" class="aSampleMiniTitle"> If/Else Construct: </a>
+                        <br/>
+                        <a id="aIfResultsText" class="aSampleBlock">  </a>
+                        
+                </div>
+            </div>
+        </div>
+        
+        <div class="divOutput">
+            <div class="divOutter">
+                <div class="divInner">
+                    <a id="aSwitchResultsTitle" class="aSampleMiniTitle"> Case/Switch Construct: </a>
+                    <br/>
+                    <a id="aSwitchResultsText" class="aSampleBlock">  </a>
+                        
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <br/>
+    
+    <a id="aBackLink" class="aLink" href="../../index.html">Back</a>
+	
+</body>
+
+</html>
+
+
+<!--
+Reference:
+http://stackoverflow.com/questions/12500989/css-text-align-not-working
+~the CSS "display:block" helps an element occupy all its horizontal space to center properly, like a standalone title.
+
+http://www.w3schools.com/css/css_padding.asp
+http://www.w3schools.com/css/css_margin.asp
+http://www.w3schools.com/cssref/pr_text_text-align.asp
+~reading
+
+http://stackoverflow.com/questions/19089115/relative-div-height
+http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work?noredirect=1&lq=1
+~good information
+
+http://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px
+~border radius cannot be percentage-based and still circular.  It tries to interpret the screen's width and height separately as minima and maxima for the "Ellipse" shape, causing it to warp with the width of the window (undesirable)
+
+http://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements
+~good info for CSS specifics
+
+
+-->

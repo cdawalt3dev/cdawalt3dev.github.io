@@ -1,0 +1,249 @@
+/*
+ Name: style.css
+ Purpose: Stores default CSS information
+ Author: Chris Dawalt
+ Created: 2018-1-9
+*/
+
+
+/* CSS: 
+    use ">" to link immediate children.
+    use " " to link all children (yes, that is a space).
+*/
+
+
+
+
+
+a:link{
+  color:#007700;
+}
+a:visited{
+  color:#007700;
+}
+a:hover{
+  color:#007700;
+}
+a:active{
+  color:#009900;
+}
+
+
+
+
+*{
+    /*values are: content-box, border-box*/
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: #b4d2b4;
+    
+}
+
+.scrollable{
+   overflow:auto;
+}
+
+
+
+
+
+
+.aBack{
+    font-size:16px;
+    display: inline-block;
+    margin:80px 30px 30px 30px;
+    padding:8px;
+}
+
+p.pSubHeader{
+    
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:6px;
+    margin-bottom:24px;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+header{
+    display:block;
+    font-size:30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#004700;
+    text-align:center;
+    margin: 0px 0px 32px 0px;
+}
+
+
+header.headerPrimary{
+
+    background-color:#a4e3a4;
+
+    /* top, right, bottom, left*/
+    margin: 36px 0px 5px 0px;
+    padding:7px 0px 3px 0px;
+
+    font-size:34px;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+
+
+img.imgPortfolio{
+
+    display:flex;
+    
+    margin:0px;
+    padding:0px;
+    
+    max-width:50px;
+    max-height:50px;
+
+}
+
+table{
+
+
+    margin-left:auto;
+    margin-right:auto;
+    
+    /*
+    border-style:solid;
+    border-width:3px;
+    border-color:#1e631e;
+    */
+
+    border-collapse: collapse;
+}
+
+
+
+/*Style for the text inside the table.*/
+th p, th a, td p, td a{
+    margin:0px;
+    /*padding:9px 16px 9px 16px;*/
+    
+    display:flex;
+    
+    /*vertical*/
+    align-items: center;
+    -webkit-justify-content: center;
+    
+    /*horizontal*/
+    justify-content: flex-end;
+    
+    
+    height:50px;
+    
+    font-size:24px;
+    padding:0px 30px 0px 30px;
+}
+
+th, td{
+    background-color:#c4e3c4;
+    
+    margin:0px;
+    padding:0px;
+    
+    /*text-align:center;*/
+    
+    border-style:solid;
+    border-width:3px;
+    border-color:#1e631e;
+    
+    border-width:3px 0px 0px 3px;
+
+}
+
+th:first-child, td:first-child{
+    text-align:right;
+}
+
+th:last-child, td:last-child{
+    border-width:3px 3px 0px 3px;
+}
+tr:last-child>th, tr:last-child>td{
+    border-width:3px 0px 3px 3px;
+}
+tr:last-child>th:last-child, tr:last-child>td:last-child{
+    border-width:3px 3px 3px 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div{
+    margin:0px;
+    padding:0px;
+    display:block;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+div.divWide{
+    float: none;
+    display:block;
+    text-align:center;
+    
+}
+
+div.divContent{
+    text-align:left;
+    background-color:#addcad;
+    min-width:560px;
+    max-width:1000px;
+    width: 92%;
+    min-height:300px;
+    border-radius: 32px;
+    border:3px solid #005000;
+    padding:30px 0px 30px 0px;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+div.divContentSlim{
+    display:inline-block;
+    width:auto;
+    text-align:left;
+    background-color:#addcad;
+    min-width:40px;
+    max-width:1000px;
+    min-height:40px;
+    border-radius: 32px;
+    border:3px solid #005000;
+    padding:30px 30px 30px 30px;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+

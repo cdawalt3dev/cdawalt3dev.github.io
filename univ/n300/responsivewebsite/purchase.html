@@ -1,0 +1,248 @@
+<!doctype html>
+<!--
+ Name: index.html
+ Purpose: Simple web page
+ Author: Chris Dawalt
+ Created: 2018-1-9
+
+-->
+  
+  
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    
+    <title>SOFTWARE & SUPPORT</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../_global/img/img_icon_responsivewebsite.png" />
+    
+    
+    <meta name="viewport" content="width=device-width, user-scalable=false;"/> 
+    
+    <link rel="stylesheet" type="text/css" href="../_global/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="../_global/css/style_narrow.css">
+    <link rel="stylesheet" type="text/css" href="css/style_narrow.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/javascript.js"> </script>
+    
+    
+    
+  </head>
+  
+  
+  
+  <body>
+    
+    <header class="headerResponsiveSite">
+      SOFTWARE & SUPPORT
+      
+    </header>
+    
+    
+   <p class="pNavTitle"> Navigation </p>
+    
+    
+    
+    <div class="divWide">
+      <nav>
+        <a href="index.html">
+          <p> Home </p>
+        </a>
+        <a href="browse.html">
+          <p> Browse </p>
+        </a>
+        <a href="purchase.html" class="aNavCurrent">
+          <p> Purchase </p>
+        </a>
+      </nav>
+    </div>
+    
+    
+    
+    <div class="divContent">
+      
+      <header>
+        Order Form
+      </header>
+      
+      <!--<p id="debug">what?</p> -->
+      
+      <div class="divTextArea">
+        <p>Use the following form to order software. Someone from our company will contact you regarding payment.</p>
+        <br>
+        <p>One submission per product (minimum quantity of 30).</p>
+        <br>
+        <br>
+      </div>
+      
+      
+      <div class="divSemiContent divFlexBoxContainerVer">
+        <form>
+      
+      
+      
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC" >
+              <div class="divPadderLeft">
+                <label for="inputName">Name</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputName" name="name" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputEmail" >Email Address</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight"  >
+                <input id="inputEmail" name="email" type="email">
+              </div>
+            </div>
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputPhonenumber">Phone Number</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight"  >
+                <input id="inputPhonenumber" name="phonenumber" type="tel">
+              </div>
+            </div>
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC" >
+              <div class="divPadderLeft">
+                  <label for="inputCompany">Company</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputCompany" name="company" type="text">
+              </div>
+            </div>
+          </div>
+        
+        
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputSoftware">Software</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <select id="inputSoftware" name="software">
+                  <option value="visual_studio">Visual Studio</option>
+                  <option value="eclipse">Eclipse</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputRangeQuantity">Quantity</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputRangeQuantity"  class="inputRange" min="30" max="100" name="quantity" value="30" onchange="updateQuantity()" type="range"/>
+
+                <p id="pQuantity" class="pRangeValue" >30</p>
+            
+              </div>
+            </div>
+
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputInstall_date" >Install Date</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputInstall_date" name="install_date" type="date"/>
+            
+              </div>
+            </div>
+
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputInstallTime">Install Time</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputInstallTime" name="install_time" type="time"/>
+            
+              </div>
+            </div>
+
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="inputAddress">Address</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <input id="inputAddress" name="address" type="text"/>
+            
+              </div>
+            </div>
+
+          </div>
+          <div class="divFlexBoxContainerHorStackable divFlexBoxRowThin divFlexBoxFormConstraint">
+            <div class="divFlexBoxColC"  >
+              <div class="divPadderLeft">
+                <label for="textareaComments">Other comments</label>
+              </div>
+            </div>
+            <div class="divFlexBoxColD" >
+              <div class="divPadderRight">
+                <textarea id="textareaComments" name="comments" class="textareaComment"></textarea>
+            
+              </div>
+            </div>
+
+          </div>
+          <div class="divFlexBoxRowThin divFlexBoxFormConstraint divFlexBoxCenter">
+            <div class="divButtonGroup"  >
+              <button class="buttonForm" type="submit"> Submit </button>
+              <button class="buttonForm" type="reset"> Reset </button>
+            </div>
+          </div>
+        
+        
+        </form>
+      </div>
+    </div>
+    
+    <a class="aBack" href="../index.html">Back</a>
+    
+  </body>
+  
+</html>
+

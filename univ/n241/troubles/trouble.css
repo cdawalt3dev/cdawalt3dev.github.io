@@ -1,0 +1,95 @@
+/* ================================ UNIVERSAL ================================ */
+body {
+	position: relative;
+	padding: 10px 0;
+	border-bottom: 1px solid;
+	border-bottom-color: #CCCCCC; /* medium gray */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	font-family: "Times New Roman", Times, serif;
+	line-height: 19px;
+	background-color: #DBDBDB;			/* light gray */
+}
+
+p {
+	font-size: 16px;
+	margin: 10px 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-family: "Arial Black", Gadget, sans-serif;
+	margin: 25px 0px 10px 0px;
+}
+
+h1 {
+	font-size: 30px;
+	text-align: center;
+	margin: 0px;
+	color: #000000;						/* black */
+}
+
+/* ================================ HEADER ================================ */
+
+#title p {
+	font-weight: bold;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #000000;						/* black */
+}
+
+#title {
+	color: #363636; /* dark gray */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding-top: 10px;
+	padding-left: 30px;
+	width: 1000px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+	box-shadow: 0px 0px 30px #000000; /* black */
+	border: 1px solid #28545B;			/* teal */
+	background-color: #66B3B7;			/* light blue */
+}
+/* ================================ MAIN ================================ */
+#main {
+	padding: 25px;
+}
+
+#container {
+	background: #FFFFFF; /* white */
+	width: 1000px;
+	margin: auto;
+	box-shadow: 0px 0px 30px #000000; /* black */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 10px;
+}
+
+/* ================================ FOOTER ================================ */
+
+footer {
+	padding: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	width: 1000px;
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	box-shadow: 0px 0px 30px #000000;   /* black */
+	background: #66B3B7;				/* light blue */
+	color: #000000;						/* black */
+	border: 1px solid #28545B;			/* teal */
+}
+

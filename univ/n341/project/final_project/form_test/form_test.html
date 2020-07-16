@@ -1,0 +1,593 @@
+<!doctype html>
+
+<!--
+ Filename: form_test.html
+ Written by: Chris Dawalt
+ Creation Date: 2 December 2016
+ Purpose: 
+ Modification History:
+ Original Build.
+ 
+ ***Also submitting for the "Test Page Challenge"***
+Points covered:
+*load testing at different times of the day
+*different screen sizes (mobile vs. desktop)
+*test for functionality with simultaneous user sessions
+
+
+~Apparently, some mobile devices (like my android phone) do not come with a "startsWith" method for strings.  So this line
+"someString".startsWith(...) 
+
+would trigger an error and stop any further script for that path of execution.
+A custom one has been made instead.  Goes to show that one can't assume a whole lot anymore.
+
+Enable "Debug Mode" at the top-left corner of the page to reveal the "Spam" button at the bottom to fill the page with some valid sample inputs, and see the "Strict Telephone" box (which defaults to checked).
+
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    
+	<title>Test Page</title>
+	
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="theme/jquery-ui.css" rel="stylesheet">
+    <link href="css/form_prototype.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../img/ico_final_project_test_page.png" />
+    
+    
+    <!-- This script can be included before the body without any side effects.  Custom page script, javscript.js, knows to execute after the page has loaded. -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/validation/jquery.validate.min.js"></script>
+    
+    
+	<script type="text/javascript" src="js/javascript.js"> </script>
+    <!-- END OF PRE-SCRIPT -->
+    
+</head>
+
+<body >
+	
+	
+    
+    
+    
+	<div class="divSample" style="position:absolute; top:24px; left:24px;">
+        
+        <div id="divDebugMode">
+            <input name="DebugMode" id="chkDebugMode" class="debug" type="checkbox" value="DebugMode" >
+            <label for="chkStrictTelephone" class="aTheme"> Debug Mode </label>	
+        </div>
+        <div id="divStrictTelephone" class="debug" hidden>
+            <input name="StrictTelephoneOption" id="chkStrictTelephone" class="debug" value="StrictTelephoneOption" type="checkbox" checked>
+            <label for="chkStrictTelephone" class="aTheme"> Strict Telephone </label>	
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="divWideRow">
+    	<a id = "aLine1" class="aSampleTitle"> Proposal Form </a>
+        <h1 class="aSampleTitle">Test Page Challenge </h1>
+    </div>
+    
+    <br/><br/><br/>
+    
+    <div class="divWideRow">
+        <div class="divSample" style="text-align:center;float:none;">
+        	
+            
+        	<!--
+            action="mailto:proposal@brownstonesoftware.com"
+            ~appears to be ignored when the validation plugin is used ( #("FORMID").validate() ) anyways.
+            -->
+            <form id="frmProposal" method="post" enctype="text/plain" style="text-align:center;float:none;">
+                
+                <table class="tableSample" style="text-align:center;float:none;">
+                	<tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Login info:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft" >
+                        	
+                            <table class="tablePassive" >
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aThemeSmall" for="txtUsername"> Username: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                    <input name="Username" id="txtUsername" class="txtThemeSmaller" type="text" value="" autofocus required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aThemeSmall" for="txtPassword"> Password: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                        <input name="Password" id="txtPassword" class="txtThemeSmaller" type="password" value="" required>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Project Title:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	<input name="Title" id="txtTitle" class="txtTheme" type="text" value="" required>
+							
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Contact email:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	<input name="ContactEmail" id="txtContactEmail" class="txtTheme" type="email" value="" placeholder="name@site.xxx"  >
+                			
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Telephone number:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatLeft">
+                        	<!--
+                            The validation plugin is not playing well with the phone field.  Just accept anything for now.
+                            
+                        	<input name="TelephoneNumber" id="txtTelephoneNumber" class="txtTheme" type="tel" value="" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" placeholder="(###) ###-####" >
+                            -->
+                		
+                        	<input name="TelephoneNumber" id="txtTelephoneNumber" class="txtTheme" type="tel" value="" placeholder="(###) ###-####" >
+                            
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Type of project:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            
+                            <div id="divRadTypeOfProject">
+                                <input type="radio" id="radUti" class="radTypeOfProject" name="TypeOfProject" value="Utility" required><label for="radUti">Utility</label>
+                                <input type="radio" id="radInd" class="radTypeOfProject" name="TypeOfProject" value="Industrial" required><label for="radInd">Industrial</label>
+                                <input type="radio" id="radSol" class="radTypeOfProject" name="TypeOfProject" value="Solution" required><label for="radSol">Solution</label>
+                            </div>
+                            
+                            <!-- place errors here instead.  They may not appear correctly in small screen modes at default placement (splitting up the radio options)-->
+                            <div id="divRadTypeOfProjectErrorLocation">
+                            	
+                            </div>
+                            
+                        	
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Modes of sale:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            <div id="divSaleModes">
+                           		<input type="checkbox" name="SaleModes" id="chkInd" value="Individual"><label for="chkInd">Individual</label>
+                                <input type="checkbox" name="SaleModes" id="chkLis" value="Liscense"><label for="chkLis">Liscense</label>
+                                <input type="checkbox" name="SaleModes" id="chkTest" value="Mass"><label for="chkTest">Mass</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="td1stFloatRight">
+                        	<!-- NOTICE: "text-align" does nothing for plain <a> alone, but does affect text within container elements, such as <td> and <div>.  Oh CSS... -->
+                            <a class="aTheme" >
+                                Category:
+                            </a>
+                            <br/>
+                            <div style="text-align:center;">
+                                <a class="aThemeSmall" >
+                            		(Type for autocomplete)
+                            	</a>
+                            </div>
+                            
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+                            <ul id="selCategory">
+                                <li class="liCategory"><div>Light</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>Word Processing</div></li>
+                                        <li class="liCategory"><div>Mobile Game</div></li>
+                                        <li class="liCategory"><div>Media Playback</div></li>
+                                        <li class="liCategory"><div>Web Plugin</div></li>
+                                        <li class="liCategory"><div>Client Data App</div></li>
+                                        <li class="liCategory"><div>GPS</div></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Moderate</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>3D Rendering</div></li>
+                                        <li class="liCategory"><div>Software Development Kit</div></li>
+                                        <li class="liCategory"><div>Desktop Game</div></li>
+                                        <li class="liCategory"><div>Console Game</div></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Specialized</div>
+                                    <ul class="ulCategory">
+                                        <li class="liCategory"><div>Database Communication</div></li>
+                                        <li class="liCategory"><div>Debugging Apparatus</div></li>
+                                        <li class="liCategory"><div>Interactive Manufacturing</div></li>
+                                        <li class="liCategory"><div>Media Development</div></li>
+                                        <li class="liCategory"><div>Mass Data Mining</div></li>
+                                        <li class="liCategory"><div>Artificial Intelligence</div></li>
+                                   		
+                                    </ul>
+                                </li>
+                                
+                                <li class="liCategory"><div>Not Listed</div>
+                                   
+                                </li>
+                            </ul>
+                            
+                            
+                            <div class="divBreaker">
+                            	<br/>
+                            </div>
+                            
+                            
+ 							<input name="ProjectCategory" id="txtCategory" class="txtThemeSmaller" type="text" value="" required>
+                            <!--class="td2ndFloatCenter"   break line in case of error message (it will show up after this break).-->
+                            <br/>
+                            
+                            
+                        </td>
+                    </tr>
+					<tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Cost Estimate:
+                            </a>
+                        	
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	
+    						<div id="divCostEstimate" style="display:inline-block;"></div>
+                            
+                            <br/>
+                            
+                            
+                            
+                            <table class="tablePassive" >
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtEstimateLow"> Min: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                    	<input name="CostEstimateLow" id="txtEstimateLow" class="txtThemeSmallest" type="text" value="" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdNoBorder">
+                                        <label class="aTheme" for="txtEstimateHigh"> Max: </label>
+                                    </td>
+                                    <td class="tdNoBorder">
+                                    	<!-- now uses the custom text type "moneybox".  See the validation section of javascript.js for how this is handled. -->
+                                        <input name="CostEstimateHigh" id="txtEstimateHigh" class="txtThemeSmallest" type="text" value="" required>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                            
+                            
+                        </td>
+                    </tr>
+
+
+					<tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Date Estimate:
+                            </a>
+                        </td>
+                        <td class="td2ndFloatCenter">
+                            <input name="DateEstimate" id="txtDateEstimate" class="txtThemeSmallest" type="text" required>
+                        </td>
+                    </tr>
+                    
+                    <!--
+                    <tr >
+                    	<td class="td1stFloatRight" >
+                        	<a class="aTheme" >
+                            	Verification:
+                            </a>
+                        </td>
+                        <td class="td2ndFloatCenter">
+                        	<img class="imgSample" alt="please load images" src="../../../img/homemadecapcha.png">
+                            <input name="Verification" id="txtVerification" type="text" required>
+                        </td>
+                    </tr>
+                    -->
+                    
+      				<tr>
+                    	<td class="tdWide" colspan="2">
+                        <a class="aThemeSmall">
+                        	You may describe your idea further in the alloted space.
+                        </a>
+                    	<br/>
+                        <textarea id="txtExtra" class="txtAreaTheme">
+           				</textarea>
+                        
+                    	</td>
+                    </tr>
+                    
+                	<tr>
+                    	<td class="tdWide" colspan="2">
+                        
+                        <!-- action="mailto:proposal@brownstonesoftware.com"-->
+                    	<button id="btnReset" class="btnTheme" type="reset">Reset </button>
+                    	<button id="btnSubmit" class="btnTheme" type="submit">Submit </button>
+                        
+                        <button id="btnSpam" class="btnTheme debug" type="button" hidden>Spam </button>
+                        
+                        
+                    	</td>
+                    </tr>
+                </table>
+            </form>
+            
+            <br/><br/><br/>
+    
+    		<a class="aTheme">
+            	Interpretation Debug:
+            </a>
+            <br/>
+            <textarea id="txtOutput" class="txtAreaThemeBig">
+            
+            </textarea>
+			
+        </div>
+    </div>
+    
+    
+    <br/><br/><br/>
+    
+    
+	<a class="aLink" href="../final_project.html">Back</a>
+	
+    
+    <!-- This script depends on the page having already loaded, and lacks protections against early loading.  Loading JQueryUI or dependents too early will cause DOM elements to be incomplete / missing, forcing JQueryUI & dependents to fail. -->
+    <script type="text/javascript" src="theme/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/form_prototype.js"></script>
+    
+    <!-- this is the extra touch download.  See the reference "JQUERY UI TOUCH" for source.-->
+	<script type="text/javascript" src="js/touch/jquery.ui.touch-punch.min.js"></script>
+    
+    
+	<!--  END OF POST SCRIPT-->
+</body>
+
+
+
+
+</html>
+
+
+<!--
+Reference:
+
+
+
+JQUERY UI TOUCH
+http://touchpunch.furf.com/
+http://stackoverflow.com/questions/13808663/jquery-ui-slider-touch-drag-drop-support-on-mobile-devices
+~allows some JQuery features, particularly the slider, to behave as expected on mobile devices.
+
+
+http://stackoverflow.com/questions/6802085/jquery-ui-styled-text-input-box
+~A good way to help UI untouched by JQuery-UI (such as an ordinary "input" tag's textbox) take hints from the theme.
+
+http://stackoverflow.com/questions/17605976/how-to-make-one-td-span-both-columns-in-a-two-column-table
+~make a cell span multiple rows.
+
+http://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
+~ "[name='RADIOGROUP']" selector is helpful for covering all radio buttons in a group
+
+https://api.jqueryui.com/button/
+~the usual way to edit JQuery properties is something like
+ $( "SELECTOR" ).button( "option", "PROPERTY", VALUE );
+
+http://stackoverflow.com/questions/7389303/programatically-uncheck-jquery-ui-checkbox-button
+~call  $("SELECTOR").button( "refresh" )  to apply any changes to attributes outside of .button( "option", ...).
+ Such as, say  $("SELECTOR").prop("checked", true)  occurs.  Follow it up with  $("SELECTOR").button.("refresh")
+ to update the appearance.
+
+https://api.jquery.com/change/
+
+http://stackoverflow.com/questions/13766015/is-it-possible-to-configure-a-required-field-to-ignore-white-space
+http://www.w3schools.com/TAGs/att_input_type.asp
+~make a field show characters as asterisks (type="password")
+
+http://www.w3schools.com/html/html_form_input_types.asp
+http://www.w3schools.com/TAgs/att_textarea_readonly.asp
+http://www.w3schools.com/TAgs/att_input_required.asp
+http://stackoverflow.com/questions/8287779/html5-how-to-use-the-required-attribute-with-a-radio-input-field
+http://stackoverflow.com/questions/8222970/html-5-require-either-input-fields
+
+http://stackoverflow.com/questions/2689658/reset-particular-input-element-in-a-html-form
+http://stackoverflow.com/questions/12529827/reset-only-a-fieldset-within-a-form-and-keep-all-other-values
+~have more control over what a reset button does
+
+http://www.w3schools.com/cssref/pr_pos_z-index.asp
+http://stackoverflow.com/questions/8201855/cant-change-z-index-with-jquery
+http://stackoverflow.com/questions/22513291/jquery-datepicker-shows-up-behind-other-regular-page-elements
+http://stackoverflow.com/questions/7033420/jquery-date-picker-z-index-issue
+~the datepicker attached to text boxes should not show up behind other elements!
+
+
+http://www.w3schools.com/js/js_validation.asp
+http://www.girliemac.com/blog/2012/11/21/html5-form-validation/
+http://stackoverflow.com/questions/5272433/html5-form-required-attribute-set-custom-validation-message
+http://stackoverflow.com/questions/21589445/jquery-on-vs-bind-for-invalid-event-type
+http://stackoverflow.com/questions/7872047/how-to-set-a-default-text-if-a-input-text-is-empty
+http://stackoverflow.com/questions/10361460/how-can-i-change-or-remove-html5-form-validation-default-error-messages
+
+http://www.htmlgoodies.com/html5/tutorials/whats-new-in-html5-forms-email-url-and-telephone-input-types.html#fbid=SZgqGoNssjs
+http://stackoverflow.com/questions/4057702/jquery-select-the-element-that-called-the-function
+
+
+http://api.jqueryui.com/datepicker/
+http://stackoverflow.com/questions/14358021/jquery-ui-slider-detect-slider-handle-drag-drop-event
+
+https://api.jqueryui.com/slider/
+http://stackoverflow.com/questions/596467/how-do-i-convert-a-float-number-to-a-whole-number-in-javascript
+http://stackoverflow.com/questions/6655754/finding-the-number-of-digits-of-an-integer
+http://stackoverflow.com/questions/11832914/round-to-at-most-2-decimal-places-in-javascript
+
+https://api.jquery.com/focus/
+http://stackoverflow.com/questions/13937377/get-the-selected-item
+http://api.jqueryui.com/menu/
+
+https://forum.jquery.com/topic/floats-in-jquery-ui-sliders
+
+http://stackoverflow.com/questions/1134976/how-may-i-sort-a-list-alphabetically-using-jquery
+https://api.jquery.com/all-selector/
+
+http://stackoverflow.com/questions/1710838/jquery-select-all-elements-inside-particular-parent-elements
+https://api.jquery.com/children/
+http://stackoverflow.com/questions/9382028/get-the-current-jquery-selector-string
+http://stackoverflow.com/questions/6168926/jquery-validation-how-to-make-fields-red
+
+http://stackoverflow.com/questions/2457032/jquery-validation-change-default-error-message
+!
+
+
+http://stackoverflow.com/questions/8512111/jquery-is-it-possible-to-select-elements-with-only-one-class-from-among-element
+http://stackoverflow.com/questions/5796654/css-rule-to-apply-only-if-element-has-both-classes
+
+http://stackoverflow.com/questions/3380580/changing-jquery-ui-button-size
+~prioritize a CSS setting.
+
+http://stackoverflow.com/questions/16201948/how-to-exclude-particular-class-name-in-css-selector
+http://stackoverflow.com/questions/17638804/can-i-use-media-in-an-if-else-kind-of-way
+http://stackoverflow.com/questions/13637106/what-are-the-best-width-ranges-for-media-queries
+~good ranges for width.
+
+http://stackoverflow.com/questions/24450524/jquery-validation-plugin-with-two-submit-buttons
+http://stackoverflow.com/questions/5785510/how-to-trigger-validation-without-using-a-submit-button
+http://stackoverflow.com/questions/1479255/how-to-manually-trigger-validation-with-jquery-validate
+
+
+https://jqueryvalidation.org/jQuery.validator.addMethod/
+https://jqueryvalidation.org/category/methods/
+https://jqueryvalidation.org/jQuery.validator.methods/
+https://jqueryvalidation.org/category/plugin/
+https://jqueryvalidation.org/number-method/
+https://jqueryvalidation.org/rules/
+http://stackoverflow.com/questions/15482523/jquery-validate-adding-dynamic-rules-with-messages
+http://stackoverflow.com/questions/14460925/how-to-add-validation-rules-with-messages-in-jquery-validation
+http://stackoverflow.com/questions/23658228/use-addmethod-in-jquery-validate-plugin
+https://jqueryvalidation.org/jQuery.validator.addMethod/
+http://stackoverflow.com/questions/8263535/jquery-validate-addmethod-how-to-apply-custom-rule-referencing-two-text-boxe
+
+http://www.tldp.org/LDP/abs/html/textproc.html
+http://www.w3resource.com/javascript/form/letters-numbers-field.php
+http://stackoverflow.com/questions/4846978/remove-characters-from-a-string
+http://stackoverflow.com/questions/19030397/syntaxerror-unterminated-parenthetical-for-validating-the-local-file-path
+http://stackoverflow.com/questions/9115392/jquery-replace-all-parentheses-in-a-string
+http://stackoverflow.com/questions/3115150/how-to-escape-regular-expression-special-characters-using-javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+http://stackoverflow.com/questions/8292965/regular-expression-for-number-and-dash
+http://stackoverflow.com/questions/11899928/regex-to-allow-hypen-number-only
+http://stackoverflow.com/questions/1862130/strip-non-numeric-characters-from-string?noredirect=1&lq=1
+http://www.w3schools.com/jsref/jsref_regexp_0-9.asp
+http://stackoverflow.com/questions/12101125/regex-to-allow-only-digits-hypens-space-parentheses-and-should-end-with-a-dig
+http://stackoverflow.com/questions/5409135/regular-expression-numbers-spaces-parentheses
+http://stackoverflow.com/questions/18659886/allow-parentheses-and-other-symbols-in-regex
+
+http://www.regular-expressions.info/brackets.html
+http://www.regular-expressions.info/anchors.html
+
+http://stackoverflow.com/questions/8137844/jquery-validation-two-fields-only-required-to-fill-in-one
+http://stackoverflow.com/questions/15293332/jquery-validate-plugin-only-one-field-required-out-of-multiple?noredirect=1&lq=1
+
+http://stackoverflow.com/questions/537690/getting-the-value-of-a-form-field-after-keypress-event
+http://stackoverflow.com/questions/17894972/call-function-on-pass-input-in-textbox
+http://stackoverflow.com/questions/8608145/jquery-on-method-with-multiple-event-handlers-to-one-selector
+http://stackoverflow.com/questions/5617703/background-color-in-input-and-text-fields
+http://stackoverflow.com/questions/327047/what-is-the-most-efficient-way-to-create-html-elements-using-jquery
+
+http://www.w3schools.com/Css/css_pseudo_classes.asp
+http://stackoverflow.com/questions/16946878/how-do-i-select-an-element-that-has-a-certain-class
+http://stackoverflow.com/questions/17743403/form-validation-using-jquery-focus-and-blur-method
+
+http://stackoverflow.com/questions/2049502/what-characters-are-allowed-in-email-address
+http://www.regular-expressions.info/email.html
+
+http://emailregex.com/
+
+https://www.sitepoint.com/jquery-custom-validation-rule-fieldpresent/
+~call custom methods from use of "addMethod" during validation.  Very helpful.
+
+http://stackoverflow.com/questions/7657824/count-the-number-of-integers-in-a-string
+~clean way to get all digits in a string that may not consist entirely of digits.
+
+
+https://api.jquery.com/multiple-selector/
+https://api.jquery.com/not-selector/
+http://api.jquery.com/not/
+http://stackoverflow.com/questions/10687131/jquery-select-by-attribute-using-and-and-or-operators
+http://www.regular-expressions.info/optional.html
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
+~BEWARE OF "startsWith" for strings on mobile devices!  Sometimes isn't there.
+http://stackoverflow.com/questions/33106114/cordova-javascript-error-has-no-method-startswith-android
+~that's another way to solve it.
+
+http://stackoverflow.com/questions/2604976/javascript-how-to-display-script-errors-in-a-popup-alert
+~Helpful for diagnosing the above issue.  Now occurs if the "debug mode" checkbox is on.
+
+http://stackoverflow.com/questions/20150447/customizing-jquery-ui-slider-height-width
+http://api.jqueryui.com/hide/
+
+http://www.regular-expressions.info/dates.html
+
+http://stackoverflow.com/questions/16779247/jquery-how-to-force-to-lose-focus-of-all-fields-in-a-form
+http://stackoverflow.com/questions/2520650/how-do-you-clear-the-focus-in-javascript
+
+
+-->

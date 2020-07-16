@@ -1,0 +1,346 @@
+
+/* CSS Document */
+/**************************************
+ Filename: style.css
+ Author: Chris Dawalt
+ Create Date: 9 September 2016
+ Purpose: Customize this project's HTML page(s) appearance(s).
+ Modification History:
+ Original build.
+ (see HTML files for info on CSS edits past the original build)
+**************************************/
+
+body{
+	background-color: #A0ffA0;
+	
+}
+
+
+/*CSS does not seem to work with "document.write" calls.*/
+
+
+.btnSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	
+	height: 33%;
+	width: 100%;
+}
+
+
+
+
+.divFillContainer{
+	width:100%;
+	
+}
+
+.divLeftFill{
+    overflow:hidden;
+	
+	width:auto;
+	
+}
+.divRightMin{
+    overflow:hidden;
+	display:inline;
+	
+    float:right;
+	
+}
+
+
+
+
+
+.btnSampleBig{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:23px;
+	width:100%;
+	
+}
+.btnSampleBig2{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:23px;
+	
+}
+
+
+
+#aTitle{
+	position:absolute;
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:42px;
+	left:0%;
+	width:100%;
+	
+	text-align: center;
+}
+
+.aSample{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aHealth{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:center;
+	font-size:28px;
+	
+	position:absolute;
+	left:5%;
+	top: 84%;
+	right:5%;
+	bottom:5%;
+}
+
+#aMessage{
+	font-size:22px;
+}
+
+.aSampleML{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+
+
+.imgPlayerImage{
+	position:absolute;
+	left:8%;
+	top: 8%;
+	right:8%;
+	bottom:20%;
+	border:3px solid #005000;  
+	
+	width:84%;
+	height:72%;
+	
+}
+
+
+
+
+
+
+.aLink{
+	color:#064100;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+}
+
+.aLink:link {
+    color: #064100;
+}
+.aLink:visited {
+    color: #064100;
+}
+.aLink:hover {
+    color: #008F00;
+}
+.aLink:active {
+    color: #004800;
+}
+
+#aBackLink{
+	position: absolute;
+    left: 10px;
+    bottom: 15px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+/*NOTE: class is for anything non-text that wants to behave as a link but have no underline. */
+.linkPlain:link {
+    text-decoration: none;
+}
+.linkPlain:visited {
+    text-decoration: none;
+}
+.linkPlain:hover {
+    text-decoration: none;
+}
+.linkPlain:active {
+    text-decoration: none;
+}
+
+
+
+
+.divSample{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 15px;
+	border-radius: 64px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+.divSampleSmall{
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	padding: 8px;
+	border-radius: 24px;
+	background-color: #207A20;
+	border:3px solid #005000;  
+}
+
+.divSampleSmallTest{
+	margin: 0 auto;
+	padding: 2px;
+	background-color: #FF7A20;
+	border:3px solid #005000;  
+}
+
+#divMessageLog{
+	padding: 48px 24px;
+	margin: 48px 24px;
+	position:absolute;
+	left:8%;
+	top: 8%;
+	right:8%;
+	bottom:18%;
+	
+	
+}
+
+
+
+#divLeft{
+	position:absolute;
+	left:8%;
+	top: 8%;
+	right:52.5%;
+	bottom:45%;
+}
+
+#divRight{
+	position:absolute;
+	left:52.5%;
+	top: 8%;
+	right:8%;
+	bottom:45%;
+}
+
+#divAction{
+	position:absolute;
+	left:8%;
+	top: 59%;
+	right:8%;
+	bottom:18%;
+	
+}
+
+#divActionLeft{
+	position:absolute;
+	left:2%;
+	top: 2%;
+	right:51%;
+	bottom:2%;
+}
+#divActionRight{
+	position:absolute;
+	left:51%;
+	top: 2%;
+	right:2%;
+	bottom:2%;
+}
+
+
+
+
+
+#divMessage{
+	
+	
+	border:3px solid #005000; 
+	
+    overflow:hidden;
+	display: table;
+   	table-layout: fixed;
+   
+	position:absolute;
+	
+	/*left & right are "0", as "display: table" seems to force this div to be centered, making "left" and "right" not behave as expected.  Changing width alone works.*/
+	left:0%;
+	right:0%;
+	top:84%;
+	bottom:4%;
+	width:82.5%;
+}
+#divMessage2{
+	
+	width:100%;
+	text-align:center;
+	
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+#aCheatMode{
+	font-size:26px;
+}
+#divCheatMode{
+	position:absolute;
+	left: 8%;
+	overflow:visible;
+	top: 2%;
+	right: 60%;
+	bottom:94%;
+	text-align: left;
+	
+}
+#chkCheatMode{
+	
+}
+
+
+
+#aAlertsEnabled{
+	font-size:26px;
+}
+
+#divAlertsEnabled{
+	position:absolute;
+	left: 60%;
+	overflow:visible;
+	top: 2%;
+	right: 8%;
+	bottom:94%;
+	text-align: right;
+	
+}
+
+#chkAlertsEnabled{
+	
+}
+
+
+
+
+
+
+
