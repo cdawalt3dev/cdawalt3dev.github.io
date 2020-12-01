@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Selco Intranet</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle" > Selco Intranet </h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent"> 
+			Over the summer of 2019, I took on a project to restore an old employee management service that had been shelved for over a decade.
+		  </p>
+          <p class="pContent"> 
+			The site acted as an interface for job-related information stored in a Postgre database.  It was a much easier alternative to entering SQL into a Postgre console.
+		  </p>
+		  <p class="pContent"> 
+			With some assistance from the project's original developer, I managed to get the site working with the same versions of Apache, Postgre, and PHP provided by old installers that were also archived.  However, using old software on modern systems presented a security risk in real use.  I replaced the dependencies with modern versions and updated portions of the PHP files and structural PostgreSQL script that relied on old, deprecated or renamed commands/calls.
+		  </p>
+		  <p class="pContent"> 
+			The service can run on an Apache server with or without a domain in mind (The loopback address 127.0.0.1 can also be used).  It makes calls to the Postgre server which is expected to also be running.  I created sample users to test the site with full permissions and minimal permissions to mimmic the roles of an administrator and a more typical user.  It works as expected, walling off several portions of the site when logged in as the 'notadmin' user.
+		  </p>
+		  <p class="pContent"> 
+			The Postgre database was originally given data from the MAS system.  It would not be feasible nor beneficial to restore MAS as it is propietary and no longer used by the company.  Making the service compatible with a new database format or writing data from the new database format to the existing Postgre format are a few options that may be taken in the future.
+		  </p>
+		  
+        </div>
+		
+		<div class="divImageCaption">
+	      <img src="img/shot1.png" width="40%" height="40%" alt="pic" style="display:inline-block;"/>
+		  <br/>
+		  <p class="pCaption">Login page</p>
+		</div>
+		
+		<div class="divImageCaption">
+	      <img src="img/shot2.png" width="40%" height="40%" alt="pic" style="display:inline-block;"/>
+		  <br/>
+		  <p class="pCaption">Job Numbers view</p>
+		</div>
+		
+		<div class="divImageCaption">
+	      <img src="img/shot3.png" width="40%" height="40%" alt="pic" style="display:inline-block;"/>
+		  <br/>
+		  <p class="pCaption">Viewing/Editing a specific Job</p>
+		</div>
+		
+		<div class="divTextGroup">
+          <p class="pContent"> 
+			For similar database site-interface projects, see the <a href="../roche_oncall/index.html" >Roche on-call</a> and <a href="http://cdawalt.pythonanywhere.com/program_lang_db_final/index.html" >Programming Language Database</a> projects.
+		  </p>
+        </div>
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>

@@ -64,10 +64,13 @@ a:active{
 }
 
 .aBack{
-  font-size:16px;
-  display: inline-block;
-  margin:80px 30px 30px 30px;
-  padding:8px;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    font-size:1.4em;
+    display: inline-block;
+    margin:80px 30px 30px 30px;
+    padding:8px;
 }
 
 
@@ -131,10 +134,10 @@ table{
   border-collapse: collapse;
 }
 
-.tablePortfolio td, .tablePortfolio th{
+.tablePortfolio td, .tablePortfolio th, .tablePortfolioLeft td, .tablePortfolioLeft th{
   height:70px;
 }
-.tablePortfolio tr{
+.tablePortfolio tr, .tablePortfolioLeft tr{
   height:70px;
 }
 
@@ -153,11 +156,24 @@ table{
   padding-right:30px;
 }
 
-table.tablePortfolio{
+.tablePortfolioLeft tr td:first-child a{
+  height:64px;
+  font-size:1.7em;
+  /*width:100%;*/
+  /*padding:0px 30px 0px 30px;*/
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  /*height:64px;*/
+  padding-left:30px;
+  padding-right:30px;
+}
+
+table.tablePortfolio, table.tablePortfolioLeft{
   background-color:#c4e3c4;
 }
 
-.tablePortfolio th, .tablePortfolio td{
+.tablePortfolio th, .tablePortfolio td, .tablePortfolioLeft th, .tablePortfolioLeft td{
   /*line-height:normal;*/
   border-style:solid;
   border-color:#1e631e;

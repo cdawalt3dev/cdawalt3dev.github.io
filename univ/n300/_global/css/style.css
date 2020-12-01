@@ -241,6 +241,15 @@ div.divContentSlim{
 }
 
 
+.aBack{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    font-size:1.4em;
+    display: inline-block;
+    margin: 80px 30px 30px 30px;
+    padding: 8px;
+}
 
 
 

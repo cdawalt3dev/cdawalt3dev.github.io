@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Tutoring</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle">Shortest Path</h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent">
+			For my data structures class, I was assigned to use a greedy algorithm to find the ideal path in an elevation map from a given start point to an end point. The map is a given greyscale image where each pixel reflects a level of elevation; any pixel can travel to any adjacent pixel.  The greater the change in greyscale value (elevation) between two pixels, the more costly the traversal between them would be. A straight-line route is not the lowest-cost route if it takes higher-cost traversals than necessary, which is often the case.
+		  </p>
+          <p class="pContent">
+		    I created a program to implement the algorithm in C++.  It runs from a console app that generates output images.  One shows the optimum path as a path of pixels on a blank image while the rest represent the status of pixels seen by the algorithm at different increments in different ways.
+		  </p>
+		  
+		  <p class="pContent">
+		    To better relate the pixels to the algorithm, it is appropriate to think of each pixel in the image as a node and pixels touching in cardinal directions as having connections with each other.  The algorithm has two sets in mind: the set of traversed nodes (with other information) and the set of frontier nodes.  The algorithm begins by including the start node in the traversed set and putting its connected (neighboring) nodes in the frontier set. The frontier node with the lowest traversal cost is chosen to be added to the traversed set, which records the direction taken to reach it in a way that gives the lowest cost and the total cost a route of all traversals from the start to itself. Since the total cost of the total route to the node is cumulative, it is sufficient to store the cost stored in the previous node (0 for the start node) plus the cost of the best traversal that lead to this node.
+		  </p>
+		   
+		  <p class="pContent"> 
+		    The process is repeated with each changed set of frontier and traversed nodes until the node added to the traversed set happens to be the goal node (a coordinate set on the image).  The directions taken to reach the current node may be taken in reverse order starting from the goal to lead back to the start node, and traveling through this series of nodes in reverse gives the lowest-cost path from the start node to the goal node.  In the final output image, it resembles a path roughly carved out of a valley of similarly-colored pixels that move around mountains of greater color gradients.
+		  </p>
+		  
+		  <p class="pContent">
+		    
+		  </p>
+		  
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot1.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Input image (elevation map)</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot2.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Optimum path.  Start node is the far bottom-left pixel, goal node is the far top-right pixel</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot3.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Optimum path placed on the elevation map and colored red.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot4.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Distance map at step 12000 of the algorithm.  Darker pixels have lower costs to reach from the start node (with the exception of nodes not yet traversed past the white paremeter).  Colors are scaled so that the drawn pixel with the highest cost is solid white.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot5.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Distance map at step 28000 of the algorithm.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot6.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Last distance map with optimum path overlaid.</p>
+		  </div>
+		  
+        </div>
+		
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>

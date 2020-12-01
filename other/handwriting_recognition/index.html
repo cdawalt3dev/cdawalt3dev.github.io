@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Handwriting Recognition</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle" style="font-size:65px;">Handwriting Recognition</h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent"> 
+			For my artificial intelligence class, I created a handwriting recognition program that attempts to identify the single digit number drawn in a window as part of a group project.  The other group members determined how the program should standardize drawings between different trials while I implemented it as a Java program using a neural network.
+		  </p>
+		  
+		  <p class="pContent"> 
+			It uses a neural network of input nodes given values from the pixel shading (a matrix of boolean values, shaded or not).  The greatest extents of each pixel toward the left, right, top, and bottom are used to form the bounds of the image.  Images are then downscaled to a standard size so that all trials are consistent regardless of differences in the rendered number's size.  There is also a check for extreme aspect ratios so that single-line drawn 1's do not produce a nearly solid black image due to working with a very tall, thin image.
+		  </p>
+		  
+		  <p class="pContent"> 
+			The program requires sample trial drawings with the number specified by the user to train the neural network.  After enough drawings to adequately represent variations in drawing the number, the user may ask the program to determine what number is shown.  Percentages of certainty are shown in a pane to the right.  For instance, the network may strongly think that a drawing is of #8 (98%), or have a lot of uncertainty (70% #5, but 26% #3).
+		  </p>
+		  
+		  
+		  <p class="pContent"> 
+			All training trial drawings are stored after downsizing. They are organized by the number represented as told by the user. Trials may be moved to other number categories or deleted. Trials are automatically saved between program runs. All trials are used to train the neural network.  The neural network itself is also saved so that training between runs of the program without a change in trials is not necessary.
+		  </p>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot1.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">View after drawing a '6' in the window.  The drawing is sectioned into 16x24 rectangles fit the the greatest extents of the drawn pixels.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot2.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">After clicking 'Confirm' to the lower-right, the drawing is removed and previewed in the top-left corner after the 'Trial:' text.  The certanty ratings for each of the possible outcomes (digits) are shown in the right column.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot3.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">All trials submitted to the trial list that represent number 6.</p>
+		  </div>
+		  
+		  
+        </div>
+		
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>

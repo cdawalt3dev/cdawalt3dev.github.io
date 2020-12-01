@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Roche On-call</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle" > Roche On-call App </h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent"> 
+			Every week, three people were tasked to answering calls for a help hotline service in their department.  It was inconvenient to carry a separate flip phone only meant for receiving calls in addition to their personal phones.  Using their personal phone numbers instead would lead to confusion since these numbers could easily change (requiring callers to lookup the current available numbers from a schedule or website), and offering personal phone numbers could be a violation of privacy.  Several on-call staff members did not want to be called by other department members if they were not designated for support that week.
+		  </p>
+          <p class="pContent"> 
+			A solution that offered the best of both worlds was desired: callers from the department could call any of three virtual permanent phone numbers that redirect to the personal phones of on-call staff for the current week without revealing their real phone numbers.  This would also make the separate flip phones unnecessary.
+		  </p>
+		  <p class="pContent"> 
+			This could be done using Twilio, a service that hosts virtual phone numbers, along with various subservices of AWS (Amazon Web Services) for call redirection and data storage.
+		  </p>
+		  <p class="pContent"> 
+			Calls to virtual phone numbers were relayed to serverside logic which looked up the #1, #2, or #3 phone number for the given week and sent a call to that number.  If answered, the caller would be connected to the on-call staff's personal phone without revealing the on-call staff's real phone number.  Even between different weeks, the same three virtual phone numbers are available to the department.  Only the phone number associated with each permanent virtual number changes each week.
+		  </p>
+		  
+		  <p class="pContent"> 
+			In addition, call duration and any phone numbers involve were to be logged and a website was made to present the call logs in a table and let logged in staff make changes to the weekly service numbers.
+		  </p>
+		  
+		  
+		  
+        </div>
+		
+		
+		<div class="divImageCaption">
+	      <img src="img/shot1.png" width="70%" height="70%" alt="pic" style="display:inline-block;"/>
+		  <br/>
+		  <p class="pCaption">Overview of inter-service interactions.</p>
+		  <div>
+			<p class="pCaptionDeeper">Twilio: Hosts virtual phone numbers; directs calls to API Gateway.  Expects a service number to be returned to connect the caller to.</p>
+			<p class="pCaptionDeeper">API Gateway: Hosts a URL to receive Twilio calls.  Directs the call to Lambda.</p>
+			<p class="pCaptionDeeper">Lambda: Serverside logic using Node.js. Looks up the physical phone number for the given week in DynamoDB.  Waits for a call to end to record its duration for a log entry.</p>
+			<p class="pCaptionDeeper">DynamoDB: NoSQL database that holds all persistent data, including physical numbers to connect to for each of the three virtual numbers per week and call logs.</p>
+			<p class="pCaptionDeeper">S3: Website.  Hosts HTML pages and javascript to make reading and writing to the database easier.  Physical numbers per week (or aliases linked to numbers) may be entered for several weeks in advance.  Logs of calls may be viewed to see duration and phone numbers involved.  Requires the owner's amazon account login for most access.  Only the weekly phone numbers page with read-only access is publicly available (see <a href="https://blue24test.s3.us-east-2.amazonaws.com/OnCallPhoneNumbersInterface/public.html">here</a>).  Aliases are resolved to phone numbers visible in another private page.</p>
+		  </div>
+		</div>
+		
+		
+		<div class="divImageCaption">
+		  <img src="img/shot2a.png" width="40%" height="40%" alt="pic" style="display:inline-block;"/>
+		  <p class="pCaption">Home page, as seen when logged in.</p>
+		</div>
+		
+		<div class="divImageCaption">
+		  <img src="img/shot2.png" width="60%" height="60%" alt="pic" style="display:inline-block;"/>
+		  <p class="pCaption">Call log (private page).  Phone numbers are recorded and marked with 'Tw 1', 2, or 3 if related to one of the three virtual numbers during that week).  On-call staff may also initate calls to clients through the virtual numbers.</p>
+		</div>
+		
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>
