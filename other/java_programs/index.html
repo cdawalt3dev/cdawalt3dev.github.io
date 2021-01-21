@@ -30,7 +30,7 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent"> 
-			I have made several console and GUI utilities in Java.  Most are very situational but have the potential to be developed into more polished, user-friendly forms.
+			I have written several console and GUI utilities in Java.  Most are very situational but have the potential to be developed into more polished, user-friendly forms.
 		  </p>
 		  
 		  <br/>
@@ -39,7 +39,7 @@
 		  <br/>
 		  
 		  <p class="pContent"> 
-			CustoSearch is a file search tool. It search all files in a folder with a choice of extensions to search and the choice of searching filenames and/or contents. The app loads files as byte streams to reduce the time needed to read each file.
+			CustoSearch is a file search app. It searches all files under a given path with certain file extensions for a string. The extension list and choices of searching through filenames and/or contents are customizable. Files to be searched are loaded as byte streams for improved performance.
 		  </p>
 		  
 		  <div class="divImageCaption">
@@ -52,7 +52,7 @@
 		  <br/>
 		  <br/>
 		  <p class="pContent"> 
-			AutoKey lets a certain key (F2 by default) initiate a series of keystrokes given ahead of time including tabs, returns, and pastes of usernames and passwords. Each series of keystrokes can be given the username and password to paste. The app can also double as a secure way to store passwords by locking the keystroke data with a password through encryption and requiring a successful password entry to decrypt for usage between closing and opening.  The F2 key press can be detected regardless of whether the app is in focus unlike most Java apps.  The same C++ hookup used to achieve this can also be used to stop automated bots that control the mouse for long periods of time.
+			AutoKey lets a certain key (F2 by default) initiate a series of keystrokes including tabs, returns, and username/password pastes.  The program may also double as a keychain; login info stored in multiple keystrokes may be saved to encrypted files and accessed by a single password for re-use when opening the program again.  The action key is detected globally, regardless of whether the AutoKey window is in focus unlike most Java programs.  This was done using a C++ hook into Windows, as global keypress detection is not natively supported by Java.
 		  </p>
 		
 		  <div class="divImageCaption">
@@ -66,9 +66,15 @@
 		  <br/>
 		  <br/>
 		  <p class="pContent"> 
-			Most other apps I made are console-only and very specialized.  I made an app that reads in pairs of terms to find and their replacements across all files in a directory given a list of extensions and case sensitivity choice.  Another can search for text strings leftover in compiled files.  One uses the HTML-Unit library to search for and save images or other content in a gallerty or forum given login credentials.  Another can swap the folder structure of a project and edit project files accordingly (which must refer to files in the new locations), such as changing folders such as project/side/game to proejct/game/side and vice versa.
+			Most other apps are console-only and very specialized.  One app reads in pairs of search terms and replacements to find/apply across all files in a directory with a list of allowed file extensions and optional case sensitivity.  One uses the HTML-Unit library to save images or other content from a gallerty or forum given login credentials if necessary.  Another can swap the folder structure of a project, such as changing folders in the form 'project/side/game' to 'project/game/side' or vice versa. This includes adjusting any references to affected files to reflect the modified paths.
 		  </p>
 		  
+		  <br/>
+		  <br/>
+		  <br/>
+		  <p class="pContent"> 
+		     
+		  </p>
 		  
         </div>
 		

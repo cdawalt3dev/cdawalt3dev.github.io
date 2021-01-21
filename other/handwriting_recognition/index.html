@@ -30,21 +30,27 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent"> 
-			For my artificial intelligence class, I created a handwriting recognition program that attempts to identify the single digit number drawn in a window as part of a group project.  The other group members determined how the program should standardize drawings between different trials while I implemented it as a Java program using a neural network.
+			For my artificial intelligence class, I helped create a handwriting recognition program that attempts to identify a single digit number as part of a group project.  The other group members planned out key details about the program and decided how the program should standardize drawings between trials.  I implemented the ideas as a Java program using a neural network.
 		  </p>
 		  
 		  <p class="pContent"> 
-			It uses a neural network of input nodes given values from the pixel shading (a matrix of boolean values, shaded or not).  The greatest extents of each pixel toward the left, right, top, and bottom are used to form the bounds of the image.  Images are then downscaled to a standard size so that all trials are consistent regardless of differences in the rendered number's size.  There is also a check for extreme aspect ratios so that single-line drawn 1's do not produce a nearly solid black image due to working with a very tall, thin image.
+			Initially, the neural network must be given drawings assigned the numbers they represent manually. Drawings should have some variation to adequately represent imperfections and different ways the number may be drawn. The extents of the drawn area are used to form the bounds of the image.  Images are then downscaled to a standard size so that they do not vary significantly due to differences in their original drawings' extents, sizes, and proportions in the window.  Since a single-line vertical one (or 'stick one') could produce nearly solid black images from its bounds, there is also a check for extreme aspect ratios. In this case, the bounds are extended horizontally to better resemble the bounds expected for any other number drawn of similar height in its place. Both the standardized samples and neural network training data are saved for quick re-use between closing and opening the program.
 		  </p>
 		  
 		  <p class="pContent"> 
-			The program requires sample trial drawings with the number specified by the user to train the neural network.  After enough drawings to adequately represent variations in drawing the number, the user may ask the program to determine what number is shown.  Percentages of certainty are shown in a pane to the right.  For instance, the network may strongly think that a drawing is of #8 (98%), or have a lot of uncertainty (70% #5, but 26% #3).
+		    After enough samples have been assigned to each digit, the neural network is trained so that it may attempt to identify the number portrayed in a drawing outside the training set later.  Finally, the trained neural network can be used to identify a new drawing without the user's assistance.  Percentages of certainty are shown in a pane to the right.  For instance, the network may strongly think that a drawing is of #8 (98%), or have a lot of uncertainty (70% for #5, but 26% for #3).
 		  </p>
 		  
 		  
+		  <!-- MORE DETAIL
 		  <p class="pContent"> 
-			All training trial drawings are stored after downsizing. They are organized by the number represented as told by the user. Trials may be moved to other number categories or deleted. Trials are automatically saved between program runs. All trials are used to train the neural network.  The neural network itself is also saved so that training between runs of the program without a change in trials is not necessary.
+		  Each standardized sample is plugged into the input nodes of the neural network as a series of boolean values (each pixel being shaded or unshaded, 'true' or 'false'). The output layer, made up of the possible number of answers (digits 0 through 9; 10 nodes for 10 choices), is set depending on the training sample's manually assigned digit (a 1 for the output node corresponding to the assigned digit, 0's otherwise). Some math is done to make the mid-layers better produce the state of each input sample's expected output layer state.
+		  
+		  After all samples have been used to train the network, input nodes can be filled with values from pixel shading without setting the output state.  Instead, the mid-layers are used to form an output state from the input layer, which gives the certainties for each of the possible outcomes (digits the drawing is likely to belong to).  It is possible for there to be 100% certainty (one output node gets a single 1, all others 0), or varrying percentages between the highest and other nodes to reflect lower certainties.
 		  </p>
+		  -->
+			
+		  
 		  
 		  <div class="divImageCaption">
 	        <img src="img/shot1.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>

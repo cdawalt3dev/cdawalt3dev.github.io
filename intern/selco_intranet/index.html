@@ -33,16 +33,16 @@
 			Over the summer of 2019, I took on a project to restore an old employee management service that had been shelved for over a decade.
 		  </p>
           <p class="pContent"> 
-			The site acted as an interface for job-related information stored in a Postgre database.  It was a much easier alternative to entering SQL into a Postgre console.
+			The site acted as an interface for job-related information stored in a Postgre database.  It was easier to use than entering SQL into a Postgre console to change and view information.
 		  </p>
 		  <p class="pContent"> 
-			With some assistance from the project's original developer, I managed to get the site working with the same versions of Apache, Postgre, and PHP provided by old installers that were also archived.  However, using old software on modern systems presented a security risk in real use.  I replaced the dependencies with modern versions and updated portions of the PHP files and structural PostgreSQL script that relied on old, deprecated or renamed commands/calls.
+			With some assistance from the site's original developer, I could run the site as a local server with the same versions of Apache, Postgre, and PHP provided by old installers archived alongside the site.  However, using old network-related tools and software presented a security risk in real use.  I replaced the dependencies with modern versions and updated portions of the PHP files and structural PostgreSQL script that relied on old, deprecated, or renamed commands/calls.
 		  </p>
 		  <p class="pContent"> 
-			The service can run on an Apache server with or without a domain in mind (The loopback address 127.0.0.1 can also be used).  It makes calls to the Postgre server which is expected to also be running.  I created sample users to test the site with full permissions and minimal permissions to mimmic the roles of an administrator and a more typical user.  It works as expected, walling off several portions of the site when logged in as the 'notadmin' user.
+			The site can run on an Apache server with or without a domain in mind.  The loopback address (127.0.0.1) can also be used.  Calls are made to the Postgre server which is expected to be running separately.  I created sample users to test the site with full permissions and minimal permissions to mimmic the roles of an administrator and a more typical user.  It works as expected, walling off several portions of the site when logged in as the 'notadmin' user.
 		  </p>
 		  <p class="pContent"> 
-			The Postgre database was originally given data from the MAS system.  It would not be feasible nor beneficial to restore MAS as it is propietary and no longer used by the company.  Making the service compatible with a new database format or writing data from the new database format to the existing Postgre format are a few options that may be taken in the future.
+			The Postgre database was originally given data from the MAS system.  It would not be feasible nor beneficial to restore MAS as it is propietary and no longer used by the company.  Making the service compatible with a new database format or writing data from the new database format to the existing Postgre format are a few options that may be taken in the future, as well as finding a means of hosting suitable for a company intranet.
 		  </p>
 		  
         </div>

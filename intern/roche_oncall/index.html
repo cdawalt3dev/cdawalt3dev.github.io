@@ -29,21 +29,14 @@
       <article class="divGroupMaxWidth">
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
-          <p class="pContent"> 
-			Every week, three people were tasked to answering calls for a help hotline service in their department.  It was inconvenient to carry a separate flip phone only meant for receiving calls in addition to their personal phones.  Using their personal phone numbers instead would lead to confusion since these numbers could easily change (requiring callers to lookup the current available numbers from a schedule or website), and offering personal phone numbers could be a violation of privacy.  Several on-call staff members did not want to be called by other department members if they were not designated for support that week.
+          <p class="pContent">
+			Each week, three people were tasked to answering calls for a help hotline service in thier department.  They had to carry separate flip phones to receive these calls.  Using their personal phones would lead to confusion since these numbers could change from week to week.  Hotline staff also did not want to make their phone numbers public as this could lead to service-related calls outside of their designated weeks.
 		  </p>
           <p class="pContent"> 
-			A solution that offered the best of both worlds was desired: callers from the department could call any of three virtual permanent phone numbers that redirect to the personal phones of on-call staff for the current week without revealing their real phone numbers.  This would also make the separate flip phones unnecessary.
+			A solution that offered the best of both worlds was desired: department staff could call any of three virtual phone numbers that stayed consistent from week to week.  Calls to these numbers would be redirected to the personal phones of hotline staff for the current week.  Separate dedicated flip phones would no longer be necessary. This could be done using Twilio, a service that hosts virtual phone numbers, along with several services of AWS (Amazon Web Services) for call redirection and data storage. Calls to virtual phone numbers were relayed to serverside logic which looked up the physical number to direct a call to for that week. The caller would be connected to the hotline without revealing any on-call staff's personal phone numbers.
 		  </p>
 		  <p class="pContent"> 
-			This could be done using Twilio, a service that hosts virtual phone numbers, along with various subservices of AWS (Amazon Web Services) for call redirection and data storage.
-		  </p>
-		  <p class="pContent"> 
-			Calls to virtual phone numbers were relayed to serverside logic which looked up the #1, #2, or #3 phone number for the given week and sent a call to that number.  If answered, the caller would be connected to the on-call staff's personal phone without revealing the on-call staff's real phone number.  Even between different weeks, the same three virtual phone numbers are available to the department.  Only the phone number associated with each permanent virtual number changes each week.
-		  </p>
-		  
-		  <p class="pContent"> 
-			In addition, call duration and any phone numbers involve were to be logged and a website was made to present the call logs in a table and let logged in staff make changes to the weekly service numbers.
+			In addition, the duration and any phone numbers involve were to be logged for each call in a database.  A website was made to present any databases involved in a user-friendly form.  The call logs were presented in a table and could be saved to an Excel spreadsheet.  The database of redirect numbers could be similarly displayed and edited by logged in staff.
 		  </p>
 		  
 		  
@@ -72,7 +65,7 @@
 		
 		<div class="divImageCaption">
 		  <img src="img/shot2.png" width="60%" height="60%" alt="pic" style="display:inline-block;"/>
-		  <p class="pCaption">Call log (private page).  Phone numbers are recorded and marked with 'Tw 1', 2, or 3 if related to one of the three virtual numbers during that week).  On-call staff may also initate calls to clients through the virtual numbers.</p>
+		  <p class="pCaption">Call log (private page).  Phone numbers are recorded and marked with 'Tw 1', 2, or 3 if related to one of the three virtual numbers during that week).  On-call staff may also initate calls to clients through virtual numbers.</p>
 		</div>
 		
       </article>

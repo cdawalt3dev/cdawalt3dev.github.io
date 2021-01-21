@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Tutoring</title>
+  <title>Shortest Path</title>
   <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
 </head>
 <body>
@@ -30,19 +30,33 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent">
-			For my data structures class, I was assigned to use a greedy algorithm to find the ideal path in an elevation map from a given start point to an end point. The map is a given greyscale image where each pixel reflects a level of elevation; any pixel can travel to any adjacent pixel.  The greater the change in greyscale value (elevation) between two pixels, the more costly the traversal between them would be. A straight-line route is not the lowest-cost route if it takes higher-cost traversals than necessary, which is often the case.
+			For my data structures class, I received an assignment to use a greedy algorithm to find the ideal path in an elevation map between given start and end points. The map is a greyscale image where each pixel's color reflects a level of elevation.  Although any two adjacent pixels may be traversed from one another, the greater the change in color between two pixels, the more costly the traversal would be. A straight-line path between two points is not the lowest-cost route if it takes higher cost traversals than necessary, which is often the case.
 		  </p>
           <p class="pContent">
-		    I created a program to implement the algorithm in C++.  It runs from a console app that generates output images.  One shows the optimum path as a path of pixels on a blank image while the rest represent the status of pixels seen by the algorithm at different increments in different ways.
+		    I created a program to implement the algorithm in C++.  It runs from a console app that generates output images. One shows the optimum path as a path of pixels to be overlaid on the map image while the rest represent the status of pixels seen by the algorithm at different steps of the process in different ways.
 		  </p>
 		  
 		  <p class="pContent">
-		    To better relate the pixels to the algorithm, it is appropriate to think of each pixel in the image as a node and pixels touching in cardinal directions as having connections with each other.  The algorithm has two sets in mind: the set of traversed nodes (with other information) and the set of frontier nodes.  The algorithm begins by including the start node in the traversed set and putting its connected (neighboring) nodes in the frontier set. The frontier node with the lowest traversal cost is chosen to be added to the traversed set, which records the direction taken to reach it in a way that gives the lowest cost and the total cost a route of all traversals from the start to itself. Since the total cost of the total route to the node is cumulative, it is sufficient to store the cost stored in the previous node (0 for the start node) plus the cost of the best traversal that lead to this node.
+		    To better relate to the algorithm, each pixel in the image can be represented by a node with connections to adjacent pixels/nodes.  The difference in greyscale value between any adjacent pixels determines the cost a traversal between them would take.  The algorithm has two sets in mind: the set of traversed nodes and the set of frontier nodes. The algorithm begins by including the start node in the traversed set and putting its adjacent nodes in the frontier set. Each traversed node records the total cost of a route from the start node (with the start node, the first 'traversed' node, having a cost of 0 to be reached). The frontier node that, reached from an adjacent traversed node, would have the lowest-cost path from the start node of all fronteir nodes, is added to the traversed set.  This node receives the cost of the cheapest route to the start node (the cost stored in the node that would lead to the new node plus the cost of the traversal between the nodes), and the direction to reach the previous node in the route.  The new traversed node's adjacent nodes not already in either sets are added to the fronteir set as possible choices for the next traversal choice.  No node's stored cost may be set twice since its first traversal from any adjacent node produced a cheaper total route from the start node than any other fronteir nodes would have at the time.  Finally, once the goal node has been added to the traversed set, the goal node backtracks through the stored node directions to previous nodes in the route from the start.  Printing this route in reverse gives the best route from the start node to the goal node.
+			
 		  </p>
+		  
+		  
+		  <p class="pContent">
+		    The algorithm does not guarantee that each traversal choice is a step closer to the goal node.  It allows the shortest path from the start nodes to each node increasingly further away to be determined by backtracking through nodes toward the start until the goal node happens to be the cheapest fronteir node to be traversed.  Then, it too may be backtracked to the start as any other node picked to be a destination that is also covered in the traversed set.
+		  </p>
+		  
 		   
+		   
+		  <!--
 		  <p class="pContent"> 
-		    The process is repeated with each changed set of frontier and traversed nodes until the node added to the traversed set happens to be the goal node (a coordinate set on the image).  The directions taken to reach the current node may be taken in reverse order starting from the goal to lead back to the start node, and traveling through this series of nodes in reverse gives the lowest-cost path from the start node to the goal node.  In the final output image, it resembles a path roughly carved out of a valley of similarly-colored pixels that move around mountains of greater color gradients.
+			At any stage of the algorithm, the best route from the start node to any nodes in the 'traversed' set may be seen by starting from the selected node and taking the stored directions back through the nodes that the 
+			
+			The frontier node that is cheapest to travel to from the start node (accumulated cost to be reached plus traversal to fronteir) is chosen to be added to the traversed set.
+		  
+		    The process is repeated with each changed set of frontier and traversed nodes until the node added to the traversed set happens to be the goal node (a coordinate set on the image).  The directions taken to reach the current node may be taken in reverse order starting from the goal to lead back to the start node, and traveling through this series of nodes in reverse gives the lowest-cost path from the start node to the goal node.  In the final output image, it resembles a path carved out of a valley of similarly-colored pixels that move around mountains of greater color gradients.
 		  </p>
+		  -->
 		  
 		  <p class="pContent">
 		    
@@ -70,7 +84,7 @@
 		  <div class="divImageCaption">
 	        <img src="img/shot4.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">Distance map at step 12000 of the algorithm.  Darker pixels have lower costs to reach from the start node (with the exception of nodes not yet traversed past the white paremeter).  Colors are scaled so that the drawn pixel with the highest cost is solid white.</p>
+		    <p class="pCaption">Distance map at step 12000 of the algorithm.  Darker pixels have lower costs to be reached from the start node (with the exception of nodes not yet traversed past the white perimeter).  Colors are scaled so that the drawn pixel with the current highest path cost is solid white.</p>
 		  </div>
 		  
 		  <div class="divImageCaption">
