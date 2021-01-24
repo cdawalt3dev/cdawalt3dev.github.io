@@ -30,7 +30,7 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent">
-			Each week, three people were tasked to answering calls for a help hotline service in thier department.  They had to carry separate flip phones to receive these calls.  Using their personal phones would lead to confusion since these numbers could change from week to week.  Hotline staff also did not want to make their phone numbers public as this could lead to service-related calls outside of their designated weeks.
+			Each week, three people were tasked with answering calls for a help hotline service in thier department.  They had to carry separate flip phones to receive these calls.  Using their personal phones would lead to confusion since these numbers could change from week to week.  Hotline staff also did not want to make their phone numbers public as this could lead to service-related calls outside of their designated weeks.
 		  </p>
           <p class="pContent"> 
 			A solution that offered the best of both worlds was desired: department staff could call any of three virtual phone numbers that stayed consistent from week to week.  Calls to these numbers would be redirected to the personal phones of hotline staff for the current week.  Separate dedicated flip phones would no longer be necessary. This could be done using Twilio, a service that hosts virtual phone numbers, along with several services of AWS (Amazon Web Services) for call redirection and data storage. Calls to virtual phone numbers were relayed to serverside logic which looked up the physical number to direct a call to for that week. The caller would be connected to the hotline without revealing any on-call staff's personal phone numbers.
