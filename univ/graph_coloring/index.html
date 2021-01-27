@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Graph Coloring</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle">Graph Coloring</h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent">
+			For a theory of computation class, I was assigned to a group project to demonstrate the NP-completeness of the graph coloring problem. The problem is said to have come from early cartographers who needed to know the minimum number of colors necessary to color countries such that no two adjacent countries have the same color. This can also be modeled with a graph where nodes represent countries and connections come from shared borders.
+		  </p>
+		  <p class="pContent">
+		    Two algorithms were made to find a way of coloring a given graph such that no two connected nodes match in color: a deterministic and a nondeterministic one. The deterministic algorithm is brute force; it tries every combination of node colorings possible and is guaranteed to find a solution if one exists.  Running out of attempts without finding a solution proves none exists.  However it is unwieldy for larger graph sizes as the number of node coloring combinations becomes too time consuming to realistically process.  The nondeterministic algorithm starts by coloring a node and successively colors neighboring nodes to comply with all connected nodes. A legal graph coloring is produced by coloring an additional node and then used as a basis for coloring an additional node connected to the frontier of uncolored nodes. Backtracking (uncoloring nodes) to color nodes differently if a legal graph coloring cannot be found at some step is possible. Although this algorithm will both succeed and admit failure at far fewer computations than the deterministic algorithm, it is difficult to guarantee that failure is proof that no such solution exists for a given maximum number of colors.
+		  </p>
+		  
+		  <p class="pContent"> 
+		    I created a Java program to let the user build graphs for testing both algorithms. It allows nodes to be placed, moved, deleted, and connected with other nodes through GUI. Graphs may also be saved and loaded for returning to between separate runs of the program. The user may choose a deterministic or nondeterministic algorithm to attempt to color all the nodes with a maximum number of colors specified.  The default, the most connections of any one node with other nodes plus 1, is expected to be possible for any graph. A lower maximum number of colors may be possible for some graphs.
+		  </p>
+		  
+		  <p class="pContent">
+		    The window shows how long the algorithm has been running and the number of steps done while running.  It will either end on a valid fully colored graph or admit failure.  Nondeterministic algorithms may be run in step mode to show the partial graph coloring at each step.  The algorithm advances when the user presses <i>Next</i>.
+		  </p>
+		  
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot1.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">A graph of 21 nodes</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot2.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Results from running the deterministic algorithm. <i>341</i> is a count of minutes.</p>
+		  </div>
+		  
+		  <div class="divImageCaption">
+	        <img src="img/shot3.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
+		    <br/>
+		    <p class="pCaption">Results from running the breadth-first nondeterministic algorithm</p>
+		  </div>
+		  
+		  
+        </div>
+		
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>

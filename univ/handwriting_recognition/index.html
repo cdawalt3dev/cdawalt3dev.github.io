@@ -30,15 +30,15 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent"> 
-			For my artificial intelligence class, I helped create a handwriting recognition program that attempts to identify a single digit number as part of a group project.  The other group members planned out key details about the program and decided how the program should standardize drawings between trials.  I implemented the ideas as a Java program using a neural network.
+			For my AI class, I helped create a handwriting recognition program that attempts to identify a single digit number.  We planned out key details about the program and decided how the program should standardize drawings between trials.  I then implemented the ideas as a Java program using a neural network.
 		  </p>
 		  
 		  <p class="pContent"> 
-			Initially, the neural network must be given drawings assigned the numbers they represent manually. Drawings should have some variation to adequately represent imperfections and different ways the number may be drawn. The extents of the drawn area are used to form the bounds of the image.  Images are then downscaled to a standard size so that they do not vary significantly due to differences in their original drawings' extents, sizes, and proportions in the window.  Since a single-line vertical one (or 'stick one') could produce nearly solid black images from its bounds, there is also a check for extreme aspect ratios. In this case, the bounds are extended horizontally to better resemble the bounds expected for any other number drawn of similar height in its place. Both the standardized samples and neural network training data are saved for quick re-use between closing and opening the program.
+			Initially the neural network must be given drawings assigned the numbers they represent manually. Drawings should have some variation to adequately represent imperfections and different ways the number may be drawn. The extents of the drawn area are used to form the bounds of the image.  Images are then downscaled to a standard size so that they do not vary significantly due to differences in their original drawings' extents, sizes, and proportions in the window.  Since a single-line vertical one (or 'stick one') could produce nearly solid black images from its bounds, there is also a check for extreme aspect ratios. In this case, the bounds are extended horizontally to better resemble the bounds expected for any other number drawn of similar height in its place. Both the standardized samples and neural network training data are saved for quick reuse between closing and opening the program.
 		  </p>
 		  
 		  <p class="pContent"> 
-		    After enough samples have been assigned to each digit, the neural network is trained so that it may attempt to identify the number portrayed in a drawing outside the training set later.  Finally, the trained neural network can be used to identify a new drawing without the user's assistance.  Percentages of certainty are shown in a pane to the right.  For instance, the network may strongly think that a drawing is of #8 (98%), or have a lot of uncertainty (70% for #5, but 26% for #3).
+		    After enough samples have been assigned to each digit, the neural network is trained so that it may attempt to identify the number portrayed in a drawing outside the training set later.  Finally, the trained neural network can be used to identify a new drawing without the user's assistance.  Percentages of certainty are shown in a pane to the right.  For instance, the network may strongly suggest that a drawing is of #8 (98%) or have a lot of uncertainty (70% for #5 but 26% for #3).
 		  </p>
 		  
 		  
@@ -55,19 +55,19 @@
 		  <div class="divImageCaption">
 	        <img src="img/shot1.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">View after drawing a '6' in the window.  The drawing is sectioned into 16x24 rectangles fit the the greatest extents of the drawn pixels.</p>
+		    <p class="pCaption">View after drawing a <i>6</i> in the window.  The drawing is sectioned into 16x24 rectangles scaled to span the greatest extents of the drawn pixels.</p>
 		  </div>
 		  
 		  <div class="divImageCaption">
 	        <img src="img/shot2.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">After clicking 'Confirm' to the lower-right, the drawing is removed and previewed in the top-left corner after the 'Trial:' text.  The certanty ratings for each of the possible outcomes (digits) are shown in the right column.</p>
+		    <p class="pCaption">After clicking <i>Confirm</i> in the lower right-hand corner, the drawing is removed and previewed in the top left-hand corner after the <i>Trial</i> label.  The certainty ratings for each of the possible outcomes (digits) are shown in the column on the right side of the window.</p>
 		  </div>
 		  
 		  <div class="divImageCaption">
 	        <img src="img/shot3.png" width="50%" height="50%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">All trials submitted to the trial list that represent number 6.</p>
+		    <p class="pCaption">All drawings submitted to the trial list that represent number 6.</p>
 		  </div>
 		  
 		  

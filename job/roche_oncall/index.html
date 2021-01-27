@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Roche Hotline Service</title>
+  <link rel="stylesheet" type="text/css" href="../../global/css/article_common.css"/>
+</head>
+<body>
+  <div class="divPageContent">
+  
+  
+    <header>
+	  <!--
+      <nav>
+        <a class="aButtonDisabled aButton aButtonNav">Home</a>
+      </nav>
+	  -->
+      <h1 id="mainTitle" > Roche Hotline Service </h1>
+    </header>
+    
+	
+	
+	<!-- <section class="divGroupMaxWidth">-->
+    
+    <section class="sectionContent">
+      <!--<h2>Title</h2>-->
+	  
+      <article class="divGroupMaxWidth">
+        <!--<h3>Title</h3>-->
+        <div class="divTextGroup">
+          <p class="pContent">
+			Each week, three people were tasked with answering calls for a help hotline service in their department.  They had to carry separate flip phones to receive these calls.  Using their personal phones would lead to confusion since these numbers could change from week to week.  Hotline staff also did not want to make their phone numbers public as this could lead to service-related calls outside of their designated weeks.
+		  </p>
+          <p class="pContent"> 
+			I offered a solution that offered the best of both worlds: department staff could call any of three virtual phone numbers that stayed consistent from week to week.  Calls to these numbers would be redirected to the personal phones of hotline staff for the current week.  Separate dedicated flip phones would no longer be necessary. This could be done using Twilio, a service that hosts virtual phone numbers, along with several services of AWS (Amazon Web Services) for call redirection and data storage. Calls to virtual phone numbers were relayed to server-side logic which looked up the physical number to direct a call to for that week. The caller would be connected to the hotline without revealing any on-call staff's personal phone numbers.
+		  </p>
+		  <p class="pContent"> 
+			In addition, the duration and any phone numbers involved were to be logged for each call into a database.  A website was made to present any databases involved in a user-friendly form.  The call logs were presented in a table which could be saved as an Excel spreadsheet.  The database of redirect numbers could be similarly displayed and edited by staff who were logged in.
+		  </p>
+		  
+		  
+		  
+        </div>
+		
+		
+		<div class="divImageCaption">
+	      <img src="img/shot1.png" width="70%" height="70%" alt="pic" style="display:inline-block;"/>
+		  <br/>
+		  <p class="pCaption">Overview of inter-service interactions</p>
+		  <div>
+			<p class="pCaptionDeeper">Twilio: Hosts virtual phone numbers.  Directs calls to API Gateway.  Expects a service number to connect the caller to.</p>
+			<p class="pCaptionDeeper">API Gateway: Hosts a URL to receive Twilio calls.  Directs the call to Lambda.</p>
+			<p class="pCaptionDeeper">Lambda: Server-side logic using Node.js. Looks up the physical phone number for the given week in DynamoDB.  Waits for a call to end to record its duration for a log entry.</p>
+			<p class="pCaptionDeeper">DynamoDB: NoSQL database that holds all persistent data, including physical numbers (or aliases) to connect to for each of the three virtual numbers per week and call logs.</p>
+			<p class="pCaptionDeeper">S3: Website.  Hosts HTML pages and JavaScript to make reading and writing to the database easier.  Physical numbers per week (or aliases linked to numbers) may be entered for several weeks in advance.  Logs of calls may be viewed to see duration and phone numbers involved.  Requires the owner's Amazon account login for most access.  Only the weekly phone numbers page with read-only access is publicly available (see <a href="https://blue24test.s3.us-east-2.amazonaws.com/OnCallPhoneNumbersInterface/public.html">here</a>).  Aliases are resolved to phone numbers visible in another private page.</p>
+		  </div>
+		</div>
+		
+		
+		<div class="divImageCaption">
+		  <img src="img/shot2a.png" width="40%" height="40%" alt="pic" style="display:inline-block;"/>
+		  <p class="pCaption">Home page (as seen when logged in)</p>
+		</div>
+		
+		<div class="divImageCaption">
+		  <img src="img/shot2.png" width="60%" height="60%" alt="pic" style="display:inline-block;"/>
+		  <p class="pCaption">Call log (private page).  Phone numbers are recorded and marked with <i>Tw 1</i>, <i>Tw 2</i>, or <i>Tw 3</i> if related to one of the three virtual numbers during that week.  On-call staff may also initate calls to clients through virtual numbers.</p>
+		</div>
+		
+      </article>
+	  
+    </section>
+	
+	
+     
+    
+    
+    <div class="divContentBottomMarker" >
+      <a class="aBackLink" href="../index.html"> Back</a>
+    </div>
+    
+  
+  </div><!--end of divPageContent-->
+</body>
+</html>

@@ -30,10 +30,10 @@
         <!--<h3>Title</h3>-->
         <div class="divTextGroup">
           <p class="pContent">
-			For a biometrics class, I created a script in matlab that could identify the iris of the eye in a picture.  Six images of a single eye were given with a fair degree of inconsistency (slightly different portion of the eye open, size of image, proportion of eye to unrelated areas of the image, etc.).  This simulated a real-world environment where conditions for recording the eye may be inexact even with reasonable constraints.
+			For a biometrics class, I created a script in MATLAB that could identify the iris of an eye in a picture.  Six images of a single eye were given with a fair degree of inconsistency (slightly different portion of the eye open, size of image, proportion of eye to unrelated areas of the image, etc.).  This simulated a real life environment where conditions for recording the eye may be inexact even with reasonable constraints.
 		  </p>
           <p class="pContent">
-		    The program begins by using a matlab-supplied method to detect circles of a certain radius in the image, with certain ranges used for the outer and inner radius for the iris. The outer and inner circles with the least difference in center distance are picked to define the iris. Zones of irrelevant detais (partially overlapping eyelids) can be marked by the user to be omitted. The region between the outer and inner circles is then transformed into a polar strip for more easily reading iris details. This can be compared to the polar strip from another iris reading to decide if both belong to the same person.
+		    My program begins by using a MATLAB-supplied method to detect circles of a certain radius in the image with certain ranges used for the outer and inner radius for the iris. The outer and inner circles with the least difference in center distance are picked to define the iris. Zones of irrelevant detais (partially overlapping eyelids) can be marked by the user to be omitted. The region between the outer and inner circles is then transformed into a polar strip to more easily read iris details. This polar strip can be compared to the polar strip from another iris reading to decide if both eye pictures belong to the same person.
 		  </p>
 		  
 		  <p class="pContent">
@@ -46,7 +46,7 @@
 	        <img src="img/shot5.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 	        <img src="img/shot6.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">Demonstration of matlab's edge detection at different sensitivity choices for the third eye image (seen below).  Used for detecting circles.</p>
+		    <p class="pCaption">Demonstration of MATLAB's edge detection at different sensitivity choices.  Used for detecting circles.</p>
 		  </div>
 		  <br/>
 		  
@@ -56,7 +56,7 @@
 	        <img src="img/shot2b.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 	        <img src="img/shot3b.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">Input eye images with all detected potential outer/inner radii circles.</p>
+		    <p class="pCaption">Input eye images with all detected potential outer/inner radii circles</p>
 		  </div>
 		  <br/>
 		  
@@ -65,14 +65,14 @@
 	        <img src="img/shot2.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 	        <img src="img/shot3.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">Input eye images with final outer/inner radii circles.</p>
+		    <p class="pCaption">Input eye images with final outer/inner radii circles</p>
 		  </div>
 		  <br/>
 		  
 		  <div class="divImageCaption">
 	        <img src="img/shot2z.png" width="28%" height="28%" alt="pic" style="display:inline-block;"/>
 		    <br/>
-		    <p class="pCaption">Example of region marked for exclusion by the user (red)</p>
+		    <p class="pCaption">Example of region marked for exclusion by the user (shown in red)</p>
 		  </div>
 		  <br/>
 		  
